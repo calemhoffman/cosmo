@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cosmo version="4.1" date="Feb/25/2024">
+	<valencespace name="spsdpf">
+		<core name="0n" N="0" Z="0"/>
+		<orbital name="0s1" n="0" l="0" j="1/2" type="pn" index="1"/>
+		<orbital name="0p3" n="0" l="1" j="3/2" type="pn" index="2"/>
+		<orbital name="0p1" n="0" l="1" j="1/2" type="pn" index="3"/>
+		<orbital name="0d5" n="0" l="2" j="5/2" type="pn" index="4"/>
+		<orbital name="0d3" n="0" l="2" j="3/2" type="pn" index="5"/>
+		<orbital name="1s1" n="1" l="0" j="1/2" type="pn" index="6"/>
+		<orbital name="0f7" n="0" l="3" j="7/2" type="pn" index="7"/>
+		<orbital name="0f5" n="0" l="3" j="5/2" type="pn" index="8"/>
+		<orbital name="1p3" n="1" l="1" j="3/2" type="pn" index="9"/>
+		<orbital name="1p1" n="1" l="1" j="1/2" type="pn" index="10"/>
+		<outercore name="80Zr" N="40" Z="40"/>
+	</valencespace>
+	<hamiltonian name="fsu9" valencespace="spsdpf">
+		<file format="ascii">
+			<name>spsdpfpb.int</name>
+			<comment>Unchanged from WBP</comment>
+		</file>
+		<file format="ascii">
+			<name>fsu9/spsdfp-fsu9.int</name>
+			<formulascale rank="2">(18/A)^0.3</formulascale>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p1sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p3sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>0s0f1p0.int</name>
+		</file>
+		<file format="ascii">
+			<name>spsdpfcm.int</name>
+			<scale rank="1">10.000000</scale>
+			<scale rank="2">10.000000</scale>
+			<comment>Center-of-mass</comment>
+		</file>
+		<comment>Interaction fitted to particle-hole excitations</comment>
+		<reference doi="10.1103/PhysRevResearch.2.043342">R. S. Lubna, et al.  Phys. Rev. Research 2, 043342 (2020)</reference>
+		<reference>R. S. Lubna, et al. Phys. Rev. C 100, 034308 (2019)</reference>
+		<reference>R. S. Lubna, Ph.D. thesis, Florida State University (2019)</reference>
+	</hamiltonian>
+	<system Av="35" Nv="19" Zv="16" A="35" Tz="3/2" Jz="1/2" P="-" name="35S_fsu9_M1T3-">
+		<hwrejection HWMAX="1" HWMIN="1"/>
+		<?ManyBodyStates name="35S_fsu9_M1T3-.mbs" size="96384" creator="sysmbsOMP"?>
+		<matrix name="35S_fsu9_M1T3-.HH" format="pp"/>
+		<state J="7/2" P="-" T="3/2" E="-352.163" dE="5.68434e-14" name="7/2-(1)" Ex="0">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="0"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.99973"/>
+			<occupation name="0p1" N="2" Z="1.9999"/>
+			<occupation name="0d5" N="5.77804" Z="5.57935"/>
+			<occupation name="0d3" N="2.5236" Z="0.938023"/>
+			<occupation name="1s1" N="1.71041" Z="1.47136"/>
+			<occupation name="0f7" N="0.922607" Z="0.00881706"/>
+			<occupation name="0f5" N="0.0105141" Z="0.00253672"/>
+			<occupation name="1p3" N="0.0543161" Z="0.000203677"/>
+			<occupation name="1p1" N="0.000536619" Z="7.56988e-05"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-351.803" dE="3.41061e-13" name="3/2-(1)" Ex="0.36">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="1"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9999" Z="3.99983"/>
+			<occupation name="0p1" N="1.9999" Z="1.99878"/>
+			<occupation name="0d5" N="5.79446" Z="5.63002"/>
+			<occupation name="0d3" N="2.42787" Z="0.873927"/>
+			<occupation name="1s1" N="1.78817" Z="1.48874"/>
+			<occupation name="0f7" N="0.242672" Z="0.00347508"/>
+			<occupation name="0f5" N="0.00186664" Z="0.000603379"/>
+			<occupation name="1p3" N="0.741507" Z="0.00315417"/>
+			<occupation name="1p1" N="0.00365002" Z="0.00147704"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-350.756" dE="5.68434e-14" name="5/2-(1)" Ex="1.407">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="2"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99991" Z="3.99822"/>
+			<occupation name="0p1" N="1.99994" Z="1.99944"/>
+			<occupation name="0d5" N="5.81773" Z="5.60729"/>
+			<occupation name="0d3" N="2.81433" Z="0.912112"/>
+			<occupation name="1s1" N="1.49812" Z="1.35539"/>
+			<occupation name="0f7" N="0.790634" Z="0.108479"/>
+			<occupation name="0f5" N="0.0407134" Z="0.0125696"/>
+			<occupation name="1p3" N="0.0348069" Z="0.00424367"/>
+			<occupation name="1p1" N="0.00381892" Z="0.00225343"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-350.457" dE="2.27374e-13" name="9/2-(1)" Ex="1.706">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="3"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99999" Z="3.99919"/>
+			<occupation name="0p1" N="1.99998" Z="1.99993"/>
+			<occupation name="0d5" N="5.82173" Z="5.56952"/>
+			<occupation name="0d3" N="2.47993" Z="0.919588"/>
+			<occupation name="1s1" N="1.73109" Z="1.47996"/>
+			<occupation name="0f7" N="0.916657" Z="0.0248185"/>
+			<occupation name="0f5" N="0.0243337" Z="0.00624651"/>
+			<occupation name="1p3" N="0.0253071" Z="0.000417535"/>
+			<occupation name="1p1" N="0.000980267" Z="0.000330629"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-350.374" dE="1.7053e-13" name="3/2-(2)" Ex="1.789">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="4"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.98966" Z="3.99356"/>
+			<occupation name="0p1" N="1.99973" Z="1.99729"/>
+			<occupation name="0d5" N="5.83203" Z="5.67856"/>
+			<occupation name="0d3" N="2.56051" Z="0.51266"/>
+			<occupation name="1s1" N="1.8096" Z="1.64615"/>
+			<occupation name="0f7" N="0.6567" Z="0.13604"/>
+			<occupation name="0f5" N="0.0451436" Z="0.0195382"/>
+			<occupation name="1p3" N="0.0950644" Z="0.010535"/>
+			<occupation name="1p1" N="0.0115641" Z="0.00566284"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-350.131" dE="2.27374e-13" name="7/2-(2)" Ex="2.032">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="5"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99994" Z="3.9994"/>
+			<occupation name="0p1" N="1.99998" Z="1.99964"/>
+			<occupation name="0d5" N="5.78758" Z="5.56508"/>
+			<occupation name="0d3" N="2.65543" Z="1.07603"/>
+			<occupation name="1s1" N="1.58872" Z="1.32927"/>
+			<occupation name="0f7" N="0.650418" Z="0.0232497"/>
+			<occupation name="0f5" N="0.00756424" Z="0.00295164"/>
+			<occupation name="1p3" N="0.307408" Z="0.00278663"/>
+			<occupation name="1p1" N="0.00296672" Z="0.00160427"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-350.041" dE="5.68434e-14" name="1/2-(1)" Ex="2.122">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="6"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9995" Z="3.99834"/>
+			<occupation name="0p1" N="1.97708" Z="1.98458"/>
+			<occupation name="0d5" N="5.76546" Z="5.61597"/>
+			<occupation name="0d3" N="2.5433" Z="0.883149"/>
+			<occupation name="1s1" N="1.795" Z="1.47813"/>
+			<occupation name="0f7" N="0.241553" Z="0.0122698"/>
+			<occupation name="0f5" N="0.00661535" Z="0.00198237"/>
+			<occupation name="1p3" N="0.633922" Z="0.0236309"/>
+			<occupation name="1p1" N="0.037572" Z="0.00195205"/>
+		</state>
+		<state J="11/2" P="-" T="3/2" E="-350.019" dE="2.27374e-13" name="11/2-(1)" Ex="2.144">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="7"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="4" Z="3.99994"/>
+			<occupation name="0p1" N="2" Z="1.99997"/>
+			<occupation name="0d5" N="5.80113" Z="5.58612"/>
+			<occupation name="0d3" N="2.51766" Z="1.14525"/>
+			<occupation name="1s1" N="1.69243" Z="1.25758"/>
+			<occupation name="0f7" N="0.936884" Z="0.00715469"/>
+			<occupation name="0f5" N="0.0117977" Z="0.00378428"/>
+			<occupation name="1p3" N="0.0399062" Z="0.000131887"/>
+			<occupation name="1p1" N="0.000185404" Z="6.16533e-05"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-349.875" dE="1.13687e-13" name="7/2-(3)" Ex="2.288">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="8"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99995" Z="3.99792"/>
+			<occupation name="0p1" N="1.99998" Z="1.99972"/>
+			<occupation name="0d5" N="5.87094" Z="5.65189"/>
+			<occupation name="0d3" N="2.69613" Z="0.73186"/>
+			<occupation name="1s1" N="1.67957" Z="1.37449"/>
+			<occupation name="0f7" N="0.50858" Z="0.207375"/>
+			<occupation name="0f5" N="0.0384638" Z="0.0205291"/>
+			<occupation name="1p3" N="0.195456" Z="0.0102166"/>
+			<occupation name="1p1" N="0.0109396" Z="0.00600242"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-349.857" dE="5.68434e-14" name="5/2-(2)" Ex="2.306">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="9"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99992" Z="3.99957"/>
+			<occupation name="0p1" N="1.99999" Z="1.99886"/>
+			<occupation name="0d5" N="5.79708" Z="5.56882"/>
+			<occupation name="0d3" N="2.58042" Z="1.12465"/>
+			<occupation name="1s1" N="1.65991" Z="1.27245"/>
+			<occupation name="0f7" N="0.461648" Z="0.0265523"/>
+			<occupation name="0f5" N="0.0087616" Z="0.0025662"/>
+			<occupation name="1p3" N="0.484385" Z="0.00432968"/>
+			<occupation name="1p1" N="0.00788864" Z="0.00219855"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-349.809" dE="2.84217e-13" name="3/2-(3)" Ex="2.354">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="10"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99981" Z="3.99963"/>
+			<occupation name="0p1" N="1.99997" Z="1.99955"/>
+			<occupation name="0d5" N="5.8042" Z="5.52551"/>
+			<occupation name="0d3" N="2.5978" Z="1.24674"/>
+			<occupation name="1s1" N="1.62155" Z="1.20627"/>
+			<occupation name="0f7" N="0.766492" Z="0.0186614"/>
+			<occupation name="0f5" N="0.00637725" Z="0.00237233"/>
+			<occupation name="1p3" N="0.201541" Z="0.00094725"/>
+			<occupation name="1p1" N="0.00225432" Z="0.000320851"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-349.573" dE="1.7053e-13" name="5/2-(3)" Ex="2.59">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="11"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99984" Z="3.99732"/>
+			<occupation name="0p1" N="1.99992" Z="1.99879"/>
+			<occupation name="0d5" N="5.83583" Z="5.62991"/>
+			<occupation name="0d3" N="2.64276" Z="0.944385"/>
+			<occupation name="1s1" N="1.69543" Z="1.25993"/>
+			<occupation name="0f7" N="0.603547" Z="0.137779"/>
+			<occupation name="0f5" N="0.0793848" Z="0.0172006"/>
+			<occupation name="1p3" N="0.133542" Z="0.00983877"/>
+			<occupation name="1p1" N="0.00973679" Z="0.00485022"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-349.565" dE="5.11591e-13" name="3/2-(4)" Ex="2.598">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="12"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99976" Z="3.9994"/>
+			<occupation name="0p1" N="1.99985" Z="1.994"/>
+			<occupation name="0d5" N="5.75711" Z="5.55633"/>
+			<occupation name="0d3" N="2.69423" Z="1.13589"/>
+			<occupation name="1s1" N="1.57327" Z="1.29714"/>
+			<occupation name="0f7" N="0.337758" Z="0.00764259"/>
+			<occupation name="0f5" N="0.00849486" Z="0.00181187"/>
+			<occupation name="1p3" N="0.612692" Z="0.00538936"/>
+			<occupation name="1p1" N="0.0168322" Z="0.00238935"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-349.548" dE="2.84217e-13" name="1/2-(2)" Ex="2.615">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="13"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99995" Z="3.99929"/>
+			<occupation name="0p1" N="1.99315" Z="1.99688"/>
+			<occupation name="0d5" N="5.77879" Z="5.60795"/>
+			<occupation name="0d3" N="2.48165" Z="0.798665"/>
+			<occupation name="1s1" N="1.7843" Z="1.57012"/>
+			<occupation name="0f7" N="0.0193114" Z="0.00828673"/>
+			<occupation name="0f5" N="0.0214624" Z="0.000359678"/>
+			<occupation name="1p3" N="0.182886" Z="0.0171361"/>
+			<occupation name="1p1" N="0.738504" Z="0.00131957"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-349.319" dE="1.7053e-13" name="9/2-(2)" Ex="2.844">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="14"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.99616"/>
+			<occupation name="0p1" N="1.99961" Z="1.99907"/>
+			<occupation name="0d5" N="5.87768" Z="5.68937"/>
+			<occupation name="0d3" N="2.9093" Z="0.573703"/>
+			<occupation name="1s1" N="1.51194" Z="1.44838"/>
+			<occupation name="0f7" N="0.606201" Z="0.250642"/>
+			<occupation name="0f5" N="0.0691775" Z="0.0287712"/>
+			<occupation name="1p3" N="0.0184995" Z="0.00867192"/>
+			<occupation name="1p1" N="0.00761991" Z="0.00523185"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-349.289" dE="1.13687e-13" name="7/2-(4)" Ex="2.874">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="15"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99984" Z="3.99809"/>
+			<occupation name="0p1" N="1.99995" Z="1.99969"/>
+			<occupation name="0d5" N="5.80012" Z="5.59654"/>
+			<occupation name="0d3" N="2.75756" Z="0.96171"/>
+			<occupation name="1s1" N="1.65701" Z="1.23192"/>
+			<occupation name="0f7" N="0.644258" Z="0.188674"/>
+			<occupation name="0f5" N="0.0337669" Z="0.0155509"/>
+			<occupation name="1p3" N="0.10309" Z="0.00482721"/>
+			<occupation name="1p1" N="0.00439801" Z="0.00299992"/>
+		</state>
+		<state J="11/2" P="-" T="3/2" E="-349.261" dE="3.97904e-13" name="11/2-(2)" Ex="2.902">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="16"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99999" Z="3.99995"/>
+			<occupation name="0p1" N="2" Z="1.99998"/>
+			<occupation name="0d5" N="5.80482" Z="5.54498"/>
+			<occupation name="0d3" N="2.58546" Z="1.19729"/>
+			<occupation name="1s1" N="1.62764" Z="1.23997"/>
+			<occupation name="0f7" N="0.951614" Z="0.0128921"/>
+			<occupation name="0f5" N="0.0134167" Z="0.00460565"/>
+			<occupation name="1p3" N="0.0167273" Z="0.000190899"/>
+			<occupation name="1p1" N="0.000329616" Z="0.000144327"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-349.022" dE="5.68434e-14" name="9/2-(3)" Ex="3.141">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="17"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99999" Z="3.99991"/>
+			<occupation name="0p1" N="1.99999" Z="1.99994"/>
+			<occupation name="0d5" N="5.79602" Z="5.54235"/>
+			<occupation name="0d3" N="2.65307" Z="1.33058"/>
+			<occupation name="1s1" N="1.6042" Z="1.0741"/>
+			<occupation name="0f7" N="0.89993" Z="0.0482415"/>
+			<occupation name="0f5" N="0.0235454" Z="0.00392871"/>
+			<occupation name="1p3" N="0.022395" Z="0.000505031"/>
+			<occupation name="1p1" N="0.000853909" Z="0.000443294"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-348.906" dE="3.41061e-13" name="5/2-(4)" Ex="3.257">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="18"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99992" Z="3.99952"/>
+			<occupation name="0p1" N="1.99999" Z="1.99902"/>
+			<occupation name="0d5" N="5.79992" Z="5.5784"/>
+			<occupation name="0d3" N="2.63366" Z="1.38971"/>
+			<occupation name="1s1" N="1.59763" Z="1.00378"/>
+			<occupation name="0f7" N="0.840355" Z="0.0240182"/>
+			<occupation name="0f5" N="0.0164462" Z="0.00342356"/>
+			<occupation name="1p3" N="0.107558" Z="0.0016533"/>
+			<occupation name="1p1" N="0.00452283" Z="0.00047212"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-348.861" dE="1.7053e-13" name="7/2-(5)" Ex="3.302">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="19"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.99969"/>
+			<occupation name="0p1" N="1.99999" Z="1.99989"/>
+			<occupation name="0d5" N="5.82426" Z="5.62243"/>
+			<occupation name="0d3" N="2.64627" Z="1.38431"/>
+			<occupation name="1s1" N="1.5505" Z="0.973137"/>
+			<occupation name="0f7" N="0.861682" Z="0.0157649"/>
+			<occupation name="0f5" N="0.0094061" Z="0.00206658"/>
+			<occupation name="1p3" N="0.105591" Z="0.00172525"/>
+			<occupation name="1p1" N="0.00231675" Z="0.000996745"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-348.861" dE="3.97904e-13" name="3/2-(5)" Ex="3.302">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="20"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99959" Z="3.99931"/>
+			<occupation name="0p1" N="1.99989" Z="1.99782"/>
+			<occupation name="0d5" N="5.79577" Z="5.53331"/>
+			<occupation name="0d3" N="2.59101" Z="1.32263"/>
+			<occupation name="1s1" N="1.63548" Z="1.12857"/>
+			<occupation name="0f7" N="0.324131" Z="0.0104837"/>
+			<occupation name="0f5" N="0.00878002" Z="0.0017049"/>
+			<occupation name="1p3" N="0.630762" Z="0.00515298"/>
+			<occupation name="1p1" N="0.0145812" Z="0.00101702"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-348.761" dE="2.27374e-13" name="1/2-(3)" Ex="3.402">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="21"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99953" Z="3.99906"/>
+			<occupation name="0p1" N="1.99527" Z="1.9931"/>
+			<occupation name="0d5" N="5.79136" Z="5.53857"/>
+			<occupation name="0d3" N="2.68166" Z="1.22732"/>
+			<occupation name="1s1" N="1.57836" Z="1.20885"/>
+			<occupation name="0f7" N="0.358022" Z="0.0103283"/>
+			<occupation name="0f5" N="0.0155162" Z="0.00688038"/>
+			<occupation name="1p3" N="0.496335" Z="0.0112644"/>
+			<occupation name="1p1" N="0.0839599" Z="0.00463907"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-348.622" dE="1.13687e-13" name="7/2-(6)" Ex="3.541">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="22"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99937" Z="3.9984"/>
+			<occupation name="0p1" N="1.9999" Z="1.9994"/>
+			<occupation name="0d5" N="5.8203" Z="5.64119"/>
+			<occupation name="0d3" N="2.82615" Z="1.02202"/>
+			<occupation name="1s1" N="1.50417" Z="1.19201"/>
+			<occupation name="0f7" N="0.671974" Z="0.125897"/>
+			<occupation name="0f5" N="0.0343969" Z="0.0129536"/>
+			<occupation name="1p3" N="0.138145" Z="0.0061302"/>
+			<occupation name="1p1" N="0.00559419" Z="0.00198839"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-348.604" dE="2.27374e-13" name="9/2-(4)" Ex="3.559">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="23"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="4" Z="3.99986"/>
+			<occupation name="0p1" N="1.99999" Z="1.99996"/>
+			<occupation name="0d5" N="5.79861" Z="5.54527"/>
+			<occupation name="0d3" N="2.62995" Z="1.43759"/>
+			<occupation name="1s1" N="1.59212" Z="0.99686"/>
+			<occupation name="0f7" N="0.946537" Z="0.0170958"/>
+			<occupation name="0f5" N="0.0151039" Z="0.00282558"/>
+			<occupation name="1p3" N="0.016861" Z="0.000326672"/>
+			<occupation name="1p1" N="0.000839789" Z="0.000217046"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-348.603" dE="2.27374e-13" name="5/2-(5)" Ex="3.56">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="24"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99966" Z="3.99824"/>
+			<occupation name="0p1" N="1.99948" Z="1.98983"/>
+			<occupation name="0d5" N="5.8236" Z="5.62725"/>
+			<occupation name="0d3" N="2.84554" Z="0.928253"/>
+			<occupation name="1s1" N="1.48843" Z="1.31253"/>
+			<occupation name="0f7" N="0.434748" Z="0.0964439"/>
+			<occupation name="0f5" N="0.0399952" Z="0.00972237"/>
+			<occupation name="1p3" N="0.338582" Z="0.0312584"/>
+			<occupation name="1p1" N="0.0299722" Z="0.00647656"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-348.574" dE="5.68434e-14" name="5/2-(6)" Ex="3.589">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="25"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99985" Z="3.99905"/>
+			<occupation name="0p1" N="1.99903" Z="1.99772"/>
+			<occupation name="0d5" N="5.76163" Z="5.59638"/>
+			<occupation name="0d3" N="2.68031" Z="0.901933"/>
+			<occupation name="1s1" N="1.61778" Z="1.45065"/>
+			<occupation name="0f7" N="0.814751" Z="0.0322142"/>
+			<occupation name="0f5" N="0.0349673" Z="0.00614387"/>
+			<occupation name="1p3" N="0.0729585" Z="0.0142441"/>
+			<occupation name="1p1" N="0.0187214" Z="0.001656"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-348.562" dE="3.41061e-13" name="7/2-(7)" Ex="3.601">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="26"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.9998"/>
+			<occupation name="0p1" N="1.99999" Z="1.99966"/>
+			<occupation name="0d5" N="5.81399" Z="5.52969"/>
+			<occupation name="0d3" N="2.54047" Z="1.33615"/>
+			<occupation name="1s1" N="1.66757" Z="1.11327"/>
+			<occupation name="0f7" N="0.359317" Z="0.0155605"/>
+			<occupation name="0f5" N="0.00623761" Z="0.0015772"/>
+			<occupation name="1p3" N="0.607509" Z="0.00318921"/>
+			<occupation name="1p1" N="0.00492608" Z="0.00111467"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-348.446" dE="2.27374e-13" name="1/2-(4)" Ex="3.717">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="27"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99967" Z="3.99861"/>
+			<occupation name="0p1" N="1.97117" Z="1.98894"/>
+			<occupation name="0d5" N="5.80288" Z="5.62158"/>
+			<occupation name="0d3" N="2.54674" Z="0.993631"/>
+			<occupation name="1s1" N="1.76548" Z="1.35291"/>
+			<occupation name="0f7" N="0.219197" Z="0.0217737"/>
+			<occupation name="0f5" N="0.0225146" Z="0.00416174"/>
+			<occupation name="1p3" N="0.62226" Z="0.0141308"/>
+			<occupation name="1p1" N="0.0500886" Z="0.00425931"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-348.359" dE="1.13687e-13" name="5/2-(7)" Ex="3.804">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="28"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99969" Z="3.99759"/>
+			<occupation name="0p1" N="1.99978" Z="1.99611"/>
+			<occupation name="0d5" N="5.79426" Z="5.56981"/>
+			<occupation name="0d3" N="2.61456" Z="1.08064"/>
+			<occupation name="1s1" N="1.71298" Z="1.24141"/>
+			<occupation name="0f7" N="0.382104" Z="0.102881"/>
+			<occupation name="0f5" N="0.11572" Z="0.00697733"/>
+			<occupation name="1p3" N="0.366615" Z="0.00383973"/>
+			<occupation name="1p1" N="0.0142979" Z="0.000736415"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-348.334" dE="1.13687e-13" name="9/2-(5)" Ex="3.829">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="29"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.99956"/>
+			<occupation name="0p1" N="1.99999" Z="1.99996"/>
+			<occupation name="0d5" N="5.82591" Z="5.5272"/>
+			<occupation name="0d3" N="2.75456" Z="1.28697"/>
+			<occupation name="1s1" N="1.54949" Z="1.05691"/>
+			<occupation name="0f7" N="0.819752" Z="0.121003"/>
+			<occupation name="0f5" N="0.0325801" Z="0.0065914"/>
+			<occupation name="1p3" N="0.0165276" Z="0.00113756"/>
+			<occupation name="1p1" N="0.00123069" Z="0.000657473"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-348.332" dE="1.13687e-13" name="3/2-(6)" Ex="3.831">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="30"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99882" Z="3.9984"/>
+			<occupation name="0p1" N="1.99995" Z="1.99738"/>
+			<occupation name="0d5" N="5.82987" Z="5.62006"/>
+			<occupation name="0d3" N="2.91219" Z="1.19747"/>
+			<occupation name="1s1" N="1.42989" Z="1.02143"/>
+			<occupation name="0f7" N="0.65572" Z="0.134025"/>
+			<occupation name="0f5" N="0.0387538" Z="0.0145043"/>
+			<occupation name="1p3" N="0.125484" Z="0.0131577"/>
+			<occupation name="1p1" N="0.00932452" Z="0.00357817"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-348.323" dE="7.95808e-13" name="7/2-(8)" Ex="3.84">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="31"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99988" Z="3.99886"/>
+			<occupation name="0p1" N="1.99998" Z="1.99895"/>
+			<occupation name="0d5" N="5.8449" Z="5.64804"/>
+			<occupation name="0d3" N="2.68651" Z="1.09504"/>
+			<occupation name="1s1" N="1.60107" Z="1.12909"/>
+			<occupation name="0f7" N="0.654919" Z="0.112345"/>
+			<occupation name="0f5" N="0.0231101" Z="0.00948919"/>
+			<occupation name="1p3" N="0.185374" Z="0.00602437"/>
+			<occupation name="1p1" N="0.00425298" Z="0.00216051"/>
+		</state>
+		<state J="11/2" P="-" T="3/2" E="-348.316" dE="2.27374e-13" name="11/2-(3)" Ex="3.847">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="32"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.99987"/>
+			<occupation name="0p1" N="2" Z="1.99995"/>
+			<occupation name="0d5" N="5.84195" Z="5.61717"/>
+			<occupation name="0d3" N="2.66062" Z="0.957716"/>
+			<occupation name="1s1" N="1.53004" Z="1.39288"/>
+			<occupation name="0f7" N="0.899592" Z="0.0223313"/>
+			<occupation name="0f5" N="0.0237403" Z="0.00962645"/>
+			<occupation name="1p3" N="0.0435512" Z="0.000289528"/>
+			<occupation name="1p1" N="0.000527492" Z="0.000152603"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-348.164" dE="5.68434e-14" name="3/2-(7)" Ex="3.999">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="33"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99883" Z="3.9989"/>
+			<occupation name="0p1" N="1.99977" Z="1.99147"/>
+			<occupation name="0d5" N="5.82397" Z="5.56486"/>
+			<occupation name="0d3" N="2.70675" Z="1.2519"/>
+			<occupation name="1s1" N="1.52179" Z="1.1528"/>
+			<occupation name="0f7" N="0.548517" Z="0.0198415"/>
+			<occupation name="0f5" N="0.016803" Z="0.0024065"/>
+			<occupation name="1p3" N="0.36117" Z="0.01461"/>
+			<occupation name="1p1" N="0.0224009" Z="0.00321772"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-348.11" dE="5.11591e-13" name="1/2-(5)" Ex="4.053">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="34"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99995" Z="3.99829"/>
+			<occupation name="0p1" N="1.98402" Z="1.99295"/>
+			<occupation name="0d5" N="5.80063" Z="5.6111"/>
+			<occupation name="0d3" N="2.69315" Z="1.29585"/>
+			<occupation name="1s1" N="1.59258" Z="1.05628"/>
+			<occupation name="0f7" N="0.373605" Z="0.023495"/>
+			<occupation name="0f5" N="0.0368735" Z="0.00818721"/>
+			<occupation name="1p3" N="0.512053" Z="0.0104634"/>
+			<occupation name="1p1" N="0.00714322" Z="0.0033888"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-348.103" dE="5.11591e-13" name="7/2-(9)" Ex="4.06">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="35"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.99974"/>
+			<occupation name="0p1" N="1.99999" Z="1.99852"/>
+			<occupation name="0d5" N="5.82055" Z="5.58476"/>
+			<occupation name="0d3" N="2.64846" Z="1.20341"/>
+			<occupation name="1s1" N="1.592" Z="1.1544"/>
+			<occupation name="0f7" N="0.702823" Z="0.0485388"/>
+			<occupation name="0f5" N="0.0177205" Z="0.00603223"/>
+			<occupation name="1p3" N="0.212837" Z="0.0030941"/>
+			<occupation name="1p1" N="0.00565741" Z="0.00150952"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-348.005" dE="1.13687e-13" name="5/2-(8)" Ex="4.158">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="36"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99989" Z="3.99945"/>
+			<occupation name="0p1" N="1.99971" Z="1.99688"/>
+			<occupation name="0d5" N="5.81097" Z="5.60368"/>
+			<occupation name="0d3" N="2.62442" Z="1.203"/>
+			<occupation name="1s1" N="1.61651" Z="1.14955"/>
+			<occupation name="0f7" N="0.367963" Z="0.0337116"/>
+			<occupation name="0f5" N="0.0412713" Z="0.0031064"/>
+			<occupation name="1p3" N="0.411419" Z="0.00838205"/>
+			<occupation name="1p1" N="0.12785" Z="0.00223082"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-347.968" dE="1.13687e-13" name="9/2-(6)" Ex="4.195">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="37"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.9991"/>
+			<occupation name="0p1" N="1.99999" Z="1.99987"/>
+			<occupation name="0d5" N="5.75747" Z="5.5176"/>
+			<occupation name="0d3" N="2.74697" Z="1.21266"/>
+			<occupation name="1s1" N="1.5966" Z="1.17089"/>
+			<occupation name="0f7" N="0.77027" Z="0.0905132"/>
+			<occupation name="0f5" N="0.0227943" Z="0.00746051"/>
+			<occupation name="1p3" N="0.10457" Z="0.000977843"/>
+			<occupation name="1p1" N="0.00138617" Z="0.000938697"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-347.964" dE="1.7053e-13" name="5/2-(9)" Ex="4.199">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="38"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99958" Z="3.99857"/>
+			<occupation name="0p1" N="1.99788" Z="1.99737"/>
+			<occupation name="0d5" N="5.79446" Z="5.56859"/>
+			<occupation name="0d3" N="2.78708" Z="1.16442"/>
+			<occupation name="1s1" N="1.51407" Z="1.18458"/>
+			<occupation name="0f7" N="0.514844" Z="0.0598462"/>
+			<occupation name="0f5" N="0.133769" Z="0.00731471"/>
+			<occupation name="1p3" N="0.216167" Z="0.0168798"/>
+			<occupation name="1p1" N="0.0421534" Z="0.00242796"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-347.902" dE="3.41061e-13" name="3/2-(8)" Ex="4.261">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="39"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99953" Z="3.99797"/>
+			<occupation name="0p1" N="1.99911" Z="1.97199"/>
+			<occupation name="0d5" N="5.78428" Z="5.56426"/>
+			<occupation name="0d3" N="2.60444" Z="0.975108"/>
+			<occupation name="1s1" N="1.73378" Z="1.40094"/>
+			<occupation name="0f7" N="0.17885" Z="0.0444478"/>
+			<occupation name="0f5" N="0.0225159" Z="0.00421313"/>
+			<occupation name="1p3" N="0.329884" Z="0.0386277"/>
+			<occupation name="1p1" N="0.347622" Z="0.00244253"/>
+		</state>
+		<state J="13/2" P="-" T="3/2" E="-347.877" dE="3.97904e-13" name="13/2-(1)" Ex="4.286">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="40"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="4" Z="3.99999"/>
+			<occupation name="0p1" N="2" Z="2"/>
+			<occupation name="0d5" N="5.77933" Z="5.45133"/>
+			<occupation name="0d3" N="2.58339" Z="1.33178"/>
+			<occupation name="1s1" N="1.64697" Z="1.20724"/>
+			<occupation name="0f7" N="0.9714" Z="0.00550458"/>
+			<occupation name="0f5" N="0.013799" Z="0.00411931"/>
+			<occupation name="1p3" N="0.00501895" Z="3.08136e-05"/>
+			<occupation name="1p1" N="9.46989e-05" Z="1.54691e-05"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-347.867" dE="0" name="7/2-(10)" Ex="4.296">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="41"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99823" Z="3.9979"/>
+			<occupation name="0p1" N="1.99987" Z="1.9986"/>
+			<occupation name="0d5" N="5.80547" Z="5.59126"/>
+			<occupation name="0d3" N="2.82611" Z="1.17118"/>
+			<occupation name="1s1" N="1.54708" Z="1.06968"/>
+			<occupation name="0f7" N="0.626057" Z="0.152036"/>
+			<occupation name="0f5" N="0.041114" Z="0.0098771"/>
+			<occupation name="1p3" N="0.149155" Z="0.00694511"/>
+			<occupation name="1p1" N="0.00689807" Z="0.00252621"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-347.816" dE="5.68434e-14" name="3/2-(9)" Ex="4.347">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="42"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99758" Z="3.99714"/>
+			<occupation name="0p1" N="1.99961" Z="1.98549"/>
+			<occupation name="0d5" N="5.82551" Z="5.64924"/>
+			<occupation name="0d3" N="2.68436" Z="1.01334"/>
+			<occupation name="1s1" N="1.66109" Z="1.20683"/>
+			<occupation name="0f7" N="0.452755" Z="0.113271"/>
+			<occupation name="0f5" N="0.0239389" Z="0.00563651"/>
+			<occupation name="1p3" N="0.203215" Z="0.02541"/>
+			<occupation name="1p1" N="0.151945" Z="0.00364335"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-347.783" dE="1.7053e-13" name="7/2-(11)" Ex="4.38">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="43"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99967" Z="3.99912"/>
+			<occupation name="0p1" N="1.99992" Z="1.99858"/>
+			<occupation name="0d5" N="5.77099" Z="5.55989"/>
+			<occupation name="0d3" N="2.92263" Z="1.10645"/>
+			<occupation name="1s1" N="1.43098" Z="1.21449"/>
+			<occupation name="0f7" N="0.653341" Z="0.10511"/>
+			<occupation name="0f5" N="0.0242424" Z="0.00948779"/>
+			<occupation name="1p3" N="0.193049" Z="0.0052754"/>
+			<occupation name="1p1" N="0.00518757" Z="0.00159785"/>
+		</state>
+		<state J="5/2" P="-" T="3/2" E="-347.769" dE="5.68434e-14" name="5/2-(10)" Ex="4.394">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="44"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99928" Z="3.9983"/>
+			<occupation name="0p1" N="1.99956" Z="1.98793"/>
+			<occupation name="0d5" N="5.79921" Z="5.49365"/>
+			<occupation name="0d3" N="2.62202" Z="1.16902"/>
+			<occupation name="1s1" N="1.66894" Z="1.277"/>
+			<occupation name="0f7" N="0.27588" Z="0.0422862"/>
+			<occupation name="0f5" N="0.0915052" Z="0.00457069"/>
+			<occupation name="1p3" N="0.449939" Z="0.0243517"/>
+			<occupation name="1p1" N="0.0936642" Z="0.00287662"/>
+		</state>
+		<state J="11/2" P="-" T="3/2" E="-347.652" dE="5.68434e-14" name="11/2-(4)" Ex="4.511">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="45"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99983" Z="3.99976"/>
+			<occupation name="0p1" N="1.99999" Z="1.99994"/>
+			<occupation name="0d5" N="5.7473" Z="5.41802"/>
+			<occupation name="0d3" N="2.75281" Z="1.25697"/>
+			<occupation name="1s1" N="1.56924" Z="1.25661"/>
+			<occupation name="0f7" N="0.88762" Z="0.0640671"/>
+			<occupation name="0f5" N="0.0187179" Z="0.00361036"/>
+			<occupation name="1p3" N="0.0237446" Z="0.000606422"/>
+			<occupation name="1p1" N="0.000737998" Z="0.000417936"/>
+		</state>
+		<state J="9/2" P="-" T="3/2" E="-347.652" dE="5.68434e-14" name="9/2-(7)" Ex="4.511">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="46"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99999" Z="3.9985"/>
+			<occupation name="0p1" N="1.99998" Z="1.99985"/>
+			<occupation name="0d5" N="5.82783" Z="5.62035"/>
+			<occupation name="0d3" N="2.70624" Z="1.07005"/>
+			<occupation name="1s1" N="1.67749" Z="1.1014"/>
+			<occupation name="0f7" N="0.702916" Z="0.195874"/>
+			<occupation name="0f5" N="0.0434536" Z="0.0109647"/>
+			<occupation name="1p3" N="0.0399668" Z="0.00159628"/>
+			<occupation name="1p1" N="0.00213662" Z="0.00140711"/>
+		</state>
+		<state J="1/2" P="-" T="3/2" E="-347.6" dE="1.7053e-13" name="1/2-(6)" Ex="4.563">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="47"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99821" Z="3.9925"/>
+			<occupation name="0p1" N="1.90423" Z="1.95564"/>
+			<occupation name="0d5" N="5.6942" Z="5.59544"/>
+			<occupation name="0d3" N="3.01987" Z="0.916803"/>
+			<occupation name="1s1" N="1.72637" Z="1.34615"/>
+			<occupation name="0f7" N="0.333249" Z="0.0963376"/>
+			<occupation name="0f5" N="0.0457536" Z="0.0174878"/>
+			<occupation name="1p3" N="0.231467" Z="0.0696091"/>
+			<occupation name="1p1" N="0.0466482" Z="0.0100292"/>
+		</state>
+		<state J="7/2" P="-" T="3/2" E="-347.592" dE="3.41061e-13" name="7/2-(12)" Ex="4.571">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="48"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9996" Z="3.99932"/>
+			<occupation name="0p1" N="1.99997" Z="1.99831"/>
+			<occupation name="0d5" N="5.80714" Z="5.51163"/>
+			<occupation name="0d3" N="2.67883" Z="1.18909"/>
+			<occupation name="1s1" N="1.60174" Z="1.21716"/>
+			<occupation name="0f7" N="0.652988" Z="0.0738695"/>
+			<occupation name="0f5" N="0.0264937" Z="0.00577077"/>
+			<occupation name="1p3" N="0.225696" Z="0.00375178"/>
+			<occupation name="1p1" N="0.00753879" Z="0.00109661"/>
+		</state>
+		<state J="3/2" P="-" T="3/2" E="-347.571" dE="2.84217e-13" name="3/2-(10)" Ex="4.592">
+			<wavefunction Jz="1/2" Tz="3/2" file="35S_fsu9_M1T3-.HH.EE" id="49"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99699" Z="3.99766"/>
+			<occupation name="0p1" N="1.9985" Z="1.99314"/>
+			<occupation name="0d5" N="5.81581" Z="5.58328"/>
+			<occupation name="0d3" N="2.62173" Z="1.34291"/>
+			<occupation name="1s1" N="1.67642" Z="0.987275"/>
+			<occupation name="0f7" N="0.3403" Z="0.0695232"/>
+			<occupation name="0f5" N="0.0315336" Z="0.00464946"/>
+			<occupation name="1p3" N="0.46567" Z="0.0149876"/>
+			<occupation name="1p1" N="0.0530389" Z="0.0065816"/>
+		</state>
+	</system>
+</cosmo>

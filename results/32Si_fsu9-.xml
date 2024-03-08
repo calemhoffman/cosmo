@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cosmo version="4.1" date="Feb/25/2024">
+	<valencespace name="spsdpf">
+		<core name="0n" N="0" Z="0"/>
+		<orbital name="0s1" n="0" l="0" j="1/2" type="pn" index="1"/>
+		<orbital name="0p3" n="0" l="1" j="3/2" type="pn" index="2"/>
+		<orbital name="0p1" n="0" l="1" j="1/2" type="pn" index="3"/>
+		<orbital name="0d5" n="0" l="2" j="5/2" type="pn" index="4"/>
+		<orbital name="0d3" n="0" l="2" j="3/2" type="pn" index="5"/>
+		<orbital name="1s1" n="1" l="0" j="1/2" type="pn" index="6"/>
+		<orbital name="0f7" n="0" l="3" j="7/2" type="pn" index="7"/>
+		<orbital name="0f5" n="0" l="3" j="5/2" type="pn" index="8"/>
+		<orbital name="1p3" n="1" l="1" j="3/2" type="pn" index="9"/>
+		<orbital name="1p1" n="1" l="1" j="1/2" type="pn" index="10"/>
+		<outercore name="80Zr" N="40" Z="40"/>
+	</valencespace>
+	<hamiltonian name="fsu9" valencespace="spsdpf">
+		<file format="ascii">
+			<name>spsdpfpb.int</name>
+			<comment>Unchanged from WBP</comment>
+		</file>
+		<file format="ascii">
+			<name>fsu9/spsdfp-fsu9.int</name>
+			<formulascale rank="2">(18/A)^0.3</formulascale>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p1sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p3sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>0s0f1p0.int</name>
+		</file>
+		<file format="ascii">
+			<name>spsdpfcm.int</name>
+			<scale rank="1">10.000000</scale>
+			<scale rank="2">10.000000</scale>
+			<comment>Center-of-mass</comment>
+		</file>
+		<comment>Interaction fitted to particle-hole excitations</comment>
+		<reference doi="10.1103/PhysRevResearch.2.043342">R. S. Lubna, et al.  Phys. Rev. Research 2, 043342 (2020)</reference>
+		<reference>R. S. Lubna, et al. Phys. Rev. C 100, 034308 (2019)</reference>
+		<reference>R. S. Lubna, Ph.D. thesis, Florida State University (2019)</reference>
+	</hamiltonian>
+	<system Av="32" Nv="18" Zv="14" A="32" Tz="2" Jz="0" P="-" name="32Si_fsu9_M0T4-">
+		<hwrejection HWMAX="1" HWMIN="1"/>
+		<?ManyBodyStates name="32Si_fsu9_M0T4-.mbs" size="580960" creator="sysmbsOMP"?>
+		<matrix name="32Si_fsu9_M0T4-.HH" format="pp"/>
+		<state J="3" P="-" T="2" E="-310.031" dE="5.55872e-10" name="3-(1)" Ex="0">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="0"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99719" Z="3.99494"/>
+			<occupation name="0p1" N="1.99972" Z="1.9939"/>
+			<occupation name="0d5" N="5.7365" Z="5.0195"/>
+			<occupation name="0d3" N="2.08748" Z="0.330293"/>
+			<occupation name="1s1" N="1.29413" Z="0.560604"/>
+			<occupation name="0f7" N="0.715332" Z="0.0740288"/>
+			<occupation name="0f5" N="0.06843" Z="0.0140251"/>
+			<occupation name="1p3" N="0.0917909" Z="0.00772047"/>
+			<occupation name="1p1" N="0.00943649" Z="0.00498754"/>
+		</state>
+		<state J="2" P="-" T="2" E="-309.683" dE="1.2858e-10" name="2-(1)" Ex="0.348">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="1"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9981" Z="3.99594"/>
+			<occupation name="0p1" N="1.99992" Z="1.99706"/>
+			<occupation name="0d5" N="5.60741" Z="4.84298"/>
+			<occupation name="0d3" N="1.83872" Z="0.417563"/>
+			<occupation name="1s1" N="1.58302" Z="0.728296"/>
+			<occupation name="0f7" N="0.914688" Z="0.0142352"/>
+			<occupation name="0f5" N="0.026769" Z="0.00258069"/>
+			<occupation name="1p3" N="0.0263931" Z="0.000713079"/>
+			<occupation name="1p1" N="0.00498738" Z="0.0006409"/>
+		</state>
+		<state J="5" P="-" T="2" E="-309.566" dE="2.70581e-08" name="5-(1)" Ex="0.465">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="2"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.99956"/>
+			<occupation name="0p1" N="2" Z="1.99985"/>
+			<occupation name="0d5" N="5.75774" Z="4.99251"/>
+			<occupation name="0d3" N="1.7138" Z="0.370765"/>
+			<occupation name="1s1" N="1.56775" Z="0.598698"/>
+			<occupation name="0f7" N="0.919484" Z="0.0280755"/>
+			<occupation name="0f5" N="0.0306511" Z="0.0101474"/>
+			<occupation name="1p3" N="0.0099478" Z="0.000216832"/>
+			<occupation name="1p1" N="0.00067004" Z="0.000172545"/>
+		</state>
+		<state J="1" P="-" T="2" E="-309.487" dE="6.88942e-11" name="1-(1)" Ex="0.544">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="3"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99895" Z="3.99768"/>
+			<occupation name="0p1" N="1.99726" Z="1.98856"/>
+			<occupation name="0d5" N="5.60873" Z="4.8846"/>
+			<occupation name="0d3" N="1.77269" Z="0.360875"/>
+			<occupation name="1s1" N="1.65912" Z="0.749079"/>
+			<occupation name="0f7" N="0.160059" Z="0.00220734"/>
+			<occupation name="0f5" N="0.00669345" Z="0.00127812"/>
+			<occupation name="1p3" N="0.76639" Z="0.0128389"/>
+			<occupation name="1p1" N="0.0301038" Z="0.00288067"/>
+		</state>
+		<state J="3" P="-" T="2" E="-309.277" dE="5.45845e-08" name="3-(2)" Ex="0.754">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="4"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99843" Z="3.99753"/>
+			<occupation name="0p1" N="1.99988" Z="1.997"/>
+			<occupation name="0d5" N="5.71971" Z="5.01869"/>
+			<occupation name="0d3" N="1.92201" Z="0.374242"/>
+			<occupation name="1s1" N="1.42161" Z="0.558071"/>
+			<occupation name="0f7" N="0.816255" Z="0.0438376"/>
+			<occupation name="0f5" N="0.0465021" Z="0.00709986"/>
+			<occupation name="1p3" N="0.0727401" Z="0.00247555"/>
+			<occupation name="1p1" N="0.00286405" Z="0.00105895"/>
+		</state>
+		<state J="3" P="-" T="2" E="-308.862" dE="4.502e-11" name="3-(3)" Ex="1.169">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="5"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99965" Z="3.99881"/>
+			<occupation name="0p1" N="1.99995" Z="1.99892"/>
+			<occupation name="0d5" N="5.73079" Z="4.94401"/>
+			<occupation name="0d3" N="1.67494" Z="0.348496"/>
+			<occupation name="1s1" N="1.63033" Z="0.676771"/>
+			<occupation name="0f7" N="0.260865" Z="0.013333"/>
+			<occupation name="0f5" N="0.0185318" Z="0.00288253"/>
+			<occupation name="1p3" N="0.668952" Z="0.0112604"/>
+			<occupation name="1p1" N="0.0159901" Z="0.00551127"/>
+		</state>
+		<state J="0" P="-" T="2" E="-308.802" dE="3.19509e-08" name="0-(1)" Ex="1.229">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="6"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99978" Z="3.99918"/>
+			<occupation name="0p1" N="1.99994" Z="1.9841"/>
+			<occupation name="0d5" N="5.65823" Z="4.87965"/>
+			<occupation name="0d3" N="1.66369" Z="0.369065"/>
+			<occupation name="1s1" N="1.69822" Z="0.765155"/>
+			<occupation name="0f7" N="0.0657941" Z="0.00141523"/>
+			<occupation name="0f5" N="0.010032" Z="0.000390159"/>
+			<occupation name="1p3" N="0.897268" Z="0.000713705"/>
+			<occupation name="1p1" N="0.00705045" Z="0.000330693"/>
+		</state>
+		<state J="4" P="-" T="2" E="-308.575" dE="3.24576e-10" name="4-(1)" Ex="1.456">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="7"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99987" Z="3.9991"/>
+			<occupation name="0p1" N="1.99998" Z="1.9994"/>
+			<occupation name="0d5" N="5.65464" Z="5.02948"/>
+			<occupation name="0d3" N="2.02432" Z="0.372733"/>
+			<occupation name="1s1" N="1.34389" Z="0.578227"/>
+			<occupation name="0f7" N="0.87243" Z="0.0167044"/>
+			<occupation name="0f5" N="0.0323811" Z="0.00396383"/>
+			<occupation name="1p3" N="0.0713883" Z="0.000294455"/>
+			<occupation name="1p1" N="0.00109603" Z="9.43841e-05"/>
+		</state>
+		<state J="4" P="-" T="2" E="-308.523" dE="1.41142e-10" name="4-(2)" Ex="1.508">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="8"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9997" Z="3.9974"/>
+			<occupation name="0p1" N="1.99992" Z="1.99778"/>
+			<occupation name="0d5" N="5.7513" Z="4.95866"/>
+			<occupation name="0d3" N="2.16782" Z="0.329629"/>
+			<occupation name="1s1" N="1.1875" Z="0.615493"/>
+			<occupation name="0f7" N="0.736534" Z="0.0757396"/>
+			<occupation name="0f5" N="0.0646706" Z="0.0150787"/>
+			<occupation name="1p3" N="0.0845625" Z="0.00602263"/>
+			<occupation name="1p1" N="0.0080014" Z="0.00419209"/>
+		</state>
+		<state J="1" P="-" T="2" E="-308.473" dE="5.18412e-11" name="1-(2)" Ex="1.558">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="9"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99803" Z="3.99226"/>
+			<occupation name="0p1" N="1.99909" Z="1.93015"/>
+			<occupation name="0d5" N="5.62885" Z="4.9958"/>
+			<occupation name="0d3" N="2.20026" Z="0.373149"/>
+			<occupation name="1s1" N="1.27814" Z="0.684715"/>
+			<occupation name="0f7" N="0.275635" Z="0.00948826"/>
+			<occupation name="0f5" N="0.0194254" Z="0.00401499"/>
+			<occupation name="1p3" N="0.556059" Z="0.0057417"/>
+			<occupation name="1p1" N="0.044498" Z="0.00467414"/>
+		</state>
+		<state J="2" P="-" T="2" E="-308.323" dE="2.67164e-11" name="2-(2)" Ex="1.708">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="10"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99928" Z="3.99816"/>
+			<occupation name="0p1" N="1.99922" Z="1.99453"/>
+			<occupation name="0d5" N="5.61034" Z="4.90411"/>
+			<occupation name="0d3" N="1.98042" Z="0.354355"/>
+			<occupation name="1s1" N="1.43766" Z="0.730722"/>
+			<occupation name="0f7" N="0.234553" Z="0.00870189"/>
+			<occupation name="0f5" N="0.00992874" Z="0.00191311"/>
+			<occupation name="1p3" N="0.703165" Z="0.00441831"/>
+			<occupation name="1p1" N="0.0254247" Z="0.00308649"/>
+		</state>
+		<state J="1" P="-" T="2" E="-308.234" dE="6.59384e-12" name="1-(3)" Ex="1.797">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="11"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99004" Z="3.98603"/>
+			<occupation name="0p1" N="1.99669" Z="1.90575"/>
+			<occupation name="0d5" N="5.72228" Z="5.11251"/>
+			<occupation name="0d3" N="2.1341" Z="0.29627"/>
+			<occupation name="1s1" N="1.34893" Z="0.628875"/>
+			<occupation name="0f7" N="0.621401" Z="0.0509271"/>
+			<occupation name="0f5" N="0.0770976" Z="0.00981342"/>
+			<occupation name="1p3" N="0.0863058" Z="0.00731919"/>
+			<occupation name="1p1" N="0.0231464" Z="0.00250216"/>
+		</state>
+		<state J="4" P="-" T="2" E="-308.19" dE="1.194e-09" name="4-(3)" Ex="1.841">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="12"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99992" Z="3.99957"/>
+			<occupation name="0p1" N="1.99999" Z="1.99978"/>
+			<occupation name="0d5" N="5.60089" Z="4.97563"/>
+			<occupation name="0d3" N="2.18979" Z="0.415473"/>
+			<occupation name="1s1" N="1.22021" Z="0.59949"/>
+			<occupation name="0f7" N="0.898358" Z="0.00693573"/>
+			<occupation name="0f5" N="0.026803" Z="0.00237674"/>
+			<occupation name="1p3" N="0.0624292" Z="0.0004993"/>
+			<occupation name="1p1" N="0.00160797" Z="0.000246081"/>
+		</state>
+		<state J="3" P="-" T="2" E="-308.032" dE="4.02451e-11" name="3-(4)" Ex="1.999">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="13"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99806" Z="3.99644"/>
+			<occupation name="0p1" N="1.99928" Z="1.98366"/>
+			<occupation name="0d5" N="5.65237" Z="4.9292"/>
+			<occupation name="0d3" N="2.29414" Z="0.344002"/>
+			<occupation name="1s1" N="1.14696" Z="0.678429"/>
+			<occupation name="0f7" N="0.554257" Z="0.0422908"/>
+			<occupation name="0f5" N="0.0367467" Z="0.00900624"/>
+			<occupation name="1p3" N="0.30214" Z="0.0108523"/>
+			<occupation name="1p1" N="0.0160405" Z="0.00611292"/>
+		</state>
+		<state J="5" P="-" T="2" E="-307.974" dE="3.43146e-08" name="5-(2)" Ex="2.057">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="14"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99889" Z="3.99648"/>
+			<occupation name="0p1" N="1.99991" Z="1.99553"/>
+			<occupation name="0d5" N="5.6872" Z="4.9661"/>
+			<occupation name="0d3" N="2.14083" Z="0.321968"/>
+			<occupation name="1s1" N="1.24156" Z="0.660704"/>
+			<occupation name="0f7" N="0.831463" Z="0.0401714"/>
+			<occupation name="0f5" N="0.0424096" Z="0.0140439"/>
+			<occupation name="1p3" N="0.0507702" Z="0.00271094"/>
+			<occupation name="1p1" N="0.00696241" Z="0.0022858"/>
+		</state>
+		<state J="2" P="-" T="2" E="-307.95" dE="2.85922e-11" name="2-(3)" Ex="2.081">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="15"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99878" Z="3.99855"/>
+			<occupation name="0p1" N="1.99842" Z="1.99594"/>
+			<occupation name="0d5" N="5.6208" Z="4.97781"/>
+			<occupation name="0d3" N="2.14154" Z="0.361247"/>
+			<occupation name="1s1" N="1.2584" Z="0.65683"/>
+			<occupation name="0f7" N="0.281619" Z="0.00471169"/>
+			<occupation name="0f5" N="0.0151386" Z="0.000749298"/>
+			<occupation name="1p3" N="0.651434" Z="0.00320365"/>
+			<occupation name="1p1" N="0.0338766" Z="0.000952026"/>
+		</state>
+		<state J="1" P="-" T="2" E="-307.631" dE="3.45381e-10" name="1-(4)" Ex="2.4">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="16"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99693" Z="3.9921"/>
+			<occupation name="0p1" N="1.97848" Z="1.94167"/>
+			<occupation name="0d5" N="5.65153" Z="4.99794"/>
+			<occupation name="0d3" N="2.0325" Z="0.33526"/>
+			<occupation name="1s1" N="1.49854" Z="0.665887"/>
+			<occupation name="0f7" N="0.151239" Z="0.0227062"/>
+			<occupation name="0f5" N="0.0223527" Z="0.00260609"/>
+			<occupation name="1p3" N="0.314497" Z="0.0393485"/>
+			<occupation name="1p1" N="0.353939" Z="0.00248373"/>
+		</state>
+		<state J="2" P="-" T="2" E="-307.444" dE="5.34328e-11" name="2-(4)" Ex="2.587">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="17"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9987" Z="3.99389"/>
+			<occupation name="0p1" N="1.99623" Z="1.96765"/>
+			<occupation name="0d5" N="5.64337" Z="4.91407"/>
+			<occupation name="0d3" N="2.20637" Z="0.373502"/>
+			<occupation name="1s1" N="1.24967" Z="0.700085"/>
+			<occupation name="0f7" N="0.387958" Z="0.0250361"/>
+			<occupation name="0f5" N="0.0309233" Z="0.00381787"/>
+			<occupation name="1p3" N="0.428385" Z="0.0153703"/>
+			<occupation name="1p1" N="0.0583988" Z="0.00657881"/>
+		</state>
+		<state J="3" P="-" T="2" E="-307.405" dE="5.91626e-10" name="3-(5)" Ex="2.626">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="18"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99903" Z="3.99751"/>
+			<occupation name="0p1" N="1.99963" Z="1.99123"/>
+			<occupation name="0d5" N="5.56019" Z="4.82427"/>
+			<occupation name="0d3" N="2.23767" Z="0.379968"/>
+			<occupation name="1s1" N="1.23611" Z="0.786981"/>
+			<occupation name="0f7" N="0.546091" Z="0.0119797"/>
+			<occupation name="0f5" N="0.0197184" Z="0.0024995"/>
+			<occupation name="1p3" N="0.383812" Z="0.00393957"/>
+			<occupation name="1p1" N="0.0177458" Z="0.00162065"/>
+		</state>
+		<state J="6" P="-" T="2" E="-307.349" dE="2.04466e-10" name="6-(1)" Ex="2.682">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="19"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99998" Z="3.99977"/>
+			<occupation name="0p1" N="2" Z="1.99992"/>
+			<occupation name="0d5" N="5.69038" Z="4.87416"/>
+			<occupation name="0d3" N="2.01154" Z="0.363163"/>
+			<occupation name="1s1" N="1.33145" Z="0.729967"/>
+			<occupation name="0f7" N="0.915941" Z="0.0234203"/>
+			<occupation name="0f5" N="0.0324834" Z="0.00925618"/>
+			<occupation name="1p3" N="0.0175886" Z="0.000202297"/>
+			<occupation name="1p1" N="0.000645261" Z="0.000135342"/>
+		</state>
+		<state J="1" P="-" T="2" E="-307.259" dE="9.07733e-10" name="1-(5)" Ex="2.772">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="20"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99367" Z="3.98392"/>
+			<occupation name="0p1" N="1.99573" Z="1.87611"/>
+			<occupation name="0d5" N="5.70659" Z="5.09688"/>
+			<occupation name="0d3" N="2.07357" Z="0.32882"/>
+			<occupation name="1s1" N="1.4509" Z="0.644396"/>
+			<occupation name="0f7" N="0.339315" Z="0.0488885"/>
+			<occupation name="0f5" N="0.0924911" Z="0.0106002"/>
+			<occupation name="1p3" N="0.281398" Z="0.00688283"/>
+			<occupation name="1p1" N="0.0663398" Z="0.00350911"/>
+		</state>
+		<state J="2" P="-" T="2" E="-307.235" dE="1.48589e-10" name="2-(5)" Ex="2.796">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="21"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99937" Z="3.99714"/>
+			<occupation name="0p1" N="1.9995" Z="1.97755"/>
+			<occupation name="0d5" N="5.46449" Z="4.7909"/>
+			<occupation name="0d3" N="2.05816" Z="0.411525"/>
+			<occupation name="1s1" N="1.52402" Z="0.803772"/>
+			<occupation name="0f7" N="0.269279" Z="0.0103065"/>
+			<occupation name="0f5" N="0.035949" Z="0.00219769"/>
+			<occupation name="1p3" N="0.561778" Z="0.00409294"/>
+			<occupation name="1p1" N="0.0874455" Z="0.00251819"/>
+		</state>
+		<state J="4" P="-" T="2" E="-307.043" dE="5.80371e-11" name="4-(4)" Ex="2.988">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="22"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99924" Z="3.99803"/>
+			<occupation name="0p1" N="1.99993" Z="1.99864"/>
+			<occupation name="0d5" N="5.54327" Z="4.73388"/>
+			<occupation name="0d3" N="2.16583" Z="0.435611"/>
+			<occupation name="1s1" N="1.31543" Z="0.814311"/>
+			<occupation name="0f7" N="0.819257" Z="0.0146673"/>
+			<occupation name="0f5" N="0.0304527" Z="0.003543"/>
+			<occupation name="1p3" N="0.121975" Z="0.000669873"/>
+			<occupation name="1p1" N="0.00461922" Z="0.000650618"/>
+		</state>
+		<state J="3" P="-" T="2" E="-307.029" dE="1.27841e-10" name="3-(6)" Ex="3.002">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="23"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99777" Z="3.99599"/>
+			<occupation name="0p1" N="1.99962" Z="1.98883"/>
+			<occupation name="0d5" N="5.43675" Z="4.89518"/>
+			<occupation name="0d3" N="2.12597" Z="0.391515"/>
+			<occupation name="1s1" N="1.51391" Z="0.672247"/>
+			<occupation name="0f7" N="0.627965" Z="0.0395611"/>
+			<occupation name="0f5" N="0.051716" Z="0.0061827"/>
+			<occupation name="1p3" N="0.231359" Z="0.00684873"/>
+			<occupation name="1p1" N="0.0149341" Z="0.00364628"/>
+		</state>
+		<state J="5" P="-" T="2" E="-306.969" dE="1.55728e-07" name="5-(3)" Ex="3.062">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="24"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.99975"/>
+			<occupation name="0p1" N="1.99999" Z="1.99969"/>
+			<occupation name="0d5" N="5.50317" Z="4.88792"/>
+			<occupation name="0d3" N="2.3991" Z="0.431909"/>
+			<occupation name="1s1" N="1.11133" Z="0.6678"/>
+			<occupation name="0f7" N="0.942371" Z="0.00707607"/>
+			<occupation name="0f5" N="0.0263028" Z="0.00498696"/>
+			<occupation name="1p3" N="0.0165609" Z="0.000530823"/>
+			<occupation name="1p1" N="0.00121721" Z="0.000341578"/>
+		</state>
+		<state J="3" P="-" T="2" E="-306.943" dE="5.5212e-10" name="3-(7)" Ex="3.088">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="25"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99866" Z="3.99652"/>
+			<occupation name="0p1" N="1.99952" Z="1.97794"/>
+			<occupation name="0d5" N="5.36703" Z="4.71862"/>
+			<occupation name="0d3" N="2.1878" Z="0.424948"/>
+			<occupation name="1s1" N="1.49983" Z="0.85649"/>
+			<occupation name="0f7" N="0.361039" Z="0.0166582"/>
+			<occupation name="0f5" N="0.0343606" Z="0.00345018"/>
+			<occupation name="1p3" N="0.517894" Z="0.0030376"/>
+			<occupation name="1p1" N="0.0338676" Z="0.00233127"/>
+		</state>
+		<state J="2" P="-" T="2" E="-306.82" dE="1.20622e-10" name="2-(6)" Ex="3.211">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="26"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99828" Z="3.99589"/>
+			<occupation name="0p1" N="1.9929" Z="1.95968"/>
+			<occupation name="0d5" N="5.67217" Z="4.97734"/>
+			<occupation name="0d3" N="1.85025" Z="0.351295"/>
+			<occupation name="1s1" N="1.58566" Z="0.66978"/>
+			<occupation name="0f7" N="0.123626" Z="0.0262455"/>
+			<occupation name="0f5" N="0.0819091" Z="0.00274797"/>
+			<occupation name="1p3" N="0.178274" Z="0.0149426"/>
+			<occupation name="1p1" N="0.51693" Z="0.00207819"/>
+		</state>
+		<state J="4" P="-" T="2" E="-306.795" dE="4.19504e-11" name="4-(5)" Ex="3.236">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="27"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99984" Z="3.9989"/>
+			<occupation name="0p1" N="1.99995" Z="1.99906"/>
+			<occupation name="0d5" N="5.56088" Z="4.83752"/>
+			<occupation name="0d3" N="2.08421" Z="0.355418"/>
+			<occupation name="1s1" N="1.41304" Z="0.753429"/>
+			<occupation name="0f7" N="0.516204" Z="0.0395784"/>
+			<occupation name="0f5" N="0.127459" Z="0.00706323"/>
+			<occupation name="1p3" N="0.28708" Z="0.00508429"/>
+			<occupation name="1p1" N="0.0113333" Z="0.00394882"/>
+		</state>
+		<state J="0" P="-" T="2" E="-306.732" dE="1.81282e-07" name="0-(2)" Ex="3.299">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="28"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99011" Z="3.96915"/>
+			<occupation name="0p1" N="1.99371" Z="1.56134"/>
+			<occupation name="0d5" N="5.6652" Z="5.10842"/>
+			<occupation name="0d3" N="2.26634" Z="0.35574"/>
+			<occupation name="1s1" N="1.63443" Z="0.94125"/>
+			<occupation name="0f7" N="0.266965" Z="0.0412605"/>
+			<occupation name="0f5" N="0.0584624" Z="0.0157802"/>
+			<occupation name="1p3" N="0.033433" Z="0.00341359"/>
+			<occupation name="1p1" N="0.0913512" Z="0.00364737"/>
+		</state>
+		<state J="1" P="-" T="2" E="-306.71" dE="4.08886e-09" name="1-(6)" Ex="3.321">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="29"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99853" Z="3.99201"/>
+			<occupation name="0p1" N="1.9694" Z="1.96785"/>
+			<occupation name="0d5" N="5.61867" Z="5.0954"/>
+			<occupation name="0d3" N="2.0021" Z="0.343876"/>
+			<occupation name="1s1" N="1.51866" Z="0.565691"/>
+			<occupation name="0f7" N="0.15563" Z="0.0137062"/>
+			<occupation name="0f5" N="0.0353471" Z="0.0019933"/>
+			<occupation name="1p3" N="0.286398" Z="0.0182882"/>
+			<occupation name="1p1" N="0.415254" Z="0.0011801"/>
+		</state>
+		<state J="3" P="-" T="2" E="-306.654" dE="2.97234e-10" name="3-(8)" Ex="3.377">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="30"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99694" Z="3.99453"/>
+			<occupation name="0p1" N="1.99954" Z="1.98983"/>
+			<occupation name="0d5" N="5.39324" Z="4.79215"/>
+			<occupation name="0d3" N="2.25219" Z="0.374079"/>
+			<occupation name="1s1" N="1.50037" Z="0.726301"/>
+			<occupation name="0f7" N="0.434312" Z="0.103207"/>
+			<occupation name="0f5" N="0.0658268" Z="0.0130373"/>
+			<occupation name="1p3" N="0.349897" Z="0.0038259"/>
+			<occupation name="1p1" N="0.00769256" Z="0.0030367"/>
+		</state>
+		<state J="2" P="-" T="2" E="-306.646" dE="1.08493e-07" name="2-(7)" Ex="3.385">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="31"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99774" Z="3.9975"/>
+			<occupation name="0p1" N="1.99914" Z="1.99477"/>
+			<occupation name="0d5" N="5.55312" Z="4.89414"/>
+			<occupation name="0d3" N="2.06792" Z="0.377888"/>
+			<occupation name="1s1" N="1.43285" Z="0.695793"/>
+			<occupation name="0f7" N="0.460931" Z="0.0276407"/>
+			<occupation name="0f5" N="0.0742641" Z="0.00385742"/>
+			<occupation name="1p3" N="0.35601" Z="0.00576651"/>
+			<occupation name="1p1" N="0.0580325" Z="0.00264266"/>
+		</state>
+		<state J="4" P="-" T="2" E="-306.514" dE="5.23426e-08" name="4-(6)" Ex="3.517">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="32"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99992" Z="3.99911"/>
+			<occupation name="0p1" N="1.99992" Z="1.99862"/>
+			<occupation name="0d5" N="5.51952" Z="4.7636"/>
+			<occupation name="0d3" N="2.05408" Z="0.40195"/>
+			<occupation name="1s1" N="1.4607" Z="0.805023"/>
+			<occupation name="0f7" N="0.485306" Z="0.0187933"/>
+			<occupation name="0f5" N="0.0229762" Z="0.00359692"/>
+			<occupation name="1p3" N="0.447591" Z="0.00603373"/>
+			<occupation name="1p1" N="0.00999472" Z="0.00327267"/>
+		</state>
+		<state J="5" P="-" T="2" E="-306.437" dE="1.76215e-11" name="5-(4)" Ex="3.594">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="33"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99992" Z="3.99937"/>
+			<occupation name="0p1" N="1.99997" Z="1.99943"/>
+			<occupation name="0d5" N="5.51197" Z="4.76495"/>
+			<occupation name="0d3" N="2.16861" Z="0.422351"/>
+			<occupation name="1s1" N="1.35144" Z="0.783289"/>
+			<occupation name="0f7" N="0.861202" Z="0.0247502"/>
+			<occupation name="0f5" N="0.0323962" Z="0.00444944"/>
+			<occupation name="1p3" N="0.0728375" Z="0.000880683"/>
+			<occupation name="1p1" N="0.00165217" Z="0.000523959"/>
+		</state>
+		<state J="2" P="-" T="2" E="-306.352" dE="1.56486e-07" name="2-(8)" Ex="3.679">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="34"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99725" Z="3.99532"/>
+			<occupation name="0p1" N="1.99275" Z="1.95009"/>
+			<occupation name="0d5" N="5.62496" Z="4.9869"/>
+			<occupation name="0d3" N="2.37542" Z="0.416809"/>
+			<occupation name="1s1" N="1.1266" Z="0.598497"/>
+			<occupation name="0f7" N="0.546106" Z="0.0388201"/>
+			<occupation name="0f5" N="0.0630351" Z="0.00618136"/>
+			<occupation name="1p3" N="0.223062" Z="0.00493754"/>
+			<occupation name="1p1" N="0.0508196" Z="0.00244708"/>
+		</state>
+		<state J="1" P="-" T="2" E="-306.213" dE="1.9611e-10" name="1-(7)" Ex="3.818">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="35"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99581" Z="3.98052"/>
+			<occupation name="0p1" N="1.99183" Z="1.85841"/>
+			<occupation name="0d5" N="5.63105" Z="5.00918"/>
+			<occupation name="0d3" N="2.12422" Z="0.414038"/>
+			<occupation name="1s1" N="1.47998" Z="0.688379"/>
+			<occupation name="0f7" N="0.173797" Z="0.0234504"/>
+			<occupation name="0f5" N="0.152902" Z="0.00971986"/>
+			<occupation name="1p3" N="0.200447" Z="0.0140662"/>
+			<occupation name="1p1" N="0.249964" Z="0.00223168"/>
+		</state>
+		<state J="3" P="-" T="2" E="-306.175" dE="9.73159e-11" name="3-(9)" Ex="3.856">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="36"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99945" Z="3.99668"/>
+			<occupation name="0p1" N="1.9995" Z="1.97975"/>
+			<occupation name="0d5" N="5.58052" Z="4.89701"/>
+			<occupation name="0d3" N="2.3079" Z="0.383262"/>
+			<occupation name="1s1" N="1.18961" Z="0.690925"/>
+			<occupation name="0f7" N="0.454714" Z="0.0379064"/>
+			<occupation name="0f5" N="0.0855577" Z="0.00476754"/>
+			<occupation name="1p3" N="0.287425" Z="0.00613482"/>
+			<occupation name="1p1" N="0.0953184" Z="0.00356295"/>
+		</state>
+		<state J="2" P="-" T="2" E="-306.019" dE="1.47224e-11" name="2-(9)" Ex="4.012">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="37"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99495" Z="3.99033"/>
+			<occupation name="0p1" N="1.99805" Z="1.93137"/>
+			<occupation name="0d5" N="5.6231" Z="4.91122"/>
+			<occupation name="0d3" N="2.07676" Z="0.345281"/>
+			<occupation name="1s1" N="1.45378" Z="0.760458"/>
+			<occupation name="0f7" N="0.297319" Z="0.0406793"/>
+			<occupation name="0f5" N="0.175316" Z="0.00671497"/>
+			<occupation name="1p3" N="0.182225" Z="0.0123001"/>
+			<occupation name="1p1" N="0.198496" Z="0.00164669"/>
+		</state>
+		<state J="4" P="-" T="2" E="-305.956" dE="7.63464e-10" name="4-(7)" Ex="4.075">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="38"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99989" Z="3.99662"/>
+			<occupation name="0p1" N="1.99984" Z="1.9986"/>
+			<occupation name="0d5" N="5.56442" Z="4.80034"/>
+			<occupation name="0d3" N="1.87397" Z="0.422826"/>
+			<occupation name="1s1" N="1.61931" Z="0.729227"/>
+			<occupation name="0f7" N="0.446636" Z="0.0419017"/>
+			<occupation name="0f5" N="0.290323" Z="0.00612649"/>
+			<occupation name="1p3" N="0.196958" Z="0.00256693"/>
+			<occupation name="1p1" N="0.00865255" Z="0.00178742"/>
+		</state>
+		<state J="5" P="-" T="2" E="-305.94" dE="3.26395e-10" name="5-(5)" Ex="4.091">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="39"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99869" Z="3.99758"/>
+			<occupation name="0p1" N="1.99994" Z="1.99651"/>
+			<occupation name="0d5" N="5.45348" Z="4.5967"/>
+			<occupation name="0d3" N="1.90286" Z="0.499702"/>
+			<occupation name="1s1" N="1.68345" Z="0.878363"/>
+			<occupation name="0f7" N="0.817624" Z="0.0221017"/>
+			<occupation name="0f5" N="0.0273414" Z="0.00668612"/>
+			<occupation name="1p3" N="0.113405" Z="0.00155125"/>
+			<occupation name="1p1" N="0.00320219" Z="0.000813566"/>
+		</state>
+	</system>
+</cosmo>
