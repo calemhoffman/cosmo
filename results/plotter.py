@@ -1,12 +1,19 @@
 #%%
 import pandas as pd
 import plotly.graph_objects as go
-
+cool_colors = [
+    '#003f5c',  # dark blue
+    '#444e86',  # dark purple
+    '#955196',  # purple
+    '#dd5182',  # pink
+    '#ff6e54',  # orange
+    '#ffa600'   # yellow
+]
 #%%
 # Open the text file for reading
-# filein = '35S_34S_neg.txt'
-filein = '32Si_31Si_neg.txt'
-oddeven = 0# - if parent is event
+filein = '35S_34S_neg.txt'
+# filein = '32Si_31Si_neg.txt'
+oddeven = 1# - if parent is event
 with open(filein, 'r') as file:
     lines = file.readlines()
 data = []
@@ -56,7 +63,7 @@ df.dtypes
 # %%
 #calculate other things for dataframe
 df['G'] = (2.*df['Jf']+1.)/(2.*df['Ji']+1)*df['C2S']
-df = df[(df['Exd']==0) & (df['C2S']>0.05)]
+df = df[(df['Exd']==0) & (df['C2S']>0.01)]
 df[:20]
 # %%
 print(df[df['orbital']=='1p3/2'].G.sum())
@@ -67,16 +74,23 @@ print(df[df['orbital']=='0f5/2'].G.sum())
 # %%
 orb=['0f7/2','1p3/2','1p1/2','0f5/2']
 # Assuming df is your DataFrame
-
 fig = go.Figure()
-
 for i in range(len(orb)):
-    df
-    fig.add_trace(go.Scatter(x=df[df['orbital']==orb[i]].Exp, y=df[df['orbital']==orb[i]].G,
-                            mode='markers',#marker_color=df['Jf'],
-                             #marker_symbol=df['L'],
-                             name=orb[i]))
 
+    fig.add_trace(go.Bar(
+        x=df[df['orbital']==orb[i]].Exp,
+        y=df[df['orbital']==orb[i]].C2S,
+        marker_color=cool_colors[i+2],  # Set the color of the bars
+        marker_line_width=0,width=0.05,opacity=0.8,
+        text=df[df['orbital']==orb[i]].Jf.astype(str),
+        name=orb[i]
+    ))
+fig.update_layout(
+    title=filein,
+    xaxis_title='Ex',
+    yaxis_title='C2S',
+    barmode='stack'  # Stack the bars
+)
 fig.show()
 # %%
 # #%%
@@ -97,3 +111,4 @@ fig.show()
 # df['Ji'] = df['Ji']/2.
 # 
 # df
+# %%
