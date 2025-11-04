@@ -4,17 +4,17 @@ import pandas as pd
 
 # --- Paste your XML snippets here ---
 ground_xml = """
-<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4+.HH.EE" id="0"/>
-<occupation name="0s1" N="2" Z="2"/>
-<occupation name="0p3" N="4" Z="4"/>
-<occupation name="0p1" N="2" Z="2"/>
-<occupation name="0d5" N="5.84229" Z="5.34877"/>
-<occupation name="0d3" N="2.54558" Z="0.22045"/>
-<occupation name="1s1" N="1.61213" Z="0.430779"/>
-<occupation name="0f7" N="0" Z="0"/>
-<occupation name="0f5" N="0" Z="0"/>
-<occupation name="1p3" N="0" Z="0"/>
-<occupation name="1p1" N="0" Z="0"/>
+			<wavefunction Jz="0" Tz="1" file="34S_fsu9_M0T2-.HH.EE" id="0"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99706" Z="3.99471"/>
+			<occupation name="0p1" N="1.99902" Z="1.99798"/>
+			<occupation name="0d5" N="5.69887" Z="5.5489"/>
+			<occupation name="0d3" N="2.16394" Z="0.71271"/>
+			<occupation name="1s1" N="1.54398" Z="1.35405"/>
+			<occupation name="0f7" N="0.424778" Z="0.325231"/>
+			<occupation name="0f5" N="0.0609114" Z="0.0369255"/>
+			<occupation name="1p3" N="0.100295" Z="0.0210039"/>
+			<occupation name="1p1" N="0.0111459" Z="0.00848074"/>
 """
 
 # excited_xml = """
@@ -45,17 +45,17 @@ ground_xml = """
 # 			<occupation name="1p1" N="0" Z="0"/>
 #   """
 excited_xml = """
-  <wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4+.HH.EE" id="6"/>
+			<wavefunction Jz="0" Tz="1" file="34S_fsu9_M0T2-.HH.EE" id="1"/>
 			<occupation name="0s1" N="2" Z="2"/>
-			<occupation name="0p3" N="4" Z="4"/>
-			<occupation name="0p1" N="2" Z="2"/>
-			<occupation name="0d5" N="5.81144" Z="4.75239"/>
-			<occupation name="0d3" N="2.33426" Z="0.384938"/>
-			<occupation name="1s1" N="1.8543" Z="0.862673"/>
-			<occupation name="0f7" N="0" Z="0"/>
-			<occupation name="0f5" N="0" Z="0"/>
-			<occupation name="1p3" N="0" Z="0"/>
-			<occupation name="1p1" N="0" Z="0"/>
+			<occupation name="0p3" N="3.99992" Z="3.99953"/>
+			<occupation name="0p1" N="1.99997" Z="1.99988"/>
+			<occupation name="0d5" N="5.72619" Z="5.47843"/>
+			<occupation name="0d3" N="1.68117" Z="1.03673"/>
+			<occupation name="1s1" N="1.66358" Z="1.41528"/>
+			<occupation name="0f7" N="0.86846" Z="0.0544657"/>
+			<occupation name="0f5" N="0.0268541" Z="0.013882"/>
+			<occupation name="1p3" N="0.0329054" Z="0.00123524"/>
+			<occupation name="1p1" N="0.000951104" Z="0.000561939"/>
 """
 # --- Parse occupations ---
 def parse_occupations(xml_text):
