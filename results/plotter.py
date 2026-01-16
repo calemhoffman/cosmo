@@ -89,6 +89,7 @@ fig.update_layout(
     title=filein,
     xaxis_title='Ex',
     yaxis_title='C2S',
+    yaxis=dict(range=[0, 6]),
     barmode='stack'  # Stack the bars
 )
 fig.show()
