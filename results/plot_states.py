@@ -95,7 +95,7 @@ def plot_energies(files):
     print(f"Plot saved to {output_file}")
 
 if __name__ == "__main__":
-    files = ['38Cl_fsu9+.xml', '38Cl_fsu9-.xml']
+    files = ['38Cl_fsu9+_merged.xml', '38Cl_fsu9-_merged.xml']
     # Ensure we are using absolute paths or relative to the script location if running from there
     # The user is in /Users/calemhoffman/Documents/GitHub/cosmo/results/ based on the file paths
     # I will assume the script is run from that directory or I should provide full paths.
