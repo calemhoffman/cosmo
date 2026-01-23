@@ -119,31 +119,56 @@ def renormalize_and_sort(states):
     return sorted_states
 
 
-def create_merged_xml(file1, file2, output_file, tolerance=0.001):
+def create_merged_xml(input_files, output_file, tolerance=0.001):
     """
-    Create merged XML file from two input files.
+    Create merged XML file from multiple input files.
     
     Args:
-        file1: Path to first XML file (priority for duplicates)
-        file2: Path to second XML file
+        input_files: List of paths to XML files
         output_file: Path for output merged file
         tolerance: Energy tolerance for duplicate detection (MeV)
     """
-    print(f"Merging {file1} + {file2} -> {output_file}")
+    if not input_files:
+        print("No input files provided.")
+        return
+
+    print(f"Merging {len(input_files)} files -> {output_file}")
     print(f"Energy tolerance: {tolerance} MeV\n")
     
-    # Parse both files
-    tree1, root1, system1, states1 = parse_states(file1)
-    tree2, root2, system2, states2 = parse_states(file2)
-    
-    print(f"File 1: {len(states1)} states")
-    print(f"File 2: {len(states2)} states")
-    print(f"\nDetecting duplicates...")
-    
-    # Merge states
-    merged_states = merge_states(states1, states2, tolerance)
-    
-    print(f"\nMerged: {len(merged_states)} unique states")
+    # Parse the first file for header and initial states
+    file1 = input_files[0]
+    tree1, root1, system1, merged_states = parse_states(file1)
+    print(f"Initial file: {file1} ({len(merged_states)} states)")
+
+    total_duplicates = 0
+
+    # Iteratively merge subsequent files
+    for file_next in input_files[1:]:
+        _, _, _, states_next = parse_states(file_next)
+        print(f"Merging {file_next} ({len(states_next)} states)...")
+        
+        duplicates_this_file = 0
+        for state_next in states_next:
+            is_duplicate = False
+            for state_merged in merged_states:
+                if are_duplicates(state_merged, state_next, tolerance):
+                    is_duplicate = True
+                    E_merged = float(state_merged.get('E'))
+                    E_next = float(state_next.get('E'))
+                    J_merged = state_merged.get('J')
+                    J_next = state_next.get('J')
+                    print(f"  Duplicate found: J={J_next}, E={E_next:.3f} MeV (matches J={J_merged}, E={E_merged:.3f} MeV)")
+                    duplicates_this_file += 1
+                    total_duplicates += 1
+                    break
+            
+            if not is_duplicate:
+                merged_states.append(deepcopy(state_next))
+        
+        print(f"  States added after de-duplication: {len(states_next) - duplicates_this_file}")
+
+    print(f"\nTotal unique states: {len(merged_states)}")
+    print(f"Total duplicates removed: {total_duplicates}")
     
     # Renormalize and sort
     sorted_states = renormalize_and_sort(merged_states)
@@ -195,16 +220,15 @@ def create_merged_xml(file1, file2, output_file, tolerance=0.001):
 def main():
     """Main function with CLI."""
     parser = argparse.ArgumentParser(
-        description='Merge CoSMo XML files with duplicate detection',
+        description='Merge multiple CoSMo XML files with duplicate detection',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Example:
-  python3.11 merge_xml.py 38Cl_fsu9+.xml 38Cl_fsu9+_J5.xml -o 38Cl_fsu9+_merged.xml
+  python3.11 merge_xml.py 38Cl_fsu9+.xml 38Cl_fsu9+_J5.xml 38Cl_fsu9+_J8.xml -o 38Cl_fsu9+_merged.xml
         """
     )
     
-    parser.add_argument('file1', help='First XML file (priority for duplicates)')
-    parser.add_argument('file2', help='Second XML file')
+    parser.add_argument('input_files', nargs='+', help='XML files to merge')
     parser.add_argument('-o', '--output', required=True,
                        help='Output merged XML file')
     parser.add_argument('-t', '--tolerance', type=float, default=0.001,
@@ -212,7 +236,8 @@ Example:
     
     args = parser.parse_args()
     
-    create_merged_xml(args.file1, args.file2, args.output, args.tolerance)
+    create_merged_xml(args.input_files, args.output, args.tolerance)
+
 
 
 if __name__ == '__main__':

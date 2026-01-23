@@ -1333,21 +1333,8 @@
 			<occupation name="1p3" N="0.425767" Z="0" />
 			<occupation name="1p1" N="0.0165713" Z="0" />
 		</state>
-		<state J="-1/2" P="-" T="2" E="-374.706" dE="9.57875e-07" name="-1/2-(1)" Ex="10.392" id="99">
-			<wavefunction Jz="0" Tz="2" file="38Cl_fsu9_M0T4-.HH.EE" id="99" />
-			<occupation name="0s1" N="2" Z="2" />
-			<occupation name="0p3" N="4" Z="4" />
-			<occupation name="0p1" N="2" Z="2" />
-			<occupation name="0d5" N="6" Z="5.28716" />
-			<occupation name="0d3" N="4" Z="2.31088" />
-			<occupation name="1s1" N="2" Z="1.40196" />
-			<occupation name="0f7" N="0.306023" Z="0" />
-			<occupation name="0f5" N="0.311431" Z="0" />
-			<occupation name="1p3" N="0.260037" Z="0" />
-			<occupation name="1p1" N="0.122509" Z="0" />
-		</state>
-		<state J="7" P="-" T="2" E="-374.525" dE="0.00257072" name="7-(3)" Ex="10.573" id="100">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="100" />
+		<state J="7" P="-" T="2" E="-374.525" dE="0.00257072" name="7-(3)" Ex="10.573" id="99">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="99" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1359,8 +1346,8 @@
 			<occupation name="1p3" N="0.00223112" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-374.047" dE="0.00223496" name="7-(4)" Ex="11.051" id="101">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="101" />
+		<state J="7" P="-" T="2" E="-374.047" dE="0.00223496" name="7-(4)" Ex="11.051" id="100">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="100" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1372,8 +1359,8 @@
 			<occupation name="1p3" N="0.000813201" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-373.907" dE="1.13687e-13" name="8-(2)" Ex="11.191" id="102">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="102" />
+		<state J="8" P="-" T="2" E="-373.907" dE="1.13687e-13" name="8-(2)" Ex="11.191" id="101">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="101" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1385,8 +1372,8 @@
 			<occupation name="1p3" N="1.51311e-28" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-372.356" dE="0.00151738" name="7-(5)" Ex="12.742" id="103">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="103" />
+		<state J="7" P="-" T="2" E="-372.356" dE="0.00151738" name="7-(5)" Ex="12.742" id="102">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="102" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1398,8 +1385,8 @@
 			<occupation name="1p3" N="0.00262961" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-370.814" dE="0.022073" name="7-(6)" Ex="14.284" id="104">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="104" />
+		<state J="7" P="-" T="2" E="-370.814" dE="0.022073" name="7-(6)" Ex="14.284" id="103">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="103" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1411,8 +1398,8 @@
 			<occupation name="1p3" N="0.000623731" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-369.88" dE="2.27374e-13" name="8-(3)" Ex="15.218" id="105">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="105" />
+		<state J="8" P="-" T="2" E="-369.88" dE="2.27374e-13" name="8-(3)" Ex="15.218" id="104">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="104" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1424,8 +1411,8 @@
 			<occupation name="1p3" N="4.76222e-27" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-369.728" dE="0.0108827" name="7-(7)" Ex="15.370" id="106">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="106" />
+		<state J="7" P="-" T="2" E="-369.728" dE="0.0108827" name="7-(7)" Ex="15.370" id="105">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="105" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1437,8 +1424,8 @@
 			<occupation name="1p3" N="0.0180241" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-369.321" dE="0.000225782" name="7-(8)" Ex="15.777" id="107">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="107" />
+		<state J="7" P="-" T="2" E="-369.321" dE="0.000225782" name="7-(8)" Ex="15.777" id="106">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="106" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1450,8 +1437,8 @@
 			<occupation name="1p3" N="0.0109804" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="9" P="-" T="2" E="-369.309" dE="3.41061e-13" name="9-(1)" Ex="15.789" id="108">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="108" />
+		<state J="9" P="-" T="2" E="-369.309" dE="3.41061e-13" name="9-(1)" Ex="15.789" id="107">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="107" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1463,8 +1450,8 @@
 			<occupation name="1p3" N="1.12136e-24" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-368.413" dE="5.68434e-14" name="8-(4)" Ex="16.685" id="109">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="109" />
+		<state J="8" P="-" T="2" E="-368.413" dE="5.68434e-14" name="8-(4)" Ex="16.685" id="108">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="108" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1476,8 +1463,8 @@
 			<occupation name="1p3" N="5.71696e-28" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-368.283" dE="0.00418451" name="7-(9)" Ex="16.815" id="110">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="110" />
+		<state J="7" P="-" T="2" E="-368.283" dE="0.00418451" name="7-(9)" Ex="16.815" id="109">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="109" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1489,8 +1476,8 @@
 			<occupation name="1p3" N="0.0208618" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-367.479" dE="0.0463602" name="7-(10)" Ex="17.619" id="111">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="111" />
+		<state J="7" P="-" T="2" E="-367.479" dE="0.0463602" name="7-(10)" Ex="17.619" id="110">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="110" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1502,8 +1489,8 @@
 			<occupation name="1p3" N="0.471932" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-367.318" dE="0.160517" name="7-(11)" Ex="17.780" id="112">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="112" />
+		<state J="7" P="-" T="2" E="-367.318" dE="0.160517" name="7-(11)" Ex="17.780" id="111">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="111" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1515,8 +1502,8 @@
 			<occupation name="1p3" N="0.0934127" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-367.051" dE="0.029588" name="7-(12)" Ex="18.047" id="113">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="113" />
+		<state J="7" P="-" T="2" E="-367.051" dE="0.029588" name="7-(12)" Ex="18.047" id="112">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="112" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1528,8 +1515,8 @@
 			<occupation name="1p3" N="0.263744" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-365.984" dE="0.012082" name="7-(13)" Ex="19.114" id="114">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="114" />
+		<state J="7" P="-" T="2" E="-365.984" dE="0.012082" name="7-(13)" Ex="19.114" id="113">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="113" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1541,8 +1528,8 @@
 			<occupation name="1p3" N="0.104337" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-364.784" dE="5.68434e-14" name="8-(5)" Ex="20.314" id="115">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="115" />
+		<state J="8" P="-" T="2" E="-364.784" dE="5.68434e-14" name="8-(5)" Ex="20.314" id="114">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="114" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1554,8 +1541,8 @@
 			<occupation name="1p3" N="2.87241e-27" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-364.317" dE="0.0395807" name="7-(14)" Ex="20.781" id="116">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="116" />
+		<state J="7" P="-" T="2" E="-364.317" dE="0.0395807" name="7-(14)" Ex="20.781" id="115">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="115" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1567,8 +1554,8 @@
 			<occupation name="1p3" N="0.00767204" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-362.855" dE="0.0029622" name="7-(15)" Ex="22.243" id="117">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="117" />
+		<state J="7" P="-" T="2" E="-362.855" dE="0.0029622" name="7-(15)" Ex="22.243" id="116">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="116" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1580,8 +1567,8 @@
 			<occupation name="1p3" N="0.000485611" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-362.811" dE="5.68434e-14" name="8-(6)" Ex="22.287" id="118">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="118" />
+		<state J="8" P="-" T="2" E="-362.811" dE="5.68434e-14" name="8-(6)" Ex="22.287" id="117">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="117" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1593,8 +1580,8 @@
 			<occupation name="1p3" N="4.08327e-29" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-361.874" dE="0.28491" name="7-(16)" Ex="23.224" id="119">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="119" />
+		<state J="7" P="-" T="2" E="-361.874" dE="0.28491" name="7-(16)" Ex="23.224" id="118">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="118" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1606,8 +1593,8 @@
 			<occupation name="1p3" N="1.29584e-05" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="8" P="-" T="2" E="-361.021" dE="1.7053e-13" name="8-(7)" Ex="24.077" id="120">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="120" />
+		<state J="8" P="-" T="2" E="-361.021" dE="1.7053e-13" name="8-(7)" Ex="24.077" id="119">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="119" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
@@ -1619,8 +1606,8 @@
 			<occupation name="1p3" N="1.28135e-30" Z="0" />
 			<occupation name="1p1" N="0" Z="0" />
 		</state>
-		<state J="7" P="-" T="2" E="-360.829" dE="0.203768" name="7-(17)" Ex="24.269" id="121">
-			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="121" />
+		<state J="7" P="-" T="2" E="-360.829" dE="0.203768" name="7-(17)" Ex="24.269" id="120">
+			<wavefunction Jz="7" Tz="2" file="38Cl_fsu9_M14T4-.HH.EE" id="120" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="4" Z="4" />
 			<occupation name="0p1" N="2" Z="2" />
