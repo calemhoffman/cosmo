@@ -12,6 +12,11 @@ def get_states_from_xml(filename):
         system = root.find('system')
         if system is not None:
             parity = system.get('P')
+            # Extract source from filename to distinguish between 0hw and 2hw
+            source = 'fsu9'
+            if '2hw' in filename:
+                source = 'fsu9_2hw'
+                
             for state in system.findall('state'):
                 e_val = state.get('E')
                 j_val = state.get('J')
@@ -21,7 +26,8 @@ def get_states_from_xml(filename):
                         'E': float(e_val),
                         'J': float(j_val),
                         'P': parity,
-                        'name': name
+                        'name': name,
+                        'source': source
                     })
     except Exception as e:
         print(f"Error parsing {filename}: {e}")
@@ -39,7 +45,6 @@ def parse_spin_parity(sp_str):
     sp_str = sp_str.split('/')[0]
     
     # Extract J and P
-    # Matches optional parenthesis, then float/int, then + or -
     match = re.search(r'\(?(\d+\.?\d*)([+-])\)?', sp_str)
     if match:
         j = float(match.group(1))
@@ -59,7 +64,6 @@ def get_experimental_states(filename):
                 if not energy_str or not sp_str:
                     continue
                 
-                # Handle cases like "755 / 671"
                 energy_val = energy_str.split('/')[0].strip()
                 try:
                     energy_mev = float(energy_val) / 1000.0
@@ -86,8 +90,13 @@ def plot_38Cl_states():
     
     xml_files = [
         os.path.join(base_dir, '38Cl_fsu9+_merged.xml'),
-        os.path.join(base_dir, '38Cl_fsu9-_merged.xml')
+        os.path.join(base_dir, '38Cl_fsu9-.xml'),  # Using the original fsu9- file if merged is not strictly necessary or if it's the 0hw one
+        os.path.join(base_dir, '38Cl_fsu9_2hw-_merged.xml')
     ]
+    
+    # Check if 38Cl_fsu9-_merged.xml exists as well, might be better to use that if it covers all J
+    if os.path.exists(os.path.join(base_dir, '38Cl_fsu9-_merged.xml')):
+        xml_files[1] = os.path.join(base_dir, '38Cl_fsu9-_merged.xml')
 
     all_calc_states = []
     for f in xml_files:
@@ -97,7 +106,7 @@ def plot_38Cl_states():
         print("No calculated states found.")
         return
 
-    # Find global ground state energy for calculated states
+    # Find global ground state energy for all calculated states
     global_min_e = min(s['E'] for s in all_calc_states)
     print(f"Calculated Global Ground State Energy: {global_min_e:.3f} MeV")
 
@@ -105,21 +114,19 @@ def plot_38Cl_states():
         s['Ex'] = s['E'] - global_min_e
         s['type'] = 'Calc'
 
-    # Filter Calculated: Lowest two energy states for each (J, P)
+    # Group calculated states by (J, P, source)
     grouped_calc = {}
     for s in all_calc_states:
-        key = (s['J'], s['P'])
+        key = (s['J'], s['P'], s['source'])
         if key not in grouped_calc:
             grouped_calc[key] = []
         grouped_calc[key].append(s)
 
-    filtered_calc = []
-    lowest_calc_per_jp = {} # For line connections
-    
+    # Filter Calculated: Yrast states only
+    yrast_calc = {}
     for key, group in grouped_calc.items():
         group.sort(key=lambda x: x['E'])
-        filtered_calc.extend(group[:2])
-        lowest_calc_per_jp[key] = group[0]
+        yrast_calc[key] = group[0]
 
     # Get Experimental Data
     exp_states = get_experimental_states(csv_file)
@@ -128,54 +135,38 @@ def plot_38Cl_states():
     # Plotly visualization
     fig = go.Figure()
 
-    # Colors
+    # Colors and Styles
     colors = {'+': '#00CED1', '-': '#FF00FF'} # Cyan (+) and Magenta (-)
+    source_styles = {
+        'fsu9': dict(width=2, dash='solid'),
+        'fsu9_2hw': dict(width=2, dash='dashdot')
+    }
     
-    # 1. Plot Calculated States and Connections
-    for p in ['+', '-']:
-        p_calc = [s for s in filtered_calc if s['P'] == p]
-        if not p_calc:
-            continue
-            
-        # Markers for lowest two states
-        fig.add_trace(go.Scatter(
-            x=[s['J'] for s in p_calc],
-            y=[s['Ex'] for s in p_calc],
-            mode='markers',
-            name=f'Calc {p} (Lowest 2)',
-            marker=dict(
-                size=10,
-                color=colors[p],
-                symbol='circle',
-                line=dict(width=1, color='White'),
-                opacity=0.7
-            ),
-            hoverinfo='text',
-            hovertext=[f"Calc {s['name']}<br>Ex: {s['Ex']:.3f} MeV<br>J: {s['J']}" for s in p_calc],
-            legendgroup=f'calc_{p}'
-        ))
-
-        # Line connection for the very lowest calculated states per J
-        lowest_p_calc = sorted([s for key, s in lowest_calc_per_jp.items() if key[1] == p], key=lambda x: x['J'])
-        if len(lowest_p_calc) > 1:
+    # 1. Plot Calculated States (Yrast Lines Only)
+    for source in ['fsu9', 'fsu9_2hw']:
+        for p in ['+', '-']:
+            # Filter yrast states for this source and parity
+            yrast_group = sorted([s for key, s in yrast_calc.items() if key[1] == p and key[2] == source], key=lambda x: x['J'])
+            if not yrast_group:
+                continue
+                
             fig.add_trace(go.Scatter(
-                x=[s['J'] for s in lowest_p_calc],
-                y=[s['Ex'] for s in lowest_p_calc],
+                x=[s['J'] for s in yrast_group],
+                y=[s['Ex'] for s in yrast_group],
                 mode='lines',
-                name=f'Calc {p} yrast line',
-                line=dict(color=colors[p], width=1, dash='dot'),
-                showlegend=False,
-                legendgroup=f'calc_{p}',
-                hoverinfo='none'
+                name=f'{source} {p} Yrast',
+                line=dict(color=colors[p], **source_styles[source]),
+                hoverinfo='text',
+                hovertext=[f"{source} {s['name']}<br>Ex: {s['Ex']:.3f} MeV<br>J: {s['J']}" for s in yrast_group],
+                legendgroup=f'{source}_{p}'
             ))
 
-    # 2. Plot Experimental States and Connections
+    # 2. Plot Experimental States (Markers Only)
     for p in ['+', '-']:
         p_exp = sorted([s for s in exp_states if s['P'] == p], key=lambda x: x['J'])
         if not p_exp:
             continue
             
-        # Markers
         fig.add_trace(go.Scatter(
             x=[s['J'] for s in p_exp],
             y=[s['Ex'] for s in p_exp],
@@ -192,22 +183,9 @@ def plot_38Cl_states():
             legendgroup=f'exp_{p}'
         ))
 
-        # Line connection
-        if len(p_exp) > 1:
-            fig.add_trace(go.Scatter(
-                x=[s['J'] for s in p_exp],
-                y=[s['Ex'] for s in p_exp],
-                mode='lines',
-                name=f'Exp {p} line',
-                line=dict(color=colors[p], width=2),
-                showlegend=False,
-                legendgroup=f'exp_{p}',
-                hoverinfo='none'
-            ))
-
     fig.update_layout(
         title=dict(
-            text="38Cl Calculated vs Experimental Energy Levels",
+            text="38Cl Calculated (fsu9 & 2hw) vs Experimental Energy Levels",
             font=dict(size=24, color='white')
         ),
         xaxis=dict(
@@ -233,12 +211,12 @@ def plot_38Cl_states():
         margin=dict(l=50, r=50, t=80, b=50)
     )
 
-    output_html = os.path.join(base_dir, '38Cl_energy_levels_with_exp.html')
+    output_html = os.path.join(base_dir, '38Cl_energy_levels_with_2hw.html')
     fig.write_html(output_html)
     print(f"Updated plotly chart saved to {output_html}")
     
     try:
-        output_png = os.path.join(base_dir, '38Cl_energy_levels_with_exp.png')
+        output_png = os.path.join(base_dir, '38Cl_energy_levels_with_2hw.png')
         fig.write_image(output_png, scale=2)
         print(f"Static image saved to {output_png}")
     except Exception as e:
