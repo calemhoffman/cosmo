@@ -16,6 +16,8 @@ def get_states_from_xml(filename):
             source = 'fsu9'
             if '2hw' in filename:
                 source = 'fsu9_2hw'
+            elif '3hw' in filename:
+                source = 'fsu9_3hw'
                 
             for state in system.findall('state'):
                 e_val = state.get('E')
@@ -90,8 +92,9 @@ def plot_38Cl_states():
     
     xml_files = [
         os.path.join(base_dir, '38Cl_fsu9+_merged.xml'),
-        os.path.join(base_dir, '38Cl_fsu9-.xml'),  # Using the original fsu9- file if merged is not strictly necessary or if it's the 0hw one
-        os.path.join(base_dir, '38Cl_fsu9_2hw-_merged.xml')
+        os.path.join(base_dir, '38Cl_fsu9-.xml'),
+        os.path.join(base_dir, '38Cl_fsu9_2hw-_merged.xml'),
+        os.path.join(base_dir, '38Cl_fsu9+3hw_merged.xml')
     ]
     
     # Check if 38Cl_fsu9-_merged.xml exists as well, might be better to use that if it covers all J
@@ -139,11 +142,12 @@ def plot_38Cl_states():
     colors = {'+': '#00CED1', '-': '#FF00FF'} # Cyan (+) and Magenta (-)
     source_styles = {
         'fsu9': dict(width=2, dash='solid'),
-        'fsu9_2hw': dict(width=2, dash='dashdot')
+        'fsu9_2hw': dict(width=2, dash='dashdot'),
+        'fsu9_3hw': dict(width=2, dash='dot')
     }
     
     # 1. Plot Calculated States (Yrast Lines Only)
-    for source in ['fsu9', 'fsu9_2hw']:
+    for source in ['fsu9', 'fsu9_2hw', 'fsu9_3hw']:
         for p in ['+', '-']:
             # Filter yrast states for this source and parity
             yrast_group = sorted([s for key, s in yrast_calc.items() if key[1] == p and key[2] == source], key=lambda x: x['J'])
