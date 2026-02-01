@@ -47,14 +47,13 @@ def plot_energies(files):
         if not data:
             continue
             
-        # Filter to keep only the first and second energy values for a specific J value
+        # Filter to keep only the yrast state (lowest energy) for each J value
         filtered_data = []
-        j_counts = {}
+        j_seen = set()
         for e, j in data:
-            count = j_counts.get(j, 0)
-            if count < 2:
+            if j not in j_seen:
                 filtered_data.append((e, j))
-                j_counts[j] = count + 1
+                j_seen.add(j)
         
         if not filtered_data:
             continue
@@ -95,7 +94,7 @@ def plot_energies(files):
     print(f"Plot saved to {output_file}")
 
 if __name__ == "__main__":
-    files = ['38Cl_fsu9+_merged.xml', '38Cl_fsu9-_merged.xml', '38Cl_fsu9_2hw-_merged.xml', '38Cl_fsu9+3hw_merged.xml']
+    files = ['38Cl_fsu9-_merged.xml', '38Cl_fsu9_2hw-_merged.xml', '38Cl_fsu9+_merged.xml', '38Cl_fsu9+3hw_merged.xml']
     # Ensure we are using absolute paths or relative to the script location if running from there
     # The user is in /Users/calemhoffman/Documents/GitHub/cosmo/results/ based on the file paths
     # I will assume the script is run from that directory or I should provide full paths.

@@ -55,40 +55,46 @@ def parse_spin_parity(sp_str):
     return None
 
 def get_experimental_states(filename):
+    """Parse tab-separated experimental data file."""
     exp_states = []
     try:
         with open(filename, mode='r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                energy_str = row.get('Energy (keV)')
-                sp_str = row.get('Spin-Parity (Jπ)')
-                
-                if not energy_str or not sp_str:
+            lines = f.readlines()
+            # Skip header line
+            for line in lines[1:]:
+                parts = line.strip().split('\t')
+                if len(parts) < 3:
                     continue
                 
-                energy_val = energy_str.split('/')[0].strip()
                 try:
-                    energy_mev = float(energy_val) / 1000.0
-                except ValueError:
-                    continue
-                
-                jp = parse_spin_parity(sp_str)
-                if jp:
-                    j, p = jp
+                    energy_kev = float(parts[0])
+                    j = float(parts[1])
+                    p = parts[2].strip()
+                    
+                    # Handle parity - remove trailing period if present
+                    if p.endswith('.'):
+                        p = p[:-1]
+                    
+                    if p not in ['+', '-']:
+                        continue
+                    
+                    energy_mev = energy_kev / 1000.0
                     exp_states.append({
                         'Ex': energy_mev,
                         'J': j,
                         'P': p,
-                        'name': f"Exp {sp_str} ({energy_mev:.3f} MeV)",
+                        'name': f"Exp J={j}{p} ({energy_mev:.3f} MeV)",
                         'type': 'Exp'
                     })
+                except (ValueError, IndexError):
+                    continue
     except Exception as e:
-        print(f"Error parsing CSV {filename}: {e}")
+        print(f"Error parsing experimental data {filename}: {e}")
     return exp_states
 
 def plot_38Cl_states():
     base_dir = '/Users/calemhoffman/Documents/GitHub/cosmo/results'
-    csv_file = '/Users/calemhoffman/.gemini/antigravity/brain/d9180346-defa-482e-b008-5e3341560215/spin_data.csv'
+    exp_data_file = os.path.join(base_dir, 'exp_data.dat')
     
     xml_files = [
         os.path.join(base_dir, '38Cl_fsu9+_merged.xml'),
@@ -132,7 +138,7 @@ def plot_38Cl_states():
         yrast_calc[key] = group[0]
 
     # Get Experimental Data
-    exp_states = get_experimental_states(csv_file)
+    exp_states = get_experimental_states(exp_data_file)
     print(f"Found {len(exp_states)} experimental states with valid J-pi.")
 
     # Plotly visualization
@@ -166,6 +172,7 @@ def plot_38Cl_states():
             ))
 
     # 2. Plot Experimental States (Markers Only)
+    exp_colors = {'+': '#0000FF', '-': '#800080'}  # Blue (+) and Purple (-)
     for p in ['+', '-']:
         p_exp = sorted([s for s in exp_states if s['P'] == p], key=lambda x: x['J'])
         if not p_exp:
@@ -178,9 +185,9 @@ def plot_38Cl_states():
             name=f'Exp {p}',
             marker=dict(
                 size=12,
-                color=colors[p],
-                symbol='diamond-open',
-                line=dict(width=2, color=colors[p])
+                color=exp_colors[p],
+                symbol='circle-open',
+                line=dict(width=2, color=exp_colors[p])
             ),
             hoverinfo='text',
             hovertext=[f"{s['name']}<br>Ex: {s['Ex']:.3f} MeV" for s in p_exp],

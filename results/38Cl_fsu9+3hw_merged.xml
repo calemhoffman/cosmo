@@ -46,8 +46,60 @@
 	<system Av="38" Nv="21" Zv="17" A="38" Tz="2" Jz="12" P="+" name="38Cl_fsu9_M24T4+_merged">
 		<hwrejection HWMAX="3" HWMIN="3" />
 		<matrix name="38Cl_fsu9_M24T4+.HH" format="pp" />
-		<state J="12" P="+" T="2" E="-373.212" dE="3.20028e-11" name="12+(1)" Ex="0.000" id="0">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="0" />
+		<state J="10" P="+" T="2" E="-375.564" dE="7.16341e-10" name="10+(1)" Ex="0.000" id="0">
+			<wavefunction Jz="10" Tz="2" file="38Cl_fsu9_M20T4+.HH.EE" id="0" />
+			<occupation name="0s1" N="2" Z="2" />
+			<occupation name="0p3" N="3.99978" Z="3.99959" />
+			<occupation name="0p1" N="1.99971" Z="1.99875" />
+			<occupation name="0d5" N="5.74688" Z="5.37334" />
+			<occupation name="0d3" N="2.62646" Z="1.52618" />
+			<occupation name="1s1" N="1.62119" Z="1.1103" />
+			<occupation name="0f7" N="2.0795" Z="0.881405" />
+			<occupation name="0f5" N="0.0935205" Z="0.0190116" />
+			<occupation name="1p3" N="0.766622" Z="0.0854258" />
+			<occupation name="1p1" N="0.0663438" Z="0.00599629" />
+		</state>
+		<state J="11" P="+" T="2" E="-375.417" dE="6.18058e-10" name="11+(1)" Ex="0.147" id="1">
+			<wavefunction Jz="10" Tz="2" file="38Cl_fsu9_M20T4+.HH.EE" id="1" />
+			<occupation name="0s1" N="2" Z="2" />
+			<occupation name="0p3" N="3.99982" Z="3.9994" />
+			<occupation name="0p1" N="1.99995" Z="1.9992" />
+			<occupation name="0d5" N="5.74975" Z="5.40347" />
+			<occupation name="0d3" N="2.77095" Z="1.52757" />
+			<occupation name="1s1" N="1.47539" Z="1.07615" />
+			<occupation name="0f7" N="2.47795" Z="0.945968" />
+			<occupation name="0f5" N="0.16928" Z="0.0128583" />
+			<occupation name="1p3" N="0.345585" Z="0.0348454" />
+			<occupation name="1p1" N="0.0113328" Z="0.000537459" />
+		</state>
+		<state J="10" P="+" T="2" E="-375.293" dE="1.26284e-08" name="10+(2)" Ex="0.271" id="2">
+			<wavefunction Jz="10" Tz="2" file="38Cl_fsu9_M20T4+.HH.EE" id="2" />
+			<occupation name="0s1" N="2" Z="2" />
+			<occupation name="0p3" N="3.99991" Z="3.99957" />
+			<occupation name="0p1" N="1.99993" Z="1.99928" />
+			<occupation name="0d5" N="5.71401" Z="5.30819" />
+			<occupation name="0d3" N="2.79729" Z="1.57371" />
+			<occupation name="1s1" N="1.48151" Z="1.12789" />
+			<occupation name="0f7" N="2.34456" Z="0.876532" />
+			<occupation name="0f5" N="0.121337" Z="0.019756" />
+			<occupation name="1p3" N="0.504211" Z="0.0895995" />
+			<occupation name="1p1" N="0.0372321" Z="0.00547102" />
+		</state>
+		<state J="10" P="+" T="2" E="-374.624" dE="1.37171e-06" name="10+(3)" Ex="0.940" id="3">
+			<wavefunction Jz="10" Tz="2" file="38Cl_fsu9_M20T4+.HH.EE" id="3" />
+			<occupation name="0s1" N="2" Z="2" />
+			<occupation name="0p3" N="3.99983" Z="3.99932" />
+			<occupation name="0p1" N="1.9995" Z="1.99763" />
+			<occupation name="0d5" N="5.6984" Z="5.34383" />
+			<occupation name="0d3" N="2.80519" Z="1.49696" />
+			<occupation name="1s1" N="1.4944" Z="1.16867" />
+			<occupation name="0f7" N="2.2602" Z="0.864203" />
+			<occupation name="0f5" N="0.115829" Z="0.0228004" />
+			<occupation name="1p3" N="0.575246" Z="0.0998487" />
+			<occupation name="1p1" N="0.051418" Z="0.00673704" />
+		</state>
+		<state J="12" P="+" T="2" E="-373.212" dE="3.20028e-11" name="12+(1)" Ex="2.352" id="4">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="4" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.99991" Z="3.99954" />
 			<occupation name="0p1" N="1.99996" Z="1.99924" />
@@ -59,8 +111,8 @@
 			<occupation name="1p3" N="0.306916" Z="0.0289531" />
 			<occupation name="1p1" N="0.0101227" Z="0.000683933" />
 		</state>
-		<state J="13" P="+" T="2" E="-372.983" dE="4.23483e-11" name="13+(1)" Ex="0.229" id="1">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="1" />
+		<state J="13" P="+" T="2" E="-372.983" dE="4.23483e-11" name="13+(1)" Ex="2.581" id="5">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="5" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.9999" Z="3.99981" />
 			<occupation name="0p1" N="1.99999" Z="1.99974" />
@@ -72,8 +124,8 @@
 			<occupation name="1p3" N="0.303111" Z="0.00507646" />
 			<occupation name="1p1" N="0.00202371" Z="0.000141423" />
 		</state>
-		<state J="12" P="+" T="2" E="-372.51" dE="4.59556e-09" name="12+(2)" Ex="0.702" id="2">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="2" />
+		<state J="12" P="+" T="2" E="-372.51" dE="4.59556e-09" name="12+(2)" Ex="3.054" id="6">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="6" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.99984" Z="3.99947" />
 			<occupation name="0p1" N="1.99996" Z="1.99599" />
@@ -85,8 +137,8 @@
 			<occupation name="1p3" N="0.255478" Z="0.00933296" />
 			<occupation name="1p1" N="0.00835028" Z="0.00216215" />
 		</state>
-		<state J="12" P="+" T="2" E="-372.324" dE="1.41687e-07" name="12+(3)" Ex="0.888" id="3">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="3" />
+		<state J="12" P="+" T="2" E="-372.324" dE="1.41687e-07" name="12+(3)" Ex="3.240" id="7">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="7" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.99986" Z="3.99884" />
 			<occupation name="0p1" N="1.99995" Z="1.999" />
@@ -98,8 +150,8 @@
 			<occupation name="1p3" N="0.331684" Z="0.0552037" />
 			<occupation name="1p1" N="0.0938757" Z="0.00210952" />
 		</state>
-		<state J="12" P="+" T="2" E="-372.195" dE="2.15949e-07" name="12+(4)" Ex="1.017" id="4">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="4" />
+		<state J="12" P="+" T="2" E="-372.195" dE="2.15949e-07" name="12+(4)" Ex="3.369" id="8">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="8" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.99965" Z="3.9986" />
 			<occupation name="0p1" N="1.99936" Z="1.99731" />
@@ -111,8 +163,8 @@
 			<occupation name="1p3" N="0.333925" Z="0.0290573" />
 			<occupation name="1p1" N="0.017313" Z="0.00324529" />
 		</state>
-		<state J="13" P="+" T="2" E="-371.689" dE="5.19762e-06" name="13+(2)" Ex="1.523" id="5">
-			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="5" />
+		<state J="13" P="+" T="2" E="-371.689" dE="5.19762e-06" name="13+(2)" Ex="3.875" id="9">
+			<wavefunction Jz="12" Tz="2" file="38Cl_fsu9_M24T4+.HH.EE" id="9" />
 			<occupation name="0s1" N="2" Z="2" />
 			<occupation name="0p3" N="3.99994" Z="3.99945" />
 			<occupation name="0p1" N="1.99997" Z="1.99964" />
