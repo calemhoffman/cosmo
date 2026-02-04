@@ -11,7 +11,7 @@ cool_colors = [
 ]
 #%%
 # Open the text file for reading
-filein = '35S_34S_neg.txt'
+filein = '35Cl_34Cl_neg.dat'
 # filein = '32Si_31Si_neg.txt'
 oddeven = 1# - if parent is event
 with open(filein, 'r') as file:
