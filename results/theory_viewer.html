@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectroscopy Data Viewer</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fcbe58 0%, #f6a05b 50%, #ef4238 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #fcbe58;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input,
+        select {
+            padding: 12px 16px;
+            border: 2px solid rgba(252, 190, 88, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #e8e8e8;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #fcbe58;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 20px rgba(252, 190, 88, 0.2);
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            padding: 20px 35px;
+            background: linear-gradient(135deg, rgba(140, 198, 64, 0.15), rgba(5, 135, 82, 0.15));
+            border-radius: 15px;
+            border: 2px solid rgba(140, 198, 64, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(140, 198, 64, 0.3);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8cc640;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plot-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        thead {
+            background: linear-gradient(135deg, rgba(252, 190, 88, 0.2), rgba(239, 66, 56, 0.2));
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+            color: #fcbe58;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            border-bottom: 2px solid rgba(252, 190, 88, 0.5);
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, rgba(252, 190, 88, 0.2), rgba(239, 66, 56, 0.2));
+            backdrop-filter: blur(10px);
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+        }
+
+        tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(252, 190, 88, 0.1);
+            transform: scale(1.01);
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 1.5rem;
+            color: #fcbe58;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: 2px solid rgba(252, 190, 88, 0.5);
+            border-radius: 10px;
+            background: rgba(252, 190, 88, 0.15);
+            color: #fcbe58;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        button:hover {
+            background: rgba(252, 190, 88, 0.3);
+            border-color: #fcbe58;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(252, 190, 88, 0.3);
+        }
+
+        button.active {
+            background: #fcbe58;
+            color: #1a1a2e;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .controls {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(252, 190, 88, 0.5);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(252, 190, 88, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Spectroscopy Data Viewer</h1>
+            <p class="subtitle">Theoretical Nuclear Structure Analysis | ³⁵Cl(d,p)³⁴Cl</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-group">
+                <label for="searchInput">Search All Fields</label>
+                <input type="text" id="searchInput" placeholder="Type to search...">
+            </div>
+
+            <div class="filter-group">
+                <label for="parentFilter">Parent State</label>
+                <select id="parentFilter">
+                    <option value="">All</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="daughterFilter">Daughter State (J)</label>
+                <select id="daughterFilter">
+                    <option value="">All</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="lFilter">Angular Momentum (L)</label>
+                <select id="lFilter">
+                    <option value="">All</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="exMinFilter">Ex(p) Min [MeV]</label>
+                <input type="number" id="exMinFilter" placeholder="0.0" step="0.1">
+            </div>
+
+            <div class="filter-group">
+                <label for="exMaxFilter">Ex(p) Max [MeV]</label>
+                <input type="number" id="exMaxFilter" placeholder="8.0" step="0.1">
+            </div>
+
+            <div class="filter-group">
+                <label for="sfMinFilter">SF Min</label>
+                <input type="number" id="sfMinFilter" placeholder="0.0" step="0.01">
+            </div>
+
+            <div class="filter-group">
+                <label for="sfMaxFilter">SF Max</label>
+                <input type="number" id="sfMaxFilter" placeholder="" step="0.01">
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalRecords">0</div>
+                <div class="stat-label">Total Records</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="displayedRecords">0</div>
+                <div class="stat-label">Displayed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="uniqueStates">0</div>
+                <div class="stat-label">Parent States</div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="plotSF" class="active">Plot SF vs Ex(p)</button>
+            <button id="plotG">Plot G vs Ex(p)</button>
+            <button id="plotSFNorm">Plot SF (normalized)</button>
+            <button id="plotGNorm">Plot G (normalized)</button>
+        </div>
+
+        <div class="plot-container">
+            <div id="plot"></div>
+        </div>
+
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Parent</th>
+                        <th>Daughter</th>
+                        <th>Ex(p) [MeV]</th>
+                        <th>Ex(d) [MeV]</th>
+                        <th>L</th>
+                        <th>SF</th>
+                        <th>SF (norm)</th>
+                        <th>G</th>
+                        <th>G (norm)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="9" class="loading">Loading data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let allData = [];
+        let filteredData = [];
+
+        // Plotly color scheme matching theory.py
+        const colors = ["#8cc640", "#fcbe58", "#b15d28", "#058752", "#b499cb", "#1ca1de", "#f6a05b", "#ef4238"];
+
+        // Load data
+        fetch('theory_data.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data;
+                filteredData = data;
+                initializeFilters();
+                updateDisplay();
+            })
+            .catch(error => {
+                document.getElementById('tableBody').innerHTML =
+                    '<tr><td colspan="9" class="no-data">Error loading data: ' + error + '</td></tr>';
+            });
+
+        function initializeFilters() {
+            // Populate parent filter
+            const parents = [...new Set(allData.map(d => d.Parent))].sort((a, b) => a - b);
+            const parentSelect = document.getElementById('parentFilter');
+            parents.forEach(p => {
+                const option = document.createElement('option');
+                option.value = p;
+                option.textContent = p;
+                parentSelect.appendChild(option);
+            });
+
+            // Populate daughter filter
+            const daughters = [...new Set(allData.map(d => d.Daughter))].sort((a, b) => a - b);
+            const daughterSelect = document.getElementById('daughterFilter');
+            daughters.forEach(d => {
+                const option = document.createElement('option');
+                option.value = d;
+                option.textContent = d;
+                daughterSelect.appendChild(option);
+            });
+
+            // Populate L filter
+            const lValues = [...new Set(allData.map(d => d.L))].sort((a, b) => a - b);
+            const lSelect = document.getElementById('lFilter');
+            lValues.forEach(l => {
+                const option = document.createElement('option');
+                option.value = l;
+                option.textContent = l;
+                lSelect.appendChild(option);
+            });
+
+            // Add event listeners
+            document.getElementById('searchInput').addEventListener('input', applyFilters);
+            document.getElementById('parentFilter').addEventListener('change', applyFilters);
+            document.getElementById('daughterFilter').addEventListener('change', applyFilters);
+            document.getElementById('lFilter').addEventListener('change', applyFilters);
+            document.getElementById('exMinFilter').addEventListener('input', applyFilters);
+            document.getElementById('exMaxFilter').addEventListener('input', applyFilters);
+            document.getElementById('sfMinFilter').addEventListener('input', applyFilters);
+            document.getElementById('sfMaxFilter').addEventListener('input', applyFilters);
+
+            // Plot button listeners
+            document.querySelectorAll('.button-group button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.button-group button').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    updatePlot();
+                });
+            });
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const parentFilter = document.getElementById('parentFilter').value;
+            const daughterFilter = document.getElementById('daughterFilter').value;
+            const lFilter = document.getElementById('lFilter').value;
+            const exMin = parseFloat(document.getElementById('exMinFilter').value) || -Infinity;
+            const exMax = parseFloat(document.getElementById('exMaxFilter').value) || Infinity;
+            const sfMin = parseFloat(document.getElementById('sfMinFilter').value) || -Infinity;
+            const sfMax = parseFloat(document.getElementById('sfMaxFilter').value) || Infinity;
+
+            filteredData = allData.filter(row => {
+                // Search filter (searches all fields)
+                const searchMatch = !searchTerm || Object.values(row).some(val =>
+                    String(val).toLowerCase().includes(searchTerm)
+                );
+
+                // Parent filter
+                const parentMatch = !parentFilter || row.Parent == parentFilter;
+
+                // Daughter filter
+                const daughterMatch = !daughterFilter || row.Daughter == daughterFilter;
+
+                // L filter
+                const lMatch = !lFilter || row.L == lFilter;
+
+                // Ex(p) range filter
+                const exMatch = row['Ex(p)'] >= exMin && row['Ex(p)'] <= exMax;
+
+                // SF range filter
+                const sfMatch = row.SF >= sfMin && row.SF <= sfMax;
+
+                return searchMatch && parentMatch && daughterMatch && lMatch && exMatch && sfMatch;
+            });
+
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            updateStats();
+            updateTable();
+            updatePlot();
+        }
+
+        function updateStats() {
+            document.getElementById('totalRecords').textContent = allData.length;
+            document.getElementById('displayedRecords').textContent = filteredData.length;
+            const uniqueParents = new Set(allData.map(d => d.Parent));
+            document.getElementById('uniqueStates').textContent = uniqueParents.size;
+        }
+
+        function updateTable() {
+            const tbody = document.getElementById('tableBody');
+
+            if (filteredData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="no-data">No data matches your filters</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = filteredData.map(row => `
+                <tr>
+                    <td>${row.Parent}</td>
+                    <td>${row.Daughter}</td>
+                    <td>${row['Ex(p)'].toFixed(4)}</td>
+                    <td>${row['Ex(d)'].toFixed(4)}</td>
+                    <td>${row.L}</td>
+                    <td>${row.SF.toFixed(4)}</td>
+                    <td>${row.SF_norm.toFixed(4)}</td>
+                    <td>${row.G.toFixed(4)}</td>
+                    <td>${row.G_norm.toFixed(4)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function updatePlot() {
+            const activeButton = document.querySelector('.button-group button.active');
+            const plotType = activeButton ? activeButton.id : 'plotSF';
+
+            let yField, yLabel;
+            switch (plotType) {
+                case 'plotG':
+                    yField = 'G';
+                    yLabel = 'G';
+                    break;
+                case 'plotSFNorm':
+                    yField = 'SF_norm';
+                    yLabel = 'SF (normalized)';
+                    break;
+                case 'plotGNorm':
+                    yField = 'G_norm';
+                    yLabel = 'G (normalized)';
+                    break;
+                default:
+                    yField = 'SF';
+                    yLabel = 'SF';
+            }
+
+            // Group by L value
+            const groupedByL = {};
+            filteredData.forEach(row => {
+                if (!groupedByL[row.L]) {
+                    groupedByL[row.L] = [];
+                }
+                groupedByL[row.L].push(row);
+            });
+
+            // Create traces for each L value
+            const traces = Object.keys(groupedByL).sort((a, b) => a - b).map((l, i) => {
+                const data = groupedByL[l];
+                return {
+                    x: data.map(d => d['Ex(p)']),
+                    y: data.map(d => d[yField]),
+                    type: 'bar',
+                    name: `L=${l}`,
+                    marker: {
+                        color: colors[i % colors.length]
+                    },
+                    hovertemplate: 'Ex(p): %{x:.4f} MeV<br>' + yLabel + ': %{y:.4f}<extra></extra>'
+                };
+            });
+
+            const layout = {
+                xaxis: {
+                    title: {
+                        text: 'Excitation Energy [MeV]',
+                        font: { size: 18, color: '#e8e8e8' }
+                    },
+                    linewidth: 2,
+                    mirror: true,
+                    gridcolor: 'rgba(255, 255, 255, 0.1)',
+                    tickfont: { size: 14, color: '#e8e8e8' }
+                },
+                yaxis: {
+                    title: {
+                        text: yLabel,
+                        font: { size: 18, color: '#e8e8e8' }
+                    },
+                    linewidth: 2,
+                    mirror: true,
+                    gridcolor: 'rgba(255, 255, 255, 0.1)',
+                    tickfont: { size: 14, color: '#e8e8e8' }
+                },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                font: { color: '#e8e8e8' },
+                showlegend: true,
+                legend: {
+                    font: { size: 14, color: '#e8e8e8' },
+                    bgcolor: 'rgba(255, 255, 255, 0.05)',
+                    bordercolor: 'rgba(255, 255, 255, 0.2)',
+                    borderwidth: 1
+                },
+                barmode: 'group',
+                bargap: 0.15,
+                bargroupgap: 0.1,
+                hovermode: 'closest',
+                height: 500
+            };
+
+            const config = {
+                responsive: true,
+                displayModeBar: true,
+                displaylogo: false,
+                toImageButtonOptions: {
+                    format: 'png',
+                    filename: 'spectroscopy_data',
+                    height: 700,
+                    width: 1000,
+                    scale: 2
+                }
+            };
+
+            Plotly.newPlot('plot', traces, layout, config);
+        }
+    </script>
+</body>
+
+</html>

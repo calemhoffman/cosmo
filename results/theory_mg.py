@@ -2,8 +2,8 @@
 import plotly.graph_objects as go
 import plotly.io as pio
 import pandas as pd
-from tabulate import tabulate
 import re  # Import the regular expression module
+import json
 
 
 color =    ["#8cc640", "#fcbe58", "#b15d28", "#058752","#b499cb", "#1ca1de", "#f6a05b", "#ef4238"]
@@ -102,23 +102,37 @@ def create_plotly_bar_plot(df,df_data):
     color_map = {l: color[i % len(color)] for i, l in enumerate(unique_L)}
     bar_colors = df['L'].map(color_map)
     print(bar_colors)
-    unique_L2 = sorted(df_data['ell'].unique())
-    color_map2 = {l: color[i % len(color)] for i, l in enumerate(unique_L2)}
-    bar_colors2 = df_data['ell'].map(color_map2)
-    print(bar_colors2)
     # Increase bar width by setting width parameter
     bar_width = 0.08
 
     fig = go.Figure(data=[go.Bar(
         x=df['Ex(p)'],
-        y=df['SF'],
+        y=df['G'],
         marker_color=bar_colors,
         width=[bar_width]*len(df),
         # text=df['Parent'],
-        hovertemplate='Ex(p): %{x}<br>G: %{y}<br>'
+        hovertemplate='Ex(p): %{x}<br>G: %{y}<br>J: %{text}<extra></extra>'
     )])
+    # Add annotations for each of the 4 colors with numbers 1 - 4 in a vertical row at fixed x position
+    fixed_x = 6.5  # Set a fixed x position (e.g., right side of plot)
+    base_y = df['G'].max() * 1.05  # Start above the highest bar
+    y_step = df['G'].max() * 0.15  # Vertical spacing between annotations
 
-    # add scatter plot of exp data with error bars on top
+    for i, l in enumerate(unique_L[:4]):
+        fig.add_annotation(
+            x=fixed_x,
+            y=base_y - i * y_step,
+            text=str(i),
+            showarrow=False,
+            font=dict(size=28, color='black'),
+            bgcolor=color[i],
+            bordercolor='black',
+            borderwidth=2,
+            xanchor='center',
+            yanchor='bottom',
+            yshift=10
+        )
+    #add scatter plot of exp data with error bars on top
     # fig.add_trace(go.Scatter(
     #     x=df_data['ex'],
     #     y=df_data['G_norm'],
@@ -136,7 +150,7 @@ def create_plotly_bar_plot(df,df_data):
         xaxis=dict(
             mirror=True,
             showline=True,
-            range=[5, 6],
+            range=[0, 7],
             title_font=dict(size=24),
             tickfont=dict(size=24)
         ),
@@ -149,7 +163,7 @@ def create_plotly_bar_plot(df,df_data):
     )
     fig.update_layout(
         xaxis_title='excitation energy [MeV]',
-        yaxis_title='C<sup>2</sup>S',
+        yaxis_title='G<sub>+</sub>',
         width=800,height=600,
         showlegend=False # If you want a legend for the colors (L values)
     )
@@ -158,18 +172,20 @@ def create_plotly_bar_plot(df,df_data):
     
 # --- Example Usage ---
 #%%
-# file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/32Si_31Si_pos.out'  
-file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/34S_33S_pos.dat'  
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/32Si_31Si_pos.out'  
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/30Mg_29Mg_pos.out'  
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/35Cl_34Cl_pos.out'  
 pos_data = parse_spectroscopic_data(file_path)
-# file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/32Si_31Si_neg.out' 
-file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/34S_33S_neg.dat' 
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/32Si_31Si_neg.out' 
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/30Mg_29Mg_neg.out' 
+file_path = '/Users/calemhoffman/Documents/GitHub/cosmo/results/35Cl_34Cl_neg.out' 
 neg_data = parse_spectroscopic_data(file_path)
 for item in neg_data:
-    item['Ex(p)'] += 5.171
-# Let's say you want to filter for daughter excitation energy of 0.0
+    item['Ex(p)'] += 2.74
+# Filter for daughter excitation energies of 0.0 (3+ ground state) and 0.024 (0+ first excited state)
 all_data = pos_data + neg_data
-selected_daughter_ex = 0.0
-filtered_data = filter_data_by_daughter_ex(all_data, selected_daughter_ex)
+selected_daughter_ex = [0.0, 0.024]
+filtered_data = [item for item in all_data if item['Ex(d)'] in selected_daughter_ex]
 
 print("Parsed Data (first 5 entries):")
 print(all_data)
@@ -198,38 +214,19 @@ if fitype2 > 0:
 else:
     df_data = df_data[df_data['fittype'] == fitype]
 print(df_data.tail())
-# df_j = df[df['Parent'] == 3].copy()
 # Create the Plotly bar plot with the filtered data
 create_plotly_bar_plot(df,df_data)
-# Output df to a LaTeX table with multirow for repeated Ex(p)
-df_filtered = df[df['Ex(p)'] < 8.00].copy()
-def df_to_latex_multirow(df, group_col='Ex(p)'):
-    df_sorted = df.sort_values(by=group_col)
-    rows = []
-    last_val = None
-    span = 0
-    for idx, row in df_sorted.iterrows():
-        val = row[group_col]
-        if val == last_val:
-            span += 1
-        else:
-            if span > 1:
-                for i in range(span):
-                    rows[-(i+1)][0] = f"\\multirow{{{span}}}{{*}}{{{last_val}}}" if i == span-1 else ""
-            span = 1
-            last_val = val
-        rows.append([val, row['Parent'], row['L'], f"{row['SF']:.2f}", f"{row['G']:.2f}"])
-    if span > 1:
-        for i in range(span):
-            rows[-(i+1)][0] = f"\\multirow{{{span}}}{{*}}{{{last_val}}}" if i == span-1 else ""
-    headers = ['Ex(p)', 'Parent', 'L', 'SF', 'G']
-    latex_table = tabulate(rows, headers, tablefmt="latex_raw")
-    latex_table = "\\usepackage{multirow}\n" + latex_table
-    print(latex_table)
+# %%
+# Export data to JSON for the web viewer
+import json
+df_export = df.copy()
+df_export = df_export.round(4)  # Round to 4 decimal places
+json_data = df_export.to_dict(orient='records')
 
+with open('theory_data.json', 'w') as f:
+    json.dump(json_data, f, indent=2)
 
-
-df_to_latex_multirow(df)
-df[(df['Daughter'] == 3) & (df['Ex(d)'] < 6.0)]
-
+print(f"\nExported {len(json_data)} records to theory_data.json")
+# %%
+df
 # %%
