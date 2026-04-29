@@ -14,6 +14,7 @@
 		<orbital name="1p1" n="1" l="1" j="1/2" type="pn" index="10"/>
 		<outercore name="80Zr" N="40" Z="40"/>
 	</valencespace>
+	<operator name="E2" J="2" en="0.35" ep="1.35"/>
 	<hamiltonian name="fsu9" valencespace="spsdpf">
 		<file format="ascii">
 			<name>spsdpfpb.int</name>
@@ -48,6 +49,7 @@
 		<?ManyBodyStates name="34Si_fsu9_M0T6-.mbs" size="28170" creator="sysmbsOMP"?>
 		<matrix name="34Si_fsu9_M0T6-.HH" format="pp"/>
 		<state J="3" P="-" T="3" E="-322.927" dE="5.68434e-14" name="3-(1)" Ex="0">
+			<moment name="E2" m="-3.08679"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="0"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99847"/>
@@ -59,8 +61,34 @@
 			<occupation name="0f5" N="0.0290486" Z="0.00118321"/>
 			<occupation name="1p3" N="0.0162642" Z="0.000246629"/>
 			<occupation name="1p1" N="0.000846272" Z="0.000257039"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="2.2747"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.643588"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0555154"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.237251"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.0912934"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0387035"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.104666"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0106498"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.207744"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.00602059"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="2.00366"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.776061"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.668686"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.173765"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.752393"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.3148"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0135803"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0374046"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.022813"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="7.40712e-05"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00855633"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.317527"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.180144"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.0103617"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0502239"/>
 		</state>
 		<state J="3" P="-" T="3" E="-322.498" dE="3.41061e-13" name="3-(2)" Ex="0.429">
+			<moment name="E2" m="-1.87477"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="1"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99907"/>
@@ -72,8 +100,34 @@
 			<occupation name="0f5" N="0.0471156" Z="0.00212653"/>
 			<occupation name="1p3" N="0.0533128" Z="0.0009361"/>
 			<occupation name="1p1" N="0.00142282" Z="0.000942392"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.643588"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.839091"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="1.61037"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.00532582"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.212501"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="1.06752"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0417212"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0621113"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.167902"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.0496124"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.521064"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.248288"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.205993"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.281528"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.79411"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.403229"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.00737893"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.193661"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0146747"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0136478"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00656677"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0719918"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.787998"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="2.84157e-05"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.189325"/>
 		</state>
 		<state J="5" P="-" T="3" E="-322.445" dE="5.22192e-09" name="5-(1)" Ex="0.482">
+			<moment name="E2" m="-1.0273"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="2"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99996"/>
@@ -85,8 +139,27 @@
 			<occupation name="0f5" N="0.0254667" Z="0.00585458"/>
 			<occupation name="1p3" N="0.0122276" Z="3.08374e-05"/>
 			<occupation name="1p1" N="0.000657751" Z="2.87392e-05"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.035328"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="1.02478"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.181959"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.513443"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0746064"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.828869"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00619486"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00869701"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0148875"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="4.32041"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.911771"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.0272638"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.012958"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.00764626"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0472843"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.00349049"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0378669"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.000215376"/>
 		</state>
 		<state J="4" P="-" T="3" E="-322.444" dE="2.84217e-13" name="4-(1)" Ex="0.483">
+			<moment name="E2" m="-3.73184"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="3"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99997"/>
@@ -98,8 +171,28 @@
 			<occupation name="0f5" N="0.0175076" Z="0.000288297"/>
 			<occupation name="1p3" N="0.00605299" Z="1.49191e-05"/>
 			<occupation name="1p1" N="0.000495061" Z="8.19058e-06"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="2.72114"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.372584"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.00481557"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.69498"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0135239"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.00235296"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.036696"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.233231"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.251342"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="2.26392"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.0163821"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.054631"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0012098"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.00954428"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0853773"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.347058"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.00839999"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.544364"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.155942"/>
 		</state>
 		<state J="2" P="-" T="3" E="-322.163" dE="0" name="2-(1)" Ex="0.764">
+			<moment name="E2" m="0.714038"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="4"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99963"/>
@@ -111,8 +204,30 @@
 			<occupation name="0f5" N="0.00530378" Z="2.72688e-05"/>
 			<occupation name="1p3" N="0.843819" Z="0.000185858"/>
 			<occupation name="1p1" N="0.019769" Z="3.71963e-05"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.670651"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.177505"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.229092"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.337085"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="1.54243"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.209753"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0707568"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.102922"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.264497"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="3.91429"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.480369"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="9.53324e-05"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00104429"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0507575"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.00407139"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.218138"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.187537"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0572246"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.00355252"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.0800278"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.0411027"/>
 		</state>
 		<state J="1" P="-" T="3" E="-321.654" dE="2.84217e-13" name="1-(1)" Ex="1.273">
+			<moment name="E2" m="0.119801"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="5"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99792"/>
@@ -124,8 +239,28 @@
 			<occupation name="0f5" N="0.0121304" Z="0.000286373"/>
 			<occupation name="1p3" N="0.759685" Z="0.0126352"/>
 			<occupation name="1p1" N="0.0898387" Z="0.000216998"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.553585"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.0124269"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0142766"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.259138"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.442439"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.333099"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.00459139"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0442192"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.000111425"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="2.43883"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0434425"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.544707"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.901717"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.177319"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0100564"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="1.02009"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0457153"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.119746"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.368041"/>
 		</state>
 		<state J="3" P="-" T="3" E="-321.644" dE="1.6758e-08" name="3-(3)" Ex="1.283">
+			<moment name="E2" m="0.118452"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="6"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99914"/>
@@ -137,8 +272,34 @@
 			<occupation name="0f5" N="0.034029" Z="0.00331629"/>
 			<occupation name="1p3" N="0.800868" Z="0.00924726"/>
 			<occupation name="1p1" N="0.0272335" Z="0.0072425"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0912934"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.212501"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.80684"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.111059"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.00334961"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.422637"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0247235"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.262741"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0286901"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.252461"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.6554"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.144375"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00329039"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.266884"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.223859"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.055171"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0497738"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.581173"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.62294"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.799503"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00287354"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.636824"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.00272756"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.126601"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0372366"/>
 		</state>
 		<state J="2" P="-" T="3" E="-321.451" dE="2.61431e-07" name="2-(2)" Ex="1.476">
+			<moment name="E2" m="-1.73669"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="7"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99991"/>
@@ -150,8 +311,30 @@
 			<occupation name="0f5" N="0.0172189" Z="0.000110363"/>
 			<occupation name="1p3" N="0.276387" Z="0.000272423"/>
 			<occupation name="1p1" N="0.0282387" Z="0.000178017"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.00866803"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.229092"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="1.05006"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="1.3255"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0388231"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.0613964"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.284517"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.204665"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="6.81165e-05"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.00606924"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.0937807"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.02724"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.129438"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.000537415"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.896773"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.225317"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.0198618"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.00030383"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.131336"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.243485"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.458302"/>
 		</state>
 		<state J="1" P="-" T="3" E="-321.415" dE="5.68434e-14" name="1-(2)" Ex="1.512">
+			<moment name="E2" m="-0.978441"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="8"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99864"/>
@@ -163,8 +346,28 @@
 			<occupation name="0f5" N="0.0402465" Z="0.000357175"/>
 			<occupation name="1p3" N="0.660008" Z="0.000230517"/>
 			<occupation name="1p1" N="0.136" Z="7.76927e-05"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0903082"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="2.49088"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.442439"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.986152"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.95229"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0263715"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.181888"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0352516"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.00568519"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00818776"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.053426"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.245479"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0636291"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.952958"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.476913"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.476537"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0913849"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.000289381"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.437319"/>
 		</state>
 		<state J="4" P="-" T="3" E="-321.024" dE="0" name="4-(2)" Ex="1.903">
+			<moment name="E2" m="-1.86925"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="9"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99992"/>
@@ -176,8 +379,28 @@
 			<occupation name="0f5" N="0.00780932" Z="5.6492e-05"/>
 			<occupation name="1p3" N="0.0152762" Z="3.26102e-06"/>
 			<occupation name="1p1" N="0.000392842" Z="1.17003e-06"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.69498"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.18727"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.736391"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.682715"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.273822"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0358654"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0580624"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.00655693"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.0352834"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.0116389"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.013823"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0153856"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.256983"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.179383"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0383516"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.00233005"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.00415234"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.309921"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.262349"/>
 		</state>
 		<state J="1" P="-" T="3" E="-321.019" dE="0" name="1-(3)" Ex="1.908">
+			<moment name="E2" m="0.502445"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="10"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.98982"/>
@@ -189,8 +412,28 @@
 			<occupation name="0f5" N="0.0530653" Z="0.00800834"/>
 			<occupation name="1p3" N="0.156907" Z="0.0113743"/>
 			<occupation name="1p1" N="0.317326" Z="0.00133311"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.244221"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.0973495"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.333099"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.0576882"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0263715"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.251117"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.000204992"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.124909"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.535593"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.66964"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0630943"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0229238"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0151377"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0127157"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.000631047"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.086127"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.18381"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.0305496"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.789074"/>
 		</state>
 		<state J="2" P="-" T="3" E="-320.032" dE="1.13687e-13" name="2-(3)" Ex="2.895">
+			<moment name="E2" m="-1.31998"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="11"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99919"/>
@@ -202,6 +445,27 @@
 			<occupation name="0f5" N="0.0134849" Z="0.000285115"/>
 			<occupation name="1p3" N="0.533568" Z="0.000215183"/>
 			<occupation name="1p1" N="0.189345" Z="7.12256e-05"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.0243431"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="1.54243"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.0388231"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.49288"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.606598"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.373826"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.27672"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.1613"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0405721"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0211746"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="3.30705e-06"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.209115"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.0509177"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0109589"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.00949799"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.196906"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.0559425"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0374039"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.283804"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.235754"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.073432"/>
 		</state>
 		<state J="0" P="-" T="3" E="-319.993" dE="0" name="0-(1)" Ex="2.934">
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="12"/>
@@ -215,8 +479,18 @@
 			<occupation name="0f5" N="0.0526315" Z="0.00903376"/>
 			<occupation name="1p3" N="0.251785" Z="0.00018808"/>
 			<occupation name="1p1" N="0.203898" Z="0.00256001"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="1.04877"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.306982"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="1.86913"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.356234"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0517125"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.540185"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0073793"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="1.10919"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.013681"/>
 		</state>
 		<state J="2" P="-" T="3" E="-319.92" dE="0" name="2-(4)" Ex="3.007">
+			<moment name="E2" m="0.85117"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="13"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99888"/>
@@ -228,8 +502,30 @@
 			<occupation name="0f5" N="0.0556068" Z="0.000305472"/>
 			<occupation name="1p3" N="0.178051" Z="4.9822e-05"/>
 			<occupation name="1p1" N="0.614031" Z="0.000152088"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.00423532"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.0707568"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.284517"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.0645578"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.27672"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.0712467"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.252232"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.0415258"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.00334084"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0349009"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.376085"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.191757"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00283515"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.00420733"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.457252"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0153081"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.0191967"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0577978"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.136703"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.000250256"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.131631"/>
 		</state>
 		<state J="1" P="-" T="3" E="-319.829" dE="1.7053e-13" name="1-(4)" Ex="3.098">
+			<moment name="E2" m="-0.302784"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="14"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99272"/>
@@ -241,6 +537,25 @@
 			<occupation name="0f5" N="0.0637427" Z="0.00715147"/>
 			<occupation name="1p3" N="0.125286" Z="0.00205061"/>
 			<occupation name="1p1" N="0.435336" Z="0.00213725"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0248495"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.144926"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.00459139"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.613062"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.181888"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.000204992"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0911939"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.350755"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.638338"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0804655"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00143429"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.544278"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0989536"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0635795"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.344705"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.424295"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.236456"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.274998"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0306259"/>
 		</state>
 		<state J="0" P="-" T="3" E="-319.575" dE="1.13687e-13" name="0-(2)" Ex="3.352">
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="15"/>
@@ -254,8 +569,18 @@
 			<occupation name="0f5" N="0.0231421" Z="0.00346663"/>
 			<occupation name="1p3" N="0.680757" Z="0.000110749"/>
 			<occupation name="1p1" N="0.0311568" Z="0.000258458"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.514609"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="1.02332"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.806502"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.207629"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.480216"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.584565"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0603908"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0680151"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.82841"/>
 		</state>
 		<state J="2" P="-" T="3" E="-319.371" dE="1.13687e-13" name="2-(5)" Ex="3.556">
+			<moment name="E2" m="-2.25647"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="16"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99873"/>
@@ -267,8 +592,30 @@
 			<occupation name="0f5" N="0.542401" Z="0.000986578"/>
 			<occupation name="1p3" N="0.101494" Z="0.00109176"/>
 			<occupation name="1p1" N="0.0199446" Z="0.000886237"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.0660528"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.264497"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="6.81165e-05"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.104512"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0405721"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.0103425"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.00334084"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.0960432"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="1.77267"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0149631"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.00791009"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.000803136"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00201058"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0798704"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0431467"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.102308"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.0317943"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="1.56957e-05"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.34749"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.122896"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.052649"/>
 		</state>
 		<state J="3" P="-" T="3" E="-319.184" dE="5.68434e-14" name="3-(4)" Ex="3.743">
+			<moment name="E2" m="-2.7341"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="17"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99563"/>
@@ -280,8 +627,34 @@
 			<occupation name="0f5" N="0.554338" Z="0.00391855"/>
 			<occupation name="1p3" N="0.034721" Z="0.00137611"/>
 			<occupation name="1p1" N="0.0049786" Z="0.0023354"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.207744"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.167902"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.117239"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0189511"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.0286901"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0151078"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0535326"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.150324"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="1.78459"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.00177973"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.0355127"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0162162"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0283636"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.102168"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0446908"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.0152994"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.00169196"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.00193963"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.139648"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0103829"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00162048"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0576206"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0779462"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.000336327"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0723098"/>
 		</state>
 		<state J="1" P="-" T="3" E="-318.94" dE="1.55978e-10" name="1-(5)" Ex="3.987">
+			<moment name="E2" m="0.985997"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="18"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9965"/>
@@ -293,8 +666,28 @@
 			<occupation name="0f5" N="0.0599101" Z="0.00135475"/>
 			<occupation name="1p3" N="0.301241" Z="0.0027149"/>
 			<occupation name="1p1" N="0.585008" Z="0.00122859"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.014048"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.115762"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.000111425"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.589076"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.00568519"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.535593"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.638338"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0041527"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.967056"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00584379"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0481398"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0102945"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0637954"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.592772"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0167256"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.112211"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0545307"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.767108"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.363163"/>
 		</state>
 		<state J="4" P="-" T="3" E="-318.912" dE="1.48668e-09" name="4-(3)" Ex="4.015">
+			<moment name="E2" m="3.58712"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="19"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9995"/>
@@ -306,8 +699,28 @@
 			<occupation name="0f5" N="0.00740248" Z="0.000287966"/>
 			<occupation name="1p3" N="0.591604" Z="0.000177646"/>
 			<occupation name="1p1" N="0.0251133" Z="0.000258173"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.233231"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="2.1746"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.0033718"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.00655693"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0117637"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0193894"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.00831282"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="2.51418"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.369272"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.414676"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00109832"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0400864"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0395265"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0962253"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.100192"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.000141682"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.00197985"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.0663629"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.00491481"/>
 		</state>
 		<state J="5" P="-" T="3" E="-318.754" dE="4.04187e-07" name="5-(2)" Ex="4.173">
+			<moment name="E2" m="1.70862"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="20"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99926"/>
@@ -319,8 +732,27 @@
 			<occupation name="0f5" N="0.0229391" Z="0.00136149"/>
 			<occupation name="1p3" N="0.146335" Z="4.64186e-05"/>
 			<occupation name="1p1" N="0.00185621" Z="1.29158e-05"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="1.27506"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.331586"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.828869"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.417073"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.022599"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.503354"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.191494"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00304185"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0051377"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.770532"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0799984"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.00023466"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0801966"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.173308"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.334403"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0209929"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.176256"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0307708"/>
 		</state>
 		<state J="3" P="-" T="3" E="-318.727" dE="1.54228e-09" name="3-(5)" Ex="4.2">
+			<moment name="E2" m="1.4391"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="21"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99849"/>
@@ -332,8 +764,34 @@
 			<occupation name="0f5" N="0.0264592" Z="0.004493"/>
 			<occupation name="1p3" N="0.442116" Z="0.00195022"/>
 			<occupation name="1p1" N="0.00587841" Z="0.00139413"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.776061"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.248288"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.00973478"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="1.04521"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.144375"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.00350904"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.286989"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0344852"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0162162"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.00250448"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.300919"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.49442"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0875469"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="1.25318"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0857968"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.160824"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.000844391"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.00063619"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.108185"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0187996"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.207453"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0643477"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0164496"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.0129691"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.00791521"/>
 		</state>
 		<state J="4" P="-" T="3" E="-318.57" dE="2.35572e-07" name="4-(4)" Ex="4.357">
+			<moment name="E2" m="-0.716096"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="22"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99936"/>
@@ -345,8 +803,28 @@
 			<occupation name="0f5" N="0.296476" Z="0.00296325"/>
 			<occupation name="1p3" N="0.171102" Z="0.00131812"/>
 			<occupation name="1p1" N="0.0059857" Z="0.001793"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.251342"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.266871"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.0521004"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.0352834"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="1.83725e-06"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.208936"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.00439449"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.369272"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.100195"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.014103"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.0882968"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0163775"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.173407"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.146727"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0570026"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.00108438"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.0285773"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.00986666"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.0455299"/>
 		</state>
 		<state J="6" P="-" T="3" E="-318.485" dE="5.68434e-14" name="6-(1)" Ex="4.442">
+			<moment name="E2" m="0.703671"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="23"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99985"/>
@@ -358,6 +836,16 @@
 			<occupation name="0f5" N="0.0304527" Z="0.00325662"/>
 			<occupation name="1p3" N="0.0229346" Z="4.97779e-05"/>
 			<occupation name="1p1" N="0.00169014" Z="5.30778e-05"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="1.56733"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.00805771"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.287084"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.00976361"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.0783583"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.320056"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.000118529"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.0407814"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.0463482"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.0765911"/>
 		</state>
 		<state J="0" P="-" T="3" E="-318.479" dE="5.74119e-12" name="0-(3)" Ex="4.448">
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="24"/>
@@ -371,8 +859,18 @@
 			<occupation name="0f5" N="0.0397897" Z="0.00417653"/>
 			<occupation name="1p3" N="0.100489" Z="0.000540743"/>
 			<occupation name="1p1" N="0.675486" Z="0.00019096"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.000476662"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.1362"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="1.04558"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.958785"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.00401568"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.753571"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.00353026"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.00551816"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.292166"/>
 		</state>
 		<state J="2" P="-" T="3" E="-318.454" dE="2.27374e-13" name="2-(6)" Ex="4.473">
+			<moment name="E2" m="-1.9948"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="25"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99005"/>
@@ -384,8 +882,30 @@
 			<occupation name="0f5" N="0.117765" Z="0.00913107"/>
 			<occupation name="1p3" N="0.147882" Z="0.00445894"/>
 			<occupation name="1p1" N="0.0268032" Z="0.00433184"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.0294878"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.00104429"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.129438"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.0248815"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0509177"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.108037"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.00283515"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.116913"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.00201058"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.00197698"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.158934"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.150714"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="1.38537"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0495423"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0424607"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.000563937"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.00826241"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.000397755"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.237913"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.00445191"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.00236685"/>
 		</state>
 		<state J="3" P="-" T="3" E="-318.424" dE="2.84217e-13" name="3-(6)" Ex="4.503">
+			<moment name="E2" m="-1.37763"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="26"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99948"/>
@@ -397,8 +917,34 @@
 			<occupation name="0f5" N="0.0701647" Z="0.00101913"/>
 			<occupation name="1p3" N="0.179885" Z="0.00030652"/>
 			<occupation name="1p1" N="0.00295568" Z="0.000316534"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.668686"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.205993"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0136667"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0186182"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.00329039"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0228969"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0270404"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.000614697"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0283636"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.0206313"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.00478006"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0875469"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.453081"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.00356117"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0474535"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.0060525"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.429215"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.458443"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.00066235"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.00285405"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.0705986"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.625967"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.00732968"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.0674384"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.285892"/>
 		</state>
 		<state J="3" P="-" T="3" E="-318.316" dE="1.4893e-11" name="3-(7)" Ex="4.611">
+			<moment name="E2" m="0.113608"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="27"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99828"/>
@@ -410,8 +956,34 @@
 			<occupation name="0f5" N="0.054112" Z="0.00473486"/>
 			<occupation name="1p3" N="0.420658" Z="0.00270927"/>
 			<occupation name="1p1" N="0.00971807" Z="0.00206419"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.173765"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.281528"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0233947"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.233446"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.266884"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.105205"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.00982448"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.233262"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.102168"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.00441191"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.00807352"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="1.25318"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00356117"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.00308125"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0414863"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.877502"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0889741"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.00281923"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0394302"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0514918"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.0698696"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="1.18565e-05"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0617733"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.00832547"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.00747406"/>
 		</state>
 		<state J="2" P="-" T="3" E="-318.186" dE="0" name="2-(7)" Ex="4.741">
+			<moment name="E2" m="-0.379725"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="28"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99839"/>
@@ -423,8 +995,30 @@
 			<occupation name="0f5" N="0.0469299" Z="0.000362813"/>
 			<occupation name="1p3" N="0.543696" Z="0.0017695"/>
 			<occupation name="1p1" N="0.0114871" Z="0.000719805"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.0983358"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.0507575"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.000537415"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.0276941"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0109589"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.00147586"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.00420733"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.0120782"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0798704"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0721556"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.0294795"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.000706052"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.0495423"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0502002"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0993287"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="1.84188"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.208376"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.532581"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.184603"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.192547"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.237436"/>
 		</state>
 		<state J="7" P="-" T="3" E="-318.179" dE="1.13687e-13" name="7-(1)" Ex="4.748">
+			<moment name="E2" m="2.22001"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="29"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99998"/>
@@ -436,8 +1030,16 @@
 			<occupation name="0f5" N="0.0195631" Z="0.000491879"/>
 			<occupation name="1p3" N="0.0297944" Z="2.21195e-05"/>
 			<occupation name="1p1" N="0.00038974" Z="2.84382e-07"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="3.1683"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.565057"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.732668"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.311045"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.376785"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0420372"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.121098"/>
 		</state>
 		<state J="4" P="-" T="3" E="-318.174" dE="1.64846e-12" name="4-(5)" Ex="4.753">
+			<moment name="E2" m="-0.333117"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="30"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99949"/>
@@ -449,8 +1051,28 @@
 			<occupation name="0f5" N="0.105264" Z="0.00218536"/>
 			<occupation name="1p3" N="0.156249" Z="0.000752882"/>
 			<occupation name="1p1" N="0.0315718" Z="0.000921826"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.0012098"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.00226188"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.498207"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.256983"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.00527666"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.254029"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0239704"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0395265"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.173407"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.462303"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.0235893"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.0551826"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.021682"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0265918"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.208648"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.0481029"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.0168053"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.108222"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="5.28443e-05"/>
 		</state>
 		<state J="5" P="-" T="3" E="-318.143" dE="1.13687e-13" name="5-(3)" Ex="4.784">
+			<moment name="E2" m="-1.32587"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="31"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9998"/>
@@ -462,8 +1084,27 @@
 			<occupation name="0f5" N="0.0133058" Z="0.00246913"/>
 			<occupation name="1p3" N="0.0661637" Z="6.11794e-05"/>
 			<occupation name="1p1" N="0.00237655" Z="5.93418e-05"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.478795"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.505343"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.911771"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.142456"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0284396"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.0799984"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.054598"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.0301977"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0264004"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.424152"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.303101"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.17742"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.64906"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0112476"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.572399"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0606454"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.096453"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.000396969"/>
 		</state>
 		<state J="4" P="-" T="3" E="-317.991" dE="5.68434e-14" name="4-(6)" Ex="4.936">
+			<moment name="E2" m="-0.966163"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="32"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99899"/>
@@ -475,8 +1116,28 @@
 			<occupation name="0f5" N="0.0615583" Z="0.00168106"/>
 			<occupation name="1p3" N="0.137546" Z="0.00116059"/>
 			<occupation name="1p1" N="0.00842472" Z="0.000128515"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.00954428"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.121188"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.125176"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.179383"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.109392"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.00850447"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.056838"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0962253"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.146727"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.000171209"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.000313298"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="1.02327"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0265918"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.182392"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.0346692"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.0863401"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.1192"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.0387373"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.744303"/>
 		</state>
 		<state J="5" P="-" T="3" E="-317.957" dE="1.13687e-13" name="5-(4)" Ex="4.97">
+			<moment name="E2" m="-0.120228"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="33"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99944"/>
@@ -488,8 +1149,27 @@
 			<occupation name="0f5" N="0.0259764" Z="0.00947198"/>
 			<occupation name="1p3" N="0.0837548" Z="0.000596623"/>
 			<occupation name="1p1" N="0.00451081" Z="0.000462847"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.200327"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.2566"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0272638"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.0351088"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.00973598"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.00023466"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.102343"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00385159"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.55841"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.513798"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.17742"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.00249227"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0054731"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.37658"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.868473"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.179203"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.00832594"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0149258"/>
 		</state>
 		<state J="1" P="-" T="3" E="-317.944" dE="5.68434e-13" name="1-(6)" Ex="4.983">
+			<moment name="E2" m="0.691956"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="34"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99655"/>
@@ -501,6 +1181,25 @@
 			<occupation name="0f5" N="0.0393597" Z="0.00151563"/>
 			<occupation name="1p3" N="0.619021" Z="0.00843991"/>
 			<occupation name="1p1" N="0.0615954" Z="0.000388364"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0316875"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.0172175"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.901717"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.116139"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0636291"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0151377"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0989536"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0039479"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.0637954"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00197025"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="1.0015"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.207606"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.476274"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.486714"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.154383"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.0130368"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.134941"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.138938"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.321681"/>
 		</state>
 		<state J="0" P="-" T="3" E="-317.922" dE="1.7053e-13" name="0-(4)" Ex="5.005">
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="35"/>
@@ -514,8 +1213,18 @@
 			<occupation name="0f5" N="0.0167163" Z="0.00146767"/>
 			<occupation name="1p3" N="0.730543" Z="0.00058248"/>
 			<occupation name="1p1" N="0.105" Z="3.94334e-05"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.937683"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.099309"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.279712"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0959835"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.158971"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.041312"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="1.04188"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="2.43523"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="1.55731"/>
 		</state>
 		<state J="3" P="-" T="3" E="-317.907" dE="6.70752e-12" name="3-(8)" Ex="5.02">
+			<moment name="E2" m="-1.03279"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="36"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99975"/>
@@ -527,8 +1236,34 @@
 			<occupation name="0f5" N="0.0193882" Z="0.000673646"/>
 			<occupation name="1p3" N="0.596359" Z="0.00138511"/>
 			<occupation name="1p1" N="0.0182232" Z="0.00105618"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0374046"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.193661"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0203626"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0759937"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.581173"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.40841"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.00544957"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0272484"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.00193963"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.254045"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.126023"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00063619"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.458443"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.00281923"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="1.01995"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.00860058"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.208592"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.254645"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="1.22973e-05"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0674462"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.170404"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.00109815"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0824444"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.10469"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0310895"/>
 		</state>
 		<state J="2" P="-" T="3" E="-317.904" dE="6.25278e-13" name="2-(8)" Ex="5.023">
+			<moment name="E2" m="-0.992861"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="37"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99928"/>
@@ -540,8 +1275,30 @@
 			<occupation name="0f5" N="0.0316634" Z="0.000546469"/>
 			<occupation name="1p3" N="0.590523" Z="0.00180505"/>
 			<occupation name="1p1" N="0.0383856" Z="0.00174879"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.153679"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.0572246"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.00030383"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.0690328"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0374039"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.221839"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0577978"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.013603"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="1.56957e-05"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.180345"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.102605"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.00110363"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.000397755"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.532581"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.375566"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0624045"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.487047"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.343198"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.655733"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.120057"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.875715"/>
 		</state>
 		<state J="3" P="-" T="3" E="-317.838" dE="2.84217e-13" name="3-(9)" Ex="5.089">
+			<moment name="E2" m="-1.01712"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="38"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99885"/>
@@ -553,8 +1310,34 @@
 			<occupation name="0f5" N="0.0833322" Z="0.00331694"/>
 			<occupation name="1p3" N="0.33749" Z="0.00329194"/>
 			<occupation name="1p1" N="0.0212362" Z="0.00252339"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.022813"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.0146747"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0120155"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0043099"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.62294"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.204391"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.000270449"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.147731"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.139648"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.0071681"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.272341"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.108185"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00066235"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0394302"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0176747"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.591769"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.066164"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="1.22973e-05"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.246976"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.578671"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.0930979"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.141198"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.125238"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.514637"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0117977"/>
 		</state>
 		<state J="5" P="-" T="3" E="-317.805" dE="2.27374e-13" name="5-(5)" Ex="5.122">
+			<moment name="E2" m="2.95144"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="39"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99965"/>
@@ -566,8 +1349,27 @@
 			<occupation name="0f5" N="0.0102677" Z="0.000736526"/>
 			<occupation name="1p3" N="0.521479" Z="0.000886366"/>
 			<occupation name="1p1" N="0.0282005" Z="0.00131791"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="4.71362e-05"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.00868499"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0472843"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.508775"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.00660729"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.334403"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0119634"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00181622"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0327675"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.0573234"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.572399"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.868473"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0429203"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.368245"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="1.50193"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.232992"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.00619322"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0461233"/>
 		</state>
 		<state J="4" P="-" T="3" E="-317.729" dE="5.27274e-09" name="4-(7)" Ex="5.198">
+			<moment name="E2" m="-1.47908"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="40"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9991"/>
@@ -579,8 +1381,28 @@
 			<occupation name="0f5" N="0.196287" Z="0.00622255"/>
 			<occupation name="1p3" N="0.0905984" Z="0.00156177"/>
 			<occupation name="1p1" N="0.026735" Z="0.00150287"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.347058"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.00197362"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.0729644"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.00233005"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.157669"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0759461"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.19305"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.000141682"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.00108438"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.0589064"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.132174"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.102557"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0481029"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0863401"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.364296"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.427454"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.00146704"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.157921"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.0781924"/>
 		</state>
 		<state J="1" P="-" T="3" E="-317.65" dE="5.9589e-10" name="1-(7)" Ex="5.277">
+			<moment name="E2" m="0.988706"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="41"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99441"/>
@@ -592,8 +1414,28 @@
 			<occupation name="0f5" N="0.024055" Z="0.00130691"/>
 			<occupation name="1p3" N="0.630698" Z="0.0128082"/>
 			<occupation name="1p1" N="0.0771488" Z="0.000968415"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0199648"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.0153225"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="1.02009"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.00670492"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.476537"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.086127"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.424295"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.00378111"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.112211"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.484058"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.16473"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.163029"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0130368"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.39761"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.217228"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.972376"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0105075"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.0592416"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0145457"/>
 		</state>
 		<state J="2" P="-" T="3" E="-317.636" dE="1.51534e-06" name="2-(9)" Ex="5.291">
+			<moment name="E2" m="1.15146"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="42"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99753"/>
@@ -605,8 +1447,30 @@
 			<occupation name="0f5" N="0.0637212" Z="0.00105661"/>
 			<occupation name="1p3" N="0.603096" Z="0.00489468"/>
 			<occupation name="1p1" N="0.0829526" Z="0.00141117"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.01512"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.0800278"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.243485"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.00747421"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.235754"/>
+			<transition name="B(E2)" final="0-(1)" E="-319.993" B="0.0027362"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.000250256"/>
+			<transition name="B(E2)" final="0-(2)" E="-319.575" B="0.165682"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.122896"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.00356374"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.0514391"/>
+			<transition name="B(E2)" final="0-(3)" E="-318.479" B="0.0584333"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00445191"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.192547"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.0302495"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.21456"/>
+			<transition name="B(E2)" final="0-(4)" E="-317.922" B="0.311463"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.120057"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.00264066"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.461603"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.388621"/>
 		</state>
 		<state J="5" P="-" T="3" E="-317.628" dE="6.53131e-11" name="5-(6)" Ex="5.299">
+			<moment name="E2" m="0.782861"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="43"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99874"/>
@@ -618,8 +1482,27 @@
 			<occupation name="0f5" N="0.0325205" Z="0.00251099"/>
 			<occupation name="1p3" N="0.152823" Z="0.00174686"/>
 			<occupation name="1p1" N="0.00655615" Z="0.00148876"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.202063"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.045813"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.00349049"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.405252"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0366676"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.0209929"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0409485"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.398342"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="7.54504e-06"/>
+			<transition name="B(E2)" final="7-(1)" E="-318.179" B="0.165133"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.0606454"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.179203"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.000698825"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0898532"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.232992"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.10567"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0188967"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.104522"/>
 		</state>
 		<state J="4" P="-" T="3" E="-317.558" dE="1.87831e-05" name="4-(8)" Ex="5.369">
+			<moment name="E2" m="-1.52229"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="44"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9998"/>
@@ -631,8 +1514,28 @@
 			<occupation name="0f5" N="0.155226" Z="0.00163773"/>
 			<occupation name="1p3" N="0.0672509" Z="0.000379346"/>
 			<occupation name="1p1" N="0.00841871" Z="0.000327755"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.544364"/>
+			<transition name="B(E2)" final="2-(1)" E="-322.163" B="0.0228348"/>
+			<transition name="B(E2)" final="2-(2)" E="-321.451" B="0.254612"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.309921"/>
+			<transition name="B(E2)" final="2-(3)" E="-320.032" B="0.0407955"/>
+			<transition name="B(E2)" final="2-(4)" E="-319.92" B="0.0731284"/>
+			<transition name="B(E2)" final="2-(5)" E="-319.371" B="0.0292494"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.0663629"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.00986666"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.0669474"/>
+			<transition name="B(E2)" final="2-(6)" E="-318.454" B="0.00131492"/>
+			<transition name="B(E2)" final="2-(7)" E="-318.186" B="0.131909"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="0.108222"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.0387373"/>
+			<transition name="B(E2)" final="2-(8)" E="-317.904" B="0.486508"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.157921"/>
+			<transition name="B(E2)" final="2-(9)" E="-317.636" B="0.215901"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.452793"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.000191803"/>
 		</state>
 		<state J="6" P="-" T="3" E="-317.555" dE="2.90993e-06" name="6-(2)" Ex="5.372">
+			<moment name="E2" m="2.25063"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="45"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99952"/>
@@ -644,8 +1547,19 @@
 			<occupation name="0f5" N="0.0303509" Z="0.000557825"/>
 			<occupation name="1p3" N="0.129246" Z="0.000105166"/>
 			<occupation name="1p1" N="0.00278407" Z="1.98558e-05"/>
+			<transition name="B(E2)" final="4-(1)" E="-322.444" B="0.10796"/>
+			<transition name="B(E2)" final="4-(2)" E="-321.024" B="0.181626"/>
+			<transition name="B(E2)" final="4-(3)" E="-318.912" B="0.00340256"/>
+			<transition name="B(E2)" final="4-(4)" E="-318.57" B="0.0315207"/>
+			<transition name="B(E2)" final="6-(1)" E="-318.485" B="0.0765911"/>
+			<transition name="B(E2)" final="4-(5)" E="-318.174" B="3.65845e-05"/>
+			<transition name="B(E2)" final="4-(6)" E="-317.991" B="0.515287"/>
+			<transition name="B(E2)" final="4-(7)" E="-317.729" B="0.0541332"/>
+			<transition name="B(E2)" final="4-(8)" E="-317.558" B="0.000132787"/>
+			<transition name="B(E2)" final="6-(2)" E="-317.555" B="0.801594"/>
 		</state>
 		<state J="3" P="-" T="3" E="-317.527" dE="9.69482e-08" name="3-(10)" Ex="5.4">
+			<moment name="E2" m="-1.70591"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="46"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99879"/>
@@ -657,8 +1571,34 @@
 			<occupation name="0f5" N="0.240426" Z="0.00279812"/>
 			<occupation name="1p3" N="0.0822577" Z="0.000956834"/>
 			<occupation name="1p1" N="0.00939547" Z="0.00105695"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.180144"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.787998"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.0595051"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.0195923"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.00272756"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.0391649"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0787756"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.101338"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0779462"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.0233703"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.276974"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0164496"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.00732968"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0617733"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.151569"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.0130836"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.0578318"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0824444"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.125238"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0097322"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00450321"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.0296948"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.694746"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.00805888"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.00347049"/>
 		</state>
 		<state J="1" P="-" T="3" E="-317.484" dE="1.44376e-06" name="1-(8)" Ex="5.443">
+			<moment name="E2" m="-0.534213"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="47"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.9971"/>
@@ -670,6 +1610,25 @@
 			<occupation name="0f5" N="0.0309608" Z="0.00691443"/>
 			<occupation name="1p3" N="0.530124" Z="0.00766464"/>
 			<occupation name="1p1" N="0.12961" Z="0.00211387"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0241773"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="6.63032e-05"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.119746"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.295403"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.000289381"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.0305496"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.274998"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.000784764"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.767108"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.0302611"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.157356"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.0194261"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.138938"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.244278"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="1.20082"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.0592416"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.0188041"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.283876"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.000416498"/>
 		</state>
 		<state J="-1/2" P="-" T="3" E="-317.459" dE="1.8307e-05" name="-1/2-(1)" Ex="5.468">
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="48"/>
@@ -685,6 +1644,7 @@
 			<occupation name="1p1" N="0.0157384" Z="0.000571724"/>
 		</state>
 		<state J="3" P="-" T="3" E="-317.385" dE="4.12483e-05" name="3-(11)" Ex="5.542">
+			<moment name="E2" m="0.613668"/>
 			<wavefunction Jz="0" Tz="3" file="34Si_fsu9_M0T6-.HH.EE" id="49"/>
 			<occupation name="0s1" N="2" Z="2"/>
 			<occupation name="0p3" N="4" Z="3.99839"/>
@@ -696,6 +1656,31 @@
 			<occupation name="0f5" N="0.218608" Z="0.00248794"/>
 			<occupation name="1p3" N="0.207924" Z="0.0114035"/>
 			<occupation name="1p1" N="0.117666" Z="0.00178288"/>
+			<transition name="B(E2)" final="3-(1)" E="-322.927" B="0.0502239"/>
+			<transition name="B(E2)" final="3-(2)" E="-322.498" B="0.189325"/>
+			<transition name="B(E2)" final="5-(1)" E="-322.445" B="0.000338448"/>
+			<transition name="B(E2)" final="1-(1)" E="-321.654" B="0.157732"/>
+			<transition name="B(E2)" final="3-(3)" E="-321.644" B="0.0372366"/>
+			<transition name="B(E2)" final="1-(2)" E="-321.415" B="0.187423"/>
+			<transition name="B(E2)" final="1-(3)" E="-321.019" B="0.338174"/>
+			<transition name="B(E2)" final="1-(4)" E="-319.829" B="0.0131254"/>
+			<transition name="B(E2)" final="3-(4)" E="-319.184" B="0.0723098"/>
+			<transition name="B(E2)" final="1-(5)" E="-318.94" B="0.155641"/>
+			<transition name="B(E2)" final="5-(2)" E="-318.754" B="0.0483541"/>
+			<transition name="B(E2)" final="3-(5)" E="-318.727" B="0.00791521"/>
+			<transition name="B(E2)" final="3-(6)" E="-318.424" B="0.285892"/>
+			<transition name="B(E2)" final="3-(7)" E="-318.316" B="0.00747406"/>
+			<transition name="B(E2)" final="5-(3)" E="-318.143" B="0.000623809"/>
+			<transition name="B(E2)" final="5-(4)" E="-317.957" B="0.0234549"/>
+			<transition name="B(E2)" final="1-(6)" E="-317.944" B="0.137863"/>
+			<transition name="B(E2)" final="3-(8)" E="-317.907" B="0.0310895"/>
+			<transition name="B(E2)" final="3-(9)" E="-317.838" B="0.0117977"/>
+			<transition name="B(E2)" final="5-(5)" E="-317.805" B="0.0724795"/>
+			<transition name="B(E2)" final="1-(7)" E="-317.65" B="0.00623386"/>
+			<transition name="B(E2)" final="5-(6)" E="-317.628" B="0.164248"/>
+			<transition name="B(E2)" final="3-(10)" E="-317.527" B="0.00347049"/>
+			<transition name="B(E2)" final="1-(8)" E="-317.484" B="0.000178499"/>
+			<transition name="B(E2)" final="3-(11)" E="-317.385" B="0.0899037"/>
 		</state>
 	</system>
 </cosmo>

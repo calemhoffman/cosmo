@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cosmo version="4.1" date="Feb/25/2024">
+	<valencespace name="spsdpf">
+		<core name="0n" N="0" Z="0"/>
+		<orbital name="0s1" n="0" l="0" j="1/2" type="pn" index="1"/>
+		<orbital name="0p3" n="0" l="1" j="3/2" type="pn" index="2"/>
+		<orbital name="0p1" n="0" l="1" j="1/2" type="pn" index="3"/>
+		<orbital name="0d5" n="0" l="2" j="5/2" type="pn" index="4"/>
+		<orbital name="0d3" n="0" l="2" j="3/2" type="pn" index="5"/>
+		<orbital name="1s1" n="1" l="0" j="1/2" type="pn" index="6"/>
+		<orbital name="0f7" n="0" l="3" j="7/2" type="pn" index="7"/>
+		<orbital name="0f5" n="0" l="3" j="5/2" type="pn" index="8"/>
+		<orbital name="1p3" n="1" l="1" j="3/2" type="pn" index="9"/>
+		<orbital name="1p1" n="1" l="1" j="1/2" type="pn" index="10"/>
+		<outercore name="80Zr" N="40" Z="40"/>
+	</valencespace>
+	<operator name="E2" J="2" en="0.35" ep="1.35"/>
+	<hamiltonian name="fsu9" valencespace="spsdpf">
+		<file format="ascii">
+			<name>spsdpfpb.int</name>
+			<comment>Unchanged from WBP</comment>
+		</file>
+		<file format="ascii">
+			<name>fsu9/spsdfp-fsu9.int</name>
+			<formulascale rank="2">(18/A)^0.3</formulascale>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p1sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>fsu9/0p3sd.int</name>
+		</file>
+		<file format="ascii">
+			<name>0s0f1p0.int</name>
+		</file>
+		<file format="ascii">
+			<name>spsdpfcm.int</name>
+			<scale rank="1">10.000000</scale>
+			<scale rank="2">10.000000</scale>
+			<comment>Center-of-mass</comment>
+		</file>
+		<comment>Interaction fitted to particle-hole excitations</comment>
+		<reference doi="10.1103/PhysRevResearch.2.043342">R. S. Lubna, et al.  Phys. Rev. Research 2, 043342 (2020)</reference>
+		<reference>R. S. Lubna, et al. Phys. Rev. C 100, 034308 (2019)</reference>
+		<reference>R. S. Lubna, Ph.D. thesis, Florida State University (2019)</reference>
+	</hamiltonian>
+	<system Av="32" Nv="18" Zv="14" A="32" Tz="2" Jz="0" P="-" name="32Si_fsu9_M0T4-">
+		<hwrejection HWMAX="1" HWMIN="1"/>
+		<?ManyBodyStates name="32Si_fsu9_M0T4-.mbs" size="580960" creator="sysmbsOMP"?>
+		<matrix name="32Si_fsu9_M0T4-.HH" format="pp"/>
+		<state J="3" P="-" T="2" E="-310.031" dE="5.55872e-10" name="3-(1)" Ex="0">
+			<moment name="E2" m="-2.31706"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="0"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99719" Z="3.99494"/>
+			<occupation name="0p1" N="1.99972" Z="1.9939"/>
+			<occupation name="0d5" N="5.7365" Z="5.0195"/>
+			<occupation name="0d3" N="2.08748" Z="0.330293"/>
+			<occupation name="1s1" N="1.29413" Z="0.560604"/>
+			<occupation name="0f7" N="0.715332" Z="0.0740288"/>
+			<occupation name="0f5" N="0.06843" Z="0.0140251"/>
+			<occupation name="1p3" N="0.0917909" Z="0.00772047"/>
+			<occupation name="1p1" N="0.00943649" Z="0.00498754"/>
+			<transition name="B(E2)" final="3-(1)" E="-310.031" B="1.2817" weisskopf="2.67105"/>
+			<transition name="B(E2)" final="5-(1)" E="-309.566" B="0.0501574" weisskopf="0.104527"/>
+			<transition name="B(E2)" final="1-(1)" E="-309.487" B="0.903992" weisskopf="1.88391"/>
+			<transition name="B(E2)" final="3-(2)" E="-309.277" B="1.59399" weisskopf="3.32185"/>
+			<transition name="B(E2)" final="3-(3)" E="-308.862" B="0.375769" weisskopf="0.783098"/>
+		</state>
+		<state J="2" P="-" T="2" E="-309.683" dE="1.2858e-10" name="2-(1)" Ex="0.348">
+			<moment name="E2" m="-3.94207"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="1"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9981" Z="3.99594"/>
+			<occupation name="0p1" N="1.99992" Z="1.99706"/>
+			<occupation name="0d5" N="5.60741" Z="4.84298"/>
+			<occupation name="0d3" N="1.83872" Z="0.417563"/>
+			<occupation name="1s1" N="1.58302" Z="0.728296"/>
+			<occupation name="0f7" N="0.914688" Z="0.0142352"/>
+			<occupation name="0f5" N="0.026769" Z="0.00258069"/>
+			<occupation name="1p3" N="0.0263931" Z="0.000713079"/>
+			<occupation name="1p1" N="0.00498738" Z="0.0006409"/>
+			<transition name="B(E2)" final="2-(1)" E="-309.683" B="5.41024" weisskopf="11.2749"/>
+			<transition name="B(E2)" final="0-(1)" E="-308.802" B="0.180683" weisskopf="0.376541"/>
+			<transition name="B(E2)" final="4-(1)" E="-308.575" B="1.67458" weisskopf="3.4898"/>
+			<transition name="B(E2)" final="4-(2)" E="-308.523" B="0.557631" weisskopf="1.1621"/>
+		</state>
+		<state J="5" P="-" T="2" E="-309.566" dE="2.70581e-08" name="5-(1)" Ex="0.465">
+			<moment name="E2" m="-6.97098"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="2"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99996" Z="3.99956"/>
+			<occupation name="0p1" N="2" Z="1.99985"/>
+			<occupation name="0d5" N="5.75774" Z="4.99251"/>
+			<occupation name="0d3" N="1.7138" Z="0.370765"/>
+			<occupation name="1s1" N="1.56775" Z="0.598698"/>
+			<occupation name="0f7" N="0.919484" Z="0.0280755"/>
+			<occupation name="0f5" N="0.0306511" Z="0.0101474"/>
+			<occupation name="1p3" N="0.0099478" Z="0.000216832"/>
+			<occupation name="1p1" N="0.00067004" Z="0.000172545"/>
+			<transition name="B(E2)" final="3-(1)" E="-310.031" B="0.0319183" weisskopf="0.0665174"/>
+			<transition name="B(E2)" final="5-(1)" E="-309.566" B="8.37857" weisskopf="17.4608"/>
+			<transition name="B(E2)" final="3-(2)" E="-309.277" B="0.336042" weisskopf="0.700306"/>
+			<transition name="B(E2)" final="3-(3)" E="-308.862" B="0.501284" weisskopf="1.04467"/>
+		</state>
+		<state J="1" P="-" T="2" E="-309.487" dE="6.88942e-11" name="1-(1)" Ex="0.544">
+			<moment name="E2" m="2.27885"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="3"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99895" Z="3.99768"/>
+			<occupation name="0p1" N="1.99726" Z="1.98856"/>
+			<occupation name="0d5" N="5.60873" Z="4.8846"/>
+			<occupation name="0d3" N="1.77269" Z="0.360875"/>
+			<occupation name="1s1" N="1.65912" Z="0.749079"/>
+			<occupation name="0f7" N="0.160059" Z="0.00220734"/>
+			<occupation name="0f5" N="0.00669345" Z="0.00127812"/>
+			<occupation name="1p3" N="0.76639" Z="0.0128389"/>
+			<occupation name="1p1" N="0.0301038" Z="0.00288067"/>
+			<transition name="B(E2)" final="3-(1)" E="-310.031" B="2.10931" weisskopf="4.39579"/>
+			<transition name="B(E2)" final="1-(1)" E="-309.487" B="5.16574" weisskopf="10.7653"/>
+			<transition name="B(E2)" final="3-(2)" E="-309.277" B="1.83432" weisskopf="3.8227"/>
+			<transition name="B(E2)" final="3-(3)" E="-308.862" B="0.120618" weisskopf="0.251367"/>
+		</state>
+		<state J="3" P="-" T="2" E="-309.277" dE="5.45845e-08" name="3-(2)" Ex="0.754">
+			<moment name="E2" m="-2.73886"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="4"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99843" Z="3.99753"/>
+			<occupation name="0p1" N="1.99988" Z="1.997"/>
+			<occupation name="0d5" N="5.71971" Z="5.01869"/>
+			<occupation name="0d3" N="1.92201" Z="0.374242"/>
+			<occupation name="1s1" N="1.42161" Z="0.558071"/>
+			<occupation name="0f7" N="0.816255" Z="0.0438376"/>
+			<occupation name="0f5" N="0.0465021" Z="0.00709986"/>
+			<occupation name="1p3" N="0.0727401" Z="0.00247555"/>
+			<occupation name="1p1" N="0.00286405" Z="0.00105895"/>
+			<transition name="B(E2)" final="3-(1)" E="-310.031" B="1.59399" weisskopf="3.32185"/>
+			<transition name="B(E2)" final="5-(1)" E="-309.566" B="0.528065" weisskopf="1.10048"/>
+			<transition name="B(E2)" final="1-(1)" E="-309.487" B="0.786137" weisskopf="1.6383"/>
+			<transition name="B(E2)" final="3-(2)" E="-309.277" B="1.79082" weisskopf="3.73204"/>
+			<transition name="B(E2)" final="3-(3)" E="-308.862" B="0.0538849" weisskopf="0.112296"/>
+		</state>
+		<state J="3" P="-" T="2" E="-308.862" dE="4.502e-11" name="3-(3)" Ex="1.169">
+			<moment name="E2" m="-3.45625"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="5"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99965" Z="3.99881"/>
+			<occupation name="0p1" N="1.99995" Z="1.99892"/>
+			<occupation name="0d5" N="5.73079" Z="4.94401"/>
+			<occupation name="0d3" N="1.67494" Z="0.348496"/>
+			<occupation name="1s1" N="1.63033" Z="0.676771"/>
+			<occupation name="0f7" N="0.260865" Z="0.013333"/>
+			<occupation name="0f5" N="0.0185318" Z="0.00288253"/>
+			<occupation name="1p3" N="0.668952" Z="0.0112604"/>
+			<occupation name="1p1" N="0.0159901" Z="0.00551127"/>
+			<transition name="B(E2)" final="3-(1)" E="-310.031" B="0.375769" weisskopf="0.783098"/>
+			<transition name="B(E2)" final="5-(1)" E="-309.566" B="0.787731" weisskopf="1.64162"/>
+			<transition name="B(E2)" final="1-(1)" E="-309.487" B="0.0516935" weisskopf="0.107729"/>
+			<transition name="B(E2)" final="3-(2)" E="-309.277" B="0.0538849" weisskopf="0.112296"/>
+			<transition name="B(E2)" final="3-(3)" E="-308.862" B="2.85181" weisskopf="5.94314"/>
+		</state>
+		<state J="0" P="-" T="2" E="-308.802" dE="3.19509e-08" name="0-(1)" Ex="1.229">
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="6"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99978" Z="3.99918"/>
+			<occupation name="0p1" N="1.99994" Z="1.9841"/>
+			<occupation name="0d5" N="5.65823" Z="4.87965"/>
+			<occupation name="0d3" N="1.66369" Z="0.369065"/>
+			<occupation name="1s1" N="1.69822" Z="0.765155"/>
+			<occupation name="0f7" N="0.0657941" Z="0.00141523"/>
+			<occupation name="0f5" N="0.010032" Z="0.000390159"/>
+			<occupation name="1p3" N="0.897268" Z="0.000713705"/>
+			<occupation name="1p1" N="0.00705045" Z="0.000330693"/>
+			<transition name="B(E2)" final="2-(1)" E="-309.683" B="0.903416" weisskopf="1.88271"/>
+		</state>
+		<state J="4" P="-" T="2" E="-308.575" dE="3.24576e-10" name="4-(1)" Ex="1.456">
+			<moment name="E2" m="-2.57336"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="7"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.99987" Z="3.9991"/>
+			<occupation name="0p1" N="1.99998" Z="1.9994"/>
+			<occupation name="0d5" N="5.65464" Z="5.02948"/>
+			<occupation name="0d3" N="2.02432" Z="0.372733"/>
+			<occupation name="1s1" N="1.34389" Z="0.578227"/>
+			<occupation name="0f7" N="0.87243" Z="0.0167044"/>
+			<occupation name="0f5" N="0.0323811" Z="0.00396383"/>
+			<occupation name="1p3" N="0.0713883" Z="0.000294455"/>
+			<occupation name="1p1" N="0.00109603" Z="9.43841e-05"/>
+			<transition name="B(E2)" final="2-(1)" E="-309.683" B="0.930321" weisskopf="1.93878"/>
+			<transition name="B(E2)" final="4-(1)" E="-308.575" B="1.29392" weisskopf="2.69651"/>
+			<transition name="B(E2)" final="4-(2)" E="-308.523" B="0.341991" weisskopf="0.712705"/>
+		</state>
+		<state J="4" P="-" T="2" E="-308.523" dE="1.41142e-10" name="4-(2)" Ex="1.508">
+			<moment name="E2" m="-1.51136"/>
+			<wavefunction Jz="0" Tz="2" file="32Si_fsu9_M0T4-.HH.EE" id="8"/>
+			<occupation name="0s1" N="2" Z="2"/>
+			<occupation name="0p3" N="3.9997" Z="3.9974"/>
+			<occupation name="0p1" N="1.99992" Z="1.99778"/>
+			<occupation name="0d5" N="5.7513" Z="4.95866"/>
+			<occupation name="0d3" N="2.16782" Z="0.329629"/>
+			<occupation name="1s1" N="1.1875" Z="0.615493"/>
+			<occupation name="0f7" N="0.736534" Z="0.0757396"/>
+			<occupation name="0f5" N="0.0646706" Z="0.0150787"/>
+			<occupation name="1p3" N="0.0845625" Z="0.00602263"/>
+			<occupation name="1p1" N="0.0080014" Z="0.00419209"/>
+			<transition name="B(E2)" final="2-(1)" E="-309.683" B="0.309795" weisskopf="0.645609"/>
+			<transition name="B(E2)" final="4-(1)" E="-308.575" B="0.341991" weisskopf="0.712705"/>
+			<transition name="B(E2)" final="4-(2)" E="-308.523" B="0.446314" weisskopf="0.930113"/>
+		</state>
+	</system>
+</cosmo>
