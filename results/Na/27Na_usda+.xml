@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cosmo version="4.1" date="Feb/25/2024">
+	<valencespace name="sd">
+		<core name="16O" N="8" Z="8"/>
+		<orbital name="0d3" n="0" l="2" j="3/2" type="pn" index="1"/>
+		<orbital name="0d5" n="0" l="2" j="5/2" type="pn" index="2"/>
+		<orbital name="1s1" n="1" l="0" j="1/2" type="pn" index="3"/>
+		<outercore name="40Ca" N="20" Z="20"/>
+	</valencespace>
+	<hamiltonian name="usda" valencespace="sd">
+		<file format="ascii">
+			<name>usda.int</name>
+			<formulascale rank="2">(18/A)^(0.3)</formulascale>
+		</file>
+		<comment>Phys. Rev. C74, 034315 (2006)</comment>
+		<reference doi="10.1103/PhysRevC.78.064302">PHYSICAL REVIEW C 78, 064302 (2008)</reference>
+	</hamiltonian>
+	<system Av="11" Nv="8" Zv="3" A="27" Tz="5/2" Jz="1/2" P="+" name="27Na_usda_M1T5+">
+		<?ManyBodyStates name="27Na_usda_M1T5+.mbs" size="13029" creator="sysmbsOMP"?>
+		<matrix name="27Na_usda_M1T5+.HH" format="pp"/>
+		<state J="5/2" P="+" T="5/2" E="-99.0526" dE="4.26326e-14" name="5/2+(1)" Ex="0">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="0"/>
+			<occupation name="0d3" N="0.936871" Z="0.176139"/>
+			<occupation name="0d5" N="5.62718" Z="2.60374"/>
+			<occupation name="1s1" N="1.43595" Z="0.220121"/>
+		</state>
+		<state J="3/2" P="+" T="5/2" E="-98.9813" dE="1.42109e-14" name="3/2+(1)" Ex="0.0713">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="1"/>
+			<occupation name="0d3" N="1.07321" Z="0.143756"/>
+			<occupation name="0d5" N="5.64363" Z="2.48822"/>
+			<occupation name="1s1" N="1.28316" Z="0.368027"/>
+		</state>
+		<state J="1/2" P="+" T="5/2" E="-97.5512" dE="1.42109e-14" name="1/2+(1)" Ex="1.5014">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="2"/>
+			<occupation name="0d3" N="0.926707" Z="0.188789"/>
+			<occupation name="0d5" N="5.57413" Z="2.19071"/>
+			<occupation name="1s1" N="1.49916" Z="0.620504"/>
+		</state>
+		<state J="9/2" P="+" T="5/2" E="-96.8751" dE="1.42109e-14" name="9/2+(1)" Ex="2.1775">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="3"/>
+			<occupation name="0d3" N="1.07587" Z="0.172456"/>
+			<occupation name="0d5" N="5.60343" Z="2.66553"/>
+			<occupation name="1s1" N="1.3207" Z="0.162012"/>
+		</state>
+		<state J="7/2" P="+" T="5/2" E="-96.7142" dE="5.68434e-14" name="7/2+(1)" Ex="2.3384">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="4"/>
+			<occupation name="0d3" N="1.1825" Z="0.140074"/>
+			<occupation name="0d5" N="5.64293" Z="2.41757"/>
+			<occupation name="1s1" N="1.17457" Z="0.442355"/>
+		</state>
+		<state J="5/2" P="+" T="5/2" E="-96.048" dE="0" name="5/2+(2)" Ex="3.0046">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="5"/>
+			<occupation name="0d3" N="1.13926" Z="0.160672"/>
+			<occupation name="0d5" N="5.60272" Z="2.58446"/>
+			<occupation name="1s1" N="1.25802" Z="0.254867"/>
+		</state>
+		<state J="3/2" P="+" T="5/2" E="-95.8416" dE="5.68434e-14" name="3/2+(2)" Ex="3.211">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="6"/>
+			<occupation name="0d3" N="1.0285" Z="0.17163"/>
+			<occupation name="0d5" N="5.52017" Z="2.70543"/>
+			<occupation name="1s1" N="1.45133" Z="0.12294"/>
+		</state>
+		<state J="1/2" P="+" T="5/2" E="-95.4361" dE="5.68434e-14" name="1/2+(2)" Ex="3.6165">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="7"/>
+			<occupation name="0d3" N="1.09744" Z="0.203881"/>
+			<occupation name="0d5" N="5.5296" Z="2.41617"/>
+			<occupation name="1s1" N="1.37296" Z="0.379947"/>
+		</state>
+		<state J="5/2" P="+" T="5/2" E="-95.2915" dE="5.68434e-14" name="5/2+(3)" Ex="3.7611">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="8"/>
+			<occupation name="0d3" N="1.27952" Z="0.173194"/>
+			<occupation name="0d5" N="5.61206" Z="2.54355"/>
+			<occupation name="1s1" N="1.10842" Z="0.283252"/>
+		</state>
+		<state J="3/2" P="+" T="5/2" E="-95.2604" dE="7.10543e-14" name="3/2+(3)" Ex="3.7922">
+			<wavefunction Jz="1/2" Tz="5/2" file="27Na_usda_M1T5+.HH.EE" id="9"/>
+			<occupation name="0d3" N="1.21709" Z="0.156665"/>
+			<occupation name="0d5" N="5.57542" Z="2.59355"/>
+			<occupation name="1s1" N="1.20749" Z="0.249784"/>
+		</state>
+	</system>
+</cosmo>

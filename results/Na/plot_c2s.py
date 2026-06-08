@@ -57,27 +57,6 @@ def parse_c2s_file(filepath):
         i += 1
     return data
 
-directory = '/Users/calemhoffman/Documents/GitHub/cosmo/results/Na'
-interactions = ['usd', 'usda', 'usdb']
-all_results = []
-
-for interact in interactions:
-    filename = f"26Na_25Na_{interact}+.txt"
-    filepath = os.path.join(directory, filename)
-    if os.path.exists(filepath):
-        print(f"Parsing {filename}...")
-        parsed_data = parse_c2s_file(filepath)
-        for entry in parsed_data:
-            entry['Interaction'] = interact.upper()
-            all_results.append(entry)
-
-df = pd.DataFrame(all_results)
-# Fill NaN with 0 for orbital columns
-df = df.fillna(0)
-csv_out = os.path.join(directory, 'c2s_26Na_25Nags.csv')
-df.to_csv(csv_out, index=False)
-print(f"Saved extracted data to {csv_out}")
-
 from plotly.subplots import make_subplots
 
 # Helper to parse J from strings like "1+(1)" or "3/2+(1)"
@@ -89,73 +68,131 @@ def parse_j(jpi_str):
     den = float(match.group(2)) if match.group(2) else 1.0
     return num / den
 
-df['J'] = df['Parent_Jpi'].apply(parse_j)
-df['2Jplus1'] = 2 * df['J'] + 1
 
-# Plotting
-orbital_colors = {'0d3/2': '#636EFA', '0d5/2': '#EF553B', '1s1/2': '#00CC96'}
-orbitals = ['0d3/2', '0d5/2', '1s1/2']
-orbital_2jplus1 = {'0d3/2': 4, '0d5/2': 6, '1s1/2': 2}
-orbital_offsets = {'0d3/2': -0.02, '0d5/2': 0, '1s1/2': 0.02}
-interactions = ['USD', 'USDA', 'USDB']
+def process_system(directory, parent_label, daughter_label, interactions,
+                   x_max=4.0, y_max=None, dp_mode=False, daughter_J=2.5,
+                   show_j_labels=True):
+    """Parse C2S files for a parent->daughter system and produce CSV + combined PNG.
 
-fig = make_subplots(
-    rows=3, cols=1, 
-    subplot_titles=interactions,
-    shared_xaxes=True,
-    vertical_spacing=0.08
-)
+    dp_mode=True scales C²S by (2J_f+1)/(2J_i+1), i.e. the factor relevant for the
+    inverse (d,p) stripping cross section onto the parent state. J_i is the daughter
+    ground-state spin (default 5/2).
+    """
+    all_results = []
+    for interact in interactions:
+        filename = f"{parent_label}_{daughter_label}_{interact}+.txt"
+        filepath = os.path.join(directory, filename)
+        if os.path.exists(filepath):
+            print(f"Parsing {filename}...")
+            parsed_data = parse_c2s_file(filepath)
+            for entry in parsed_data:
+                entry['Interaction'] = interact.upper()
+                all_results.append(entry)
+        else:
+            print(f"WARNING: {filename} not found, skipping.")
 
-for i, interact in enumerate(interactions):
-    row_num = i + 1
-    subset = df[df['Interaction'] == interact].sort_values('Parent_Ex')
-    
-    # Identify Parent Ground State J0 (where Ex=0)
-    parent_gs = subset[subset['Parent_Ex'] == 0].iloc[0]
-    twoJ0plus1 = parent_gs['2Jplus1']
-    print(f"Interaction {interact}: Parent GS J={parent_gs['J']}, 2J0+1={twoJ0plus1}")
-    
-    for orb in orbitals:
-        if orb in subset.columns:
+    if not all_results:
+        print(f"No data found for {parent_label}->{daughter_label}, skipping.")
+        return
+
+    df = pd.DataFrame(all_results).fillna(0)
+    df['J'] = df['Parent_Jpi'].apply(parse_j)
+    df['2Jplus1'] = 2 * df['J'] + 1
+    twoJi_plus_1 = 2 * daughter_J + 1
+
+    suffix = '_dp' if dp_mode else ''
+    csv_out = os.path.join(directory, f'c2s_{parent_label}_{daughter_label}gs{suffix}.csv')
+    df.to_csv(csv_out, index=False)
+    print(f"Saved extracted data to {csv_out}")
+
+    orbital_colors = {'0d3/2': '#636EFA', '0d5/2': '#EF553B', '1s1/2': '#00CC96'}
+    orbitals = ['0d3/2', '0d5/2', '1s1/2']
+    orbital_offsets = {'0d3/2': -0.02, '0d5/2': 0, '1s1/2': 0.02}
+    interactions_upper = [i.upper() for i in interactions]
+
+    # Compute global y_max so all subplots share a comparable scale.
+    if y_max is None:
+        scale_max = 0.0
+        for interact in interactions_upper:
+            subset = df[df['Interaction'] == interact]
+            for orb in orbitals:
+                if orb not in subset.columns:
+                    continue
+                yv = subset[orb]
+                if dp_mode:
+                    yv = yv * subset['2Jplus1'] / twoJi_plus_1
+                if not yv.empty:
+                    scale_max = max(scale_max, float(yv.max()))
+        y_max = max(0.9, scale_max * 1.15)
+
+    fig = make_subplots(
+        rows=len(interactions_upper), cols=1,
+        subplot_titles=interactions_upper,
+        shared_xaxes=True,
+        vertical_spacing=0.08
+    )
+
+    for i, interact in enumerate(interactions_upper):
+        row_num = i + 1
+        subset = df[df['Interaction'] == interact].sort_values('Parent_Ex')
+        if subset.empty:
+            continue
+
+        parent_gs = subset[subset['Parent_Ex'] == 0]
+        if not parent_gs.empty:
+            gs_row = parent_gs.iloc[0]
+            print(f"{parent_label}->{daughter_label} {interact}: Parent GS J={gs_row['J']}, 2J0+1={gs_row['2Jplus1']}")
+
+        # Per-state J labels, positioned above the tallest orbital at each Ex.
+        state_peaks = {}
+
+        for orb in orbitals:
+            if orb not in subset.columns:
+                continue
             orb_subset = subset[subset[orb] > 0]
-            
+            if orb_subset.empty:
+                continue
+
+            scale = (orb_subset['2Jplus1'] / twoJi_plus_1) if dp_mode else 1.0
             x_vals = orb_subset['Parent_Ex'] + orbital_offsets[orb]
-            y_vals = orb_subset[orb]
-            
-            # Stem lines
+            y_vals = orb_subset[orb] * scale
+
+            for ex, jpi, yv in zip(orb_subset['Parent_Ex'], orb_subset['Parent_Jpi'], y_vals):
+                if ex not in state_peaks or yv > state_peaks[ex][0]:
+                    state_peaks[ex] = (float(yv), jpi)
+
             stem_x, stem_y = [], []
             for x, y in zip(x_vals, y_vals):
                 stem_x.extend([x, x, None])
                 stem_y.extend([0, y, None])
-            
+
             fig.add_trace(go.Scatter(
                 x=stem_x, y=stem_y, mode='lines',
                 line=dict(color=orbital_colors[orb], width=1.5),
                 legendgroup=orb, showlegend=False, hoverinfo='skip'
             ), row=row_num, col=1)
-            
-            # Top markers
+
+            y_label = "(2J_f+1)/(2J_i+1)·C²S" if dp_mode else "C²S"
+            hover_vals = orb_subset[orb] * (scale if dp_mode else 1.0)
             fig.add_trace(go.Scatter(
                 x=x_vals, y=y_vals, mode='markers',
                 marker=dict(color=orbital_colors[orb], size=6),
                 name=orb, legendgroup=orb, showlegend=(row_num == 1),
                 hoverinfo='text',
-                text=[f"Interaction: {interact}<br>State: {jpi}<br>Ex: {ex} MeV<br>Orbital: {orb}<br>C2S: {val:.4f}" 
-                      for jpi, ex, val in zip(orb_subset['Parent_Jpi'], orb_subset['Parent_Ex'], orb_subset[orb])]
+                text=[f"Interaction: {interact}<br>State: {jpi}<br>Ex: {ex} MeV<br>Orbital: {orb}<br>{y_label}: {val:.4f}"
+                      for jpi, ex, val in zip(orb_subset['Parent_Jpi'], orb_subset['Parent_Ex'], hover_vals)]
             ), row=row_num, col=1)
-            
-            # Calculate Centroid: sum((2J+1) * C2S * Ex) / sum((2J+1) * C2S)
+
+            # Centroid: weighted by (2J+1)·C²S (independent of dp scaling).
             weights = orb_subset['2Jplus1'] * orb_subset[orb]
             weighted_sum_ex = (weights * orb_subset['Parent_Ex']).sum()
             total_weight = weights.sum()
-            
+
             if total_weight > 0:
                 centroid_ex = weighted_sum_ex / total_weight
-                
-                # Add thick vertical line for centroid
                 fig.add_trace(go.Scatter(
                     x=[centroid_ex, centroid_ex],
-                    y=[0, 0.9],
+                    y=[0, y_max],
                     mode='lines',
                     line=dict(color=orbital_colors[orb], width=4, dash='solid'),
                     name=f"{orb} Centroid",
@@ -165,16 +202,49 @@ for i, interact in enumerate(interactions):
                     text=f"Centroid ({orb}): {centroid_ex:.3f} MeV"
                 ), row=row_num, col=1)
 
-    fig.update_yaxes(title_text="C²S", range=[0, 0.9], row=row_num, col=1)
+        if show_j_labels and state_peaks:
+            label_x = [ex for ex in state_peaks]
+            label_y = [min(y_max * 0.98, state_peaks[ex][0] + y_max * 0.04) for ex in state_peaks]
+            label_t = [state_peaks[ex][1] for ex in state_peaks]
+            fig.add_trace(go.Scatter(
+                x=label_x, y=label_y, mode='text',
+                text=label_t,
+                textfont=dict(size=9, color='#444'),
+                textposition='top center',
+                showlegend=False, hoverinfo='skip'
+            ), row=row_num, col=1)
 
-fig.update_xaxes(title_text="26Na Excitation Energy (MeV)", range=[-0.1, 4.0], row=3, col=1)
+        y_title = "(2J_f+1)/(2J_i+1)·C²S" if dp_mode else "C²S"
+        fig.update_yaxes(title_text=y_title, range=[0, y_max], row=row_num, col=1)
 
-fig.update_layout(
-    title_text="Spectroscopic Factors (C²S) to 25Na Ground State (5/2+)<br>Thick Lines = Centroid Energies (2J+1 weighted)",
-    template="plotly_white", height=900, width=1000, legend_title="Orbital"
-)
+    fig.update_xaxes(title_text=f"{parent_label} Excitation Energy (MeV)",
+                     range=[-0.1, x_max], row=len(interactions_upper), col=1)
 
-# Save PNG
-img_out = os.path.join(directory, 'c2s_vs_ex_combined.png')
-fig.write_image(img_out)
-print(f"Saved combined plot to {img_out}")
+    if dp_mode:
+        title = (f"(2J_f+1)/(2J_i+1)·C²S for {daughter_label}(d,p){parent_label} "
+                 f"(J_i = {daughter_label} g.s. = {daughter_J:g})<br>"
+                 f"Thick Lines = Centroid Energies (2J+1 weighted)")
+    else:
+        title = (f"Spectroscopic Factors (C²S) for {parent_label}→{daughter_label} "
+                 f"Ground State<br>Thick Lines = Centroid Energies (2J+1 weighted)")
+
+    fig.update_layout(
+        title_text=title,
+        template="plotly_white", height=900, width=1000, legend_title="Orbital"
+    )
+
+    img_out = os.path.join(directory, f'c2s_vs_ex_combined_{parent_label}_{daughter_label}{suffix}.png')
+    fig.write_image(img_out)
+    print(f"Saved combined plot to {img_out}")
+
+
+directory = '/Users/calemhoffman/Documents/GitHub/cosmo/results/Na'
+interactions = ['usd', 'usda', 'usdb']
+
+# Bare C²S (neutron-removal convention from COSMO).
+process_system(directory, '26Na', '25Na', interactions)
+process_system(directory, '28Na', '27Na', interactions)
+
+# (d,p) stripping-style: scale by (2J_f+1)/(2J_i+1) with J_i = daughter g.s. = 5/2.
+process_system(directory, '26Na', '25Na', interactions, dp_mode=True, daughter_J=2.5)
+process_system(directory, '28Na', '27Na', interactions, dp_mode=True, daughter_J=2.5)
